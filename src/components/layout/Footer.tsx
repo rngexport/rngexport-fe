@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import logoLight from '../../assets/favicon.png'
 import facilityImg from '../../images/facility.png'
 import { NAV_ITEMS } from '../../constants/navigation'
 
 export default function Footer() {
+  const { t } = useTranslation()
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
 
@@ -68,11 +70,12 @@ export default function Footer() {
                 <img src={logoLight} alt="RNG Export" className="h-16 w-auto object-contain mb-0.5" />
                 <span className="text-2xl font-bold tracking-tighter">EXPORT</span>
               </div>
-              <span className="text-[10px] tracking-[0.3em] text-neutral-500 uppercase">ENDÜSTRİYEL ÇÖZÜMLER</span>
+              <span className="text-[10px] tracking-[0.3em] text-neutral-500 uppercase">
+                {t('header.slogan')}
+              </span>
             </Link>
             <p className="text-neutral-400 leading-relaxed text-sm max-w-md mb-8">
-              Keten ve kenevir elyaf işleme teknolojilerinde global mühendislik ortağınız. 
-              Tarladan son ürüne kadar %100 uzmanlık ve verimlilik odaklı çözümler sunuyoruz.
+              {t('footer.brand_text')}
             </p>
             <div className="flex gap-4">
                {['Linkedin', 'Instagram', 'Twitter'].map(social => (
@@ -90,7 +93,7 @@ export default function Footer() {
             <div className="flex flex-col">
               <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-8 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-[#cf8300]"></span>
-                HIZLI ERİŞİM
+                {t('footer.quick_links')}
               </h4>
               <ul className="space-y-4">
                 {NAV_ITEMS.map((item) => (
@@ -100,7 +103,21 @@ export default function Footer() {
                       className="text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-2 group"
                     >
                       <span className="w-1.5 h-1.5 bg-neutral-400 group-hover:bg-white transition-colors"></span>
-                      {item.label === 'ANASAYFA' ? 'Anasayfa' : item.label[0] + item.label.slice(1).toLowerCase()}
+                      {t(
+                        item.label === 'ANASAYFA'
+                          ? 'nav.home'
+                          : item.label === 'KURUMSAL'
+                          ? 'nav.corporate'
+                          : item.label === 'HATLARIMIZ'
+                          ? 'nav.lines'
+                          : item.label === 'MAKİNELER'
+                          ? 'nav.machines'
+                          : item.label === 'PROSES'
+                          ? 'nav.process'
+                          : item.label === 'TESİSLER'
+                          ? 'nav.facilities'
+                          : 'nav.contact'
+                      )}
                     </Link>
                   </li>
                 ))}
@@ -111,34 +128,54 @@ export default function Footer() {
             <div className="sm:col-span-1 lg:col-span-2 flex flex-col">
                <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-8 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-[#cf8300]"></span>
-                İLETİŞİM MERKEZİ
+                {t('footer.contact_center')}
               </h4>
               <div className="grid sm:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div className="group">
-                    <span className="text-[10px] uppercase tracking-widest text-neutral-500 mb-2 block group-hover:text-[#cf8300] transition-colors">GENEL MERKEZ</span>
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-500 mb-2 block group-hover:text-[#cf8300] transition-colors">
+                      {t('footer.hq_label')}
+                    </span>
                     <p className="text-neutral-300 text-sm leading-relaxed">
-                      Veliköy OSB Sanayi Bulvarı No: 86/1 <br />
-                      Çerkezköy / Tekirdağ / Türkiye
+                      {t('footer.hq_address')
+                        .split('\n')
+                        .map((line, idx) => (
+                          <span key={idx}>
+                            {line}
+                            <br />
+                          </span>
+                        ))}
                     </p>
                   </div>
                   <div className="group">
-                    <span className="text-[10px] uppercase tracking-widest text-neutral-500 mb-2 block group-hover:text-[#cf8300] transition-colors">FABRİKA</span>
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-500 mb-2 block group-hover:text-[#cf8300] transition-colors">
+                      {t('footer.factory_label')}
+                    </span>
                     <p className="text-neutral-300 text-sm leading-relaxed">
-                      Çerkezköy Organize Sanayi Bölgesi<br />
-                      Tekirdağ
+                      {t('footer.factory_address')
+                        .split('\n')
+                        .map((line, idx) => (
+                          <span key={idx}>
+                            {line}
+                            <br />
+                          </span>
+                        ))}
                     </p>
                   </div>
                 </div>
                 <div className="space-y-6">
                    <div className="group">
-                    <span className="text-[10px] uppercase tracking-widest text-neutral-500 mb-2 block group-hover:text-[#cf8300] transition-colors">E-POSTA</span>
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-500 mb-2 block group-hover:text-[#cf8300] transition-colors">
+                      {t('footer.email_label')}
+                    </span>
                     <a href="mailto:info@rngexport.com" className="text-lg text-white font-light hover:underline decoration-[#cf8300] decoration-1 underline-offset-4">
                       info@rngexport.com
                     </a>
                   </div>
                   <div className="group">
-                    <span className="text-[10px] uppercase tracking-widest text-neutral-500 mb-2 block group-hover:text-[#cf8300] transition-colors">TELEFON</span>
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-500 mb-2 block group-hover:text-[#cf8300] transition-colors">
+                      {t('footer.phone_label')}
+                    </span>
                     <a href="tel:+902425021772" className="text-lg text-white font-light hover:underline decoration-[#cf8300] decoration-1 underline-offset-4">
                       +90 242 502 17 72
                     </a>
@@ -152,11 +189,17 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] tracking-[0.2em] text-neutral-600 uppercase">
-          <p>© 2025 RNG EXPORT. TÜM HAKLARI SAKLIDIR.</p>
+          <p>{t('footer.bottom_text')}</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">GİZLİLİK POLİTİKASI</a>
-            <a href="#" className="hover:text-white transition-colors">KVKK</a>
-            <a href="#" className="hover:text-white transition-colors">ÇEREZ POLİTİKASI</a>
+            <a href="#" className="hover:text-white transition-colors">
+              {t('footer.privacy')}
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              {t('footer.kvkk')}
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              {t('footer.cookies')}
+            </a>
           </div>
         </div>
       </div>

@@ -1,44 +1,75 @@
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import logo from '../../assets/logo-dark.png'
-import { NAV_ITEMS } from '../../constants/navigation'
 
 export default function Header() {
   const location = useLocation()
+  const { t, i18n } = useTranslation()
+  const [isLangOpen, setIsLangOpen] = useState(false)
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng)
+    setIsLangOpen(false)
+  }
+
+  const navItems = [
+    { label: t('nav.home'), href: '/' },
+    { label: t('nav.corporate'), href: '/#corporate' },
+    { label: t('nav.lines'), href: '/#lines' },
+    { label: t('nav.machines'), href: '/#machines' },
+    { label: t('nav.process'), href: '/#process' },
+    { label: t('nav.facilities'), href: '/facilities' },
+    { label: t('nav.contact'), href: '/#contact' },
+  ]
+
+  const languages = [
+    { code: 'tr', label: 'Türkçe' },
+    { code: 'en', label: 'English' },
+    { code: 'ru', label: 'Русский' },
+  ]
+
+  const currentLangCode = (i18n.language || 'tr').slice(0, 2)
+  const currentLang = languages.find((l) => l.code === currentLangCode) || languages[0]
 
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-neutral-900 text-white text-[10px] tracking-[0.2em] uppercase py-2 px-6 flex justify-between items-center">
-        <span className="hidden md:block">RNG DIŞ TİCARET - KETEN & KENEVİR ELYAF TEKNOLOJİLERİ</span>
-        <div className="flex gap-6">
-          <a href="mailto:info@rngexport.com" className="hover:text-gray-300 transition-colors">
-            info@rngexport.com
-          </a>
-          <a href="tel:+902425021772" className="hover:text-gray-300 transition-colors">
-            +90 242 502 17 72
-          </a>
+        <span className="hidden md:block">{t('header.top_bar')}</span>
+        <div className="flex items-center gap-6">
+          <div className="flex gap-6">
+            <a href="mailto:info@rngexport.com" className="hover:text-gray-300 transition-colors">
+              info@rngexport.com
+            </a>
+            <a href="tel:+902425021772" className="hover:text-gray-300 transition-colors">
+              +90 242 502 17 72
+            </a>
+          </div>
         </div>
       </div>
 
       <nav className="bg-white border-b border-neutral-200">
         <div className="max-w-[1800px] mx-auto px-6 h-24 flex items-center justify-between">
-          <Link to="/" className="flex flex-col gap-1">
+          <Link to="/" className="flex flex-col gap-1 shrink-0">
             <div className="flex items-center gap-1.5">
               <img src={logo} alt="RNG Export" className="h-10 w-auto object-contain mb-0.5" />
               <span className="text-2xl font-bold tracking-tighter">EXPORT</span>
             </div>
-            <span className="text-[10px] tracking-[0.3em] text-neutral-500 uppercase ml-2">ENDÜSTRİYEL ÇÖZÜMLER</span>
+            <span className={`tracking-[0.3em] text-neutral-500 uppercase ml-2 ${currentLangCode === 'ru' ? 'text-[8px]' : 'text-[10px]'}`}>
+              {t('header.slogan')}
+            </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-10">
-            {NAV_ITEMS.map((item) => {
+          <div className={`hidden lg:flex items-center ${currentLangCode === 'ru' ? 'gap-6' : 'gap-10'}`}>
+            {navItems.map((item) => {
               const isActive = location.pathname === item.href
               return (
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`text-xs font-bold uppercase tracking-widest transition-colors relative group ${
-                    isActive ? 'text-black' : 'text-neutral-600 hover:text-black'
-                  }`}
+                  className={`font-bold uppercase tracking-widest transition-colors relative group ${
+                    currentLangCode === 'ru' ? 'text-[10px]' : 'text-xs'
+                  } ${isActive ? 'text-black' : 'text-neutral-600 hover:text-black'}`}
                 >
                   {item.label}
                   <span className="absolute -bottom-8 left-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -46,13 +77,59 @@ export default function Header() {
               )
             })}
           </div>
+          
+          <div className="hidden md:flex items-center gap-4 shrink-0">
+            {/* Language Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setIsLangOpen((prev) => !prev)}
+                className={`flex items-center gap-3 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-300 rounded-sm cursor-pointer ${
+                  isLangOpen 
+                    ? 'bg-neutral-900 text-white' 
+                    : 'bg-neutral-50 text-neutral-600 hover:bg-neutral-100 hover:text-black'
+                }`}
+              >
+                <span>{currentLang.code}</span>
+                <span className={`text-[8px] opacity-60 transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`}>▼</span>
+              </button>
+              
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white border border-neutral-100 shadow-2xl shadow-neutral-200 rounded-sm overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200">
+                  <div className="py-2">
+                    {languages.map((lng) => {
+                      const isSelected = lng.code === currentLang.code
+                      return (
+                        <button
+                          key={lng.code}
+                          type="button"
+                          onClick={() => changeLanguage(lng.code)}
+                          className={`w-full flex items-center justify-between px-6 py-3 text-[11px] tracking-[0.15em] uppercase transition-colors cursor-pointer ${
+                            isSelected 
+                              ? 'bg-neutral-50 text-black font-bold' 
+                              : 'text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900'
+                          }`}
+                        >
+                          <span>{lng.label}</span>
+                          {isSelected && (
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#cf8300]"></span>
+                          )}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
 
-          <a
-            href="/#contact"
-            className="hidden md:flex border border-neutral-900 px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-neutral-900 hover:text-white transition-colors"
-          >
-            TEKLİF İSTE
-          </a>
+            {/* CTA */}
+            <a
+              href="/#contact"
+              className="bg-neutral-900 text-white border border-neutral-900 px-8 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-neutral-900 transition-all duration-300 cursor-pointer"
+            >
+              {t('header.quote_btn')}
+            </a>
+          </div>
         </div>
       </nav>
     </header>

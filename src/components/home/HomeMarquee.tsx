@@ -1,4 +1,6 @@
-const marqueeItems = [
+import { useTranslation } from 'react-i18next'
+
+const fallbackItems = [
   'TURNKEY SOLUTIONS',
   'FIBER PROCESSING',
   'AUTOMATION',
@@ -8,7 +10,10 @@ const marqueeItems = [
 ]
 
 export default function HomeMarquee() {
-  const items = [...marqueeItems, ...marqueeItems]
+  const { t } = useTranslation()
+  const itemsFromI18n = t('marquee.items', { returnObjects: true }) as string[] | string
+  const baseItems = Array.isArray(itemsFromI18n) && itemsFromI18n.length > 0 ? itemsFromI18n : fallbackItems
+  const items = [...baseItems, ...baseItems]
   return (
     <div className="bg-neutral-900 text-white py-4 overflow-hidden border-y border-neutral-800">
       <div className="flex animate-marquee whitespace-nowrap">

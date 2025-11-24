@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import kenevaImg from '../../images/line-keneva.png'
@@ -5,77 +6,37 @@ import kotonexImg from '../../images/line-kotonex.png'
 import uzunElyafImg from '../../images/line-uzun-elyaf.png'
 import facilityImg from '../../images/facility.png'
 
-const productionLines = [
-  {
-    title: 'KENEVA – Keten & Kenevir Ön Elyaf İşleme Hattı',
-    desc: 'Tarladan gelen ham balyanın ilk kez açıldığı, lifin ana kısım ve odunsu parçadan ayrıldığı, yabancı maddelerin temizlendiği ve stabil bir giriş akışı elde edildiği hattır.',
-    image: kenevaImg,
-    bgImage: facilityImg, // Placeholder or real image
-    subtext: 'Pre-Processing & Opening Line',
-    outputs: [
-      'Balya bütünlüğünün bozulmadan açılması',
-      'Büyük parçaların küçültülmesi',
-      'Elyafın taranması',
-      'Kırtık, toz, saman, yabancı madde ayrımı',
-      'Lifin temel temizliği',
-      'Homojen bir besleme malzemesi oluşturma',
-    ],
-    benefit: 'Sonraki aşamaların verimliliğini %40-55 oranında artırır. Selüloz, biyokompozit ve kotonizasyon uygulamaları için olmazsa olmazdır.',
-  },
-  {
-    title: 'KOTONEX - Keten & Kenevir Elyaf Kotonizasyon Hattı',
-    desc: 'İşin kalbi burasıdır. Kotonizasyon hattı lif boyunu kısaltır, elyafı inceltir, temizler, hafifletir ve “pamuk benzeri” bir formata getirir.',
-    image: kotonexImg,
-    bgImage: facilityImg, // Placeholder
-    subtext: 'Cottonization Line',
-    applications: [
-      'Nonwoven',
-      'Tekstil karışım ipliği',
-      'Alfa-selüloz üretimi',
-      'Nitroselüloz üretimi',
-      'Savunma sanayi propellant üretimi',
-      'Biyokompozit takviye malzemesi',
-    ],
-    outputs: [
-      'Lif boyu kontrolü',
-      'İnceltilmiş, açılmış lif',
-      'Metal ve tozdan arındırılmış malzeme',
-      'Sürekli ve stabil debi',
-      'Düşük nem & homojen yoğunluk',
-    ],
-  },
-  {
-    title: 'Uzun Elyaf İşleme Hattı',
-    desc: 'Bu hat özellikle teknik tekstiller, otomotiv kompozitleri ve inşaat güçlendirme malzemeleri için uzun lif üreten hattır.',
-    image: uzunElyafImg,
-    bgImage: facilityImg, // Placeholder
-    subtext: 'Long Fibre Line',
-    features: [
-      'Lif boyu kırılmasını engelleyen özel açıcılar',
-      'Düşük hız kontrollü tarama tamburları',
-      'Hassas shaker-eleme',
-      'Metal ve kir ayrımı',
-    ],
-    applications: ['Teknik tekstiller', 'Otomotiv kompozitleri', 'İnşaat güçlendirme malzemeleri'],
-    outputs: ['Keten esaslı kompozit', 'Lif takviyeli plastik', 'Cam elyafa alternatif bio-fiber çözümler'],
-  },
-]
-
 export default function ProductionLinesSection() {
+  const { t } = useTranslation()
+  const lines = t('lines.items', { returnObjects: true }) as any[]
+  const listTitles = t('lines.list_titles', { returnObjects: true }) as {
+    features: string
+    applications: string
+    outputs_long: string
+    outputs_short: string
+    advantage: string
+  }
+
+  const lineVisuals = [
+    { image: kenevaImg, bgImage: facilityImg },
+    { image: kotonexImg, bgImage: facilityImg },
+    { image: uzunElyafImg, bgImage: facilityImg },
+  ]
+
   return (
     <section id="lines" className="bg-neutral-50 border-t border-neutral-200">
       <div className="max-w-[1800px] mx-auto px-6 py-24">
         <div className="mb-16">
           <span className="block text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-4">
-            ÜRETİM HATLARIMIZ
+            {t('lines.section_label')}
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-neutral-900 max-w-3xl">
-            Global pazarda sunduğumuz tam entegre 3 ana çözüm.
+            {t('lines.section_title')}
           </h2>
         </div>
 
         <div className="flex flex-col gap-12">
-          {productionLines.map((item, idx) => (
+          {lines.map((item, idx) => (
             <div 
               key={item.title} 
               className="relative w-full overflow-hidden group rounded-sm bg-neutral-900 min-h-[600px] flex flex-col lg:flex-row"
@@ -83,7 +44,7 @@ export default function ProductionLinesSection() {
               {/* Background Image Layer */}
               <div className="absolute inset-0 z-0">
                 <img 
-                  src={item.bgImage} 
+                  src={lineVisuals[idx]?.bgImage || facilityImg}
                   alt="" 
                   className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700 scale-105 group-hover:scale-100"
                 />
@@ -93,7 +54,9 @@ export default function ProductionLinesSection() {
               {/* Content Side */}
               <div className="relative z-10 flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center text-white max-w-3xl">
                 <div className="mb-8">
-                  <div className="text-xs font-bold tracking-[0.2em] text-[#cf8300] mb-4">0{idx + 1}</div>
+                  <div className="text-xs font-bold tracking-[0.2em] text-[#cf8300] mb-4">
+                    0{idx + 1}
+                  </div>
                   <h3 className="text-3xl md:text-4xl font-bold mb-2 leading-tight">{item.title}</h3>
                   <span className="text-xs font-mono text-neutral-400 block tracking-wider">{item.subtext}</span>
                 </div>
@@ -104,14 +67,14 @@ export default function ProductionLinesSection() {
 
                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8">
                   {item.features && (
-                    <ListBlock title="ÖZELLİKLER" items={item.features} />
+                    <ListBlock title={listTitles.features} items={item.features} />
                   )}
                   {item.applications && (
-                    <ListBlock title="UYGULAMA ALANLARI" items={item.applications} />
+                    <ListBlock title={listTitles.applications} items={item.applications} />
                   )}
                   {item.outputs && (
                     <ListBlock
-                      title={item.outputs.length > 3 ? 'ÇIKTI ÜRÜNLER' : 'TEMEL ÇIKTILAR'}
+                      title={item.outputs.length > 3 ? listTitles.outputs_long : listTitles.outputs_short}
                       items={item.outputs}
                     />
                   )}
@@ -119,7 +82,9 @@ export default function ProductionLinesSection() {
 
                 {item.benefit && (
                   <div className="mt-10 p-4 bg-white/5 border border-white/10 rounded text-xs text-neutral-300 italic">
-                    <span className="text-[#cf8300] font-bold not-italic mr-2">AVANTAJ:</span>
+                    <span className="text-[#cf8300] font-bold not-italic mr-2">
+                      {listTitles.advantage}
+                    </span>
                     {item.benefit}
                   </div>
                 )}
@@ -130,13 +95,13 @@ export default function ProductionLinesSection() {
                  <div className="w-full relative">
                     <Zoom>
                       <img 
-                        src={item.image} 
+                        src={lineVisuals[idx]?.image}
                         alt={item.title} 
                         className="w-full h-auto max-h-[500px] object-contain drop-shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500 cursor-zoom-in invert" 
                       />
                     </Zoom>
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-[10px] font-bold tracking-widest text-neutral-500 uppercase pointer-events-none">
-                      Büyütmek için tıkla
+                      {t('lines.zoom_hint')}
                     </div>
                  </div>
               </div>

@@ -1,6 +1,9 @@
+import { useTranslation, Trans } from 'react-i18next'
 import facilityImg from '../../images/facility.png'
 
 export default function HomeHero() {
+  const { t } = useTranslation()
+
   return (
     <header className="relative h-[85vh] bg-neutral-100 overflow-hidden flex items-center">
       <div className="absolute inset-0">
@@ -14,27 +17,28 @@ export default function HomeHero() {
       <div className="relative z-10 max-w-[1800px] mx-auto px-6 w-full">
         <div className="max-w-4xl text-white">
           <div className="inline-block border-l-3 border-[#cf8300] pl-4 mb-6">
-            <p className="text-xs font-extralight tracking-[0.3em] uppercase">MÜHENDİSLİK & TİCARET</p>
+            <p className="text-xs font-extralight tracking-[0.3em] uppercase">
+              {t('hero.subtitle')}
+            </p>
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter mb-8">
-            KETEN & KENEVİR <br /> ELYAF ÇÖZÜMLERİ
+            <Trans i18nKey="hero.title" components={{ br: <br /> }} />
           </h1>
           <p className="text-lg md:text-2xl text-gray-200 max-w-2xl leading-relaxed mb-12 font-light">
-            Tarladan çıkan ham balyayı, endüstriyel kaliteye sahip temizlenmiş, standardize edilmiş elyaf formatına
-            dönüştüren %100 uzmanlaşmış mühendislik hatları.
+            {t('hero.desc')}
           </p>
           <div className="flex flex-wrap gap-4">
             <a
               href="#lines"
-              className="bg-white text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"
+              className="bg-white text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors cursor-pointer"
             >
-              HATLARIMIZI KEŞFEDİN
+              {t('hero.btn_discover')}
             </a>
             <a
               href="#contact"
-              className="border border-white text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
+              className="border border-white text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors cursor-pointer"
             >
-              PROJENİZİ BAŞLATIN
+              {t('hero.btn_start')}
             </a>
           </div>
         </div>

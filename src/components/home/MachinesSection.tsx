@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 import kenevaImg from '../../images/machine-keneva.png'
 import kotonexImg from '../../images/machine-kotonex.png'
@@ -30,98 +31,38 @@ const getMachineImage = (id: string) => {
   }
 }
 
-const machines = [
-  {
-    id: 'M-01',
-    name: 'KENEVA – Ön Elyaf İşleme Hattı',
-    category: 'Elyaf Üretimi',
-    specs: { capacity: 'Yüksek', power: 'Optimize', automation: 'PLC Kontrol' },
-  },
-  {
-    id: 'M-02',
-    name: 'KOTONEX - Elyaf Kotonizasyon Hattı',
-    category: 'Kotonizasyon',
-    specs: { capacity: 'Endüstriyel', power: 'Düşük Tüketim', automation: 'Tam Otomatik' },
-  },
-  {
-    id: 'M-03',
-    name: 'Uzun Elyaf İşleme Hattı',
-    category: 'Uzun Lif',
-    specs: { capacity: '6-40 cm Lif', power: 'Hassas', automation: 'Servo' },
-  },
-  {
-    id: 'M-04',
-    name: 'RODI – Döner Tamburlu Elek',
-    category: 'Eleme & Temizlik',
-    specs: { capacity: '360° Tambur', power: 'Yüksek', automation: 'ATEX' },
-  },
-  {
-    id: 'M-05',
-    name: 'Dikey Balya Presi',
-    category: 'Paketleme',
-    specs: { capacity: '150-350 kg', power: 'Hidrolik', automation: 'Otomatik' },
-  },
-  {
-    id: 'M-06',
-    name: 'Yatay Balya Presi',
-    category: 'Paketleme',
-    specs: { capacity: '400-750 kg', power: 'Servo Kontrol', automation: 'PLC' },
-  },
-  {
-    id: 'M-07',
-    name: 'Aspirasyon Ünitesi',
-    category: 'Toz Toplama',
-    specs: { capacity: 'Tüm Hat', power: 'Merkezi', automation: 'Entegre' },
-  },
-  {
-    id: 'M-08',
-    name: 'Manyetik Dedektör',
-    category: 'Güvenlik',
-    specs: { capacity: 'Sıfır Hata', power: 'Sensör', automation: 'Otomatik Stop' },
-  },
-  {
-    id: 'M-09',
-    name: 'Shaker Ünitesi',
-    category: 'İnce Temizlik',
-    specs: { capacity: 'Hassas', power: 'Vibrasyon', automation: 'Anti-blinding' },
-  },
-  {
-    id: 'M-10',
-    name: 'Pelet Makinasi',
-    category: 'Peletleme',
-    specs: { capacity: '100-300 kg/h', power: 'Hidrolik', automation: 'Otomatik' },
-  },
-  {
-    id: 'M-11',
-    name: 'Tohum Eleme Ünitesi',
-    category: 'Tohum Eleme',
-    specs: { capacity: '5-12 t/saat' },
-  }
-]
-
 export default function MachinesSection() {
+  const { t } = useTranslation()
+  
+  // Fetch machines data dynamically from translation files
+  const machines = t('machines.items', { returnObjects: true }) as any[]
+
   return (
     <section id="machines" className="py-24 md:py-32 bg-white border-t border-neutral-200">
       <div className="max-w-[1800px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12">
           <div className="max-w-xl">
-            <span className="block text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-4">MAKİNE PARKURU</span>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Profesyonel Makine Çözümleri</h2>
+            <span className="block text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-4">
+              {t('machinesSection.section_label')}
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              {t('machinesSection.section_title')}
+            </h2>
             <p className="mt-4 text-sm md:text-base text-neutral-600 max-w-lg">
-              Keten ve kenevir işleme süreçleri için özel olarak geliştirilmiş 9 ana ünite.
+              {t('machinesSection.section_desc')}
             </p>
           </div>
         </div>
 
         <div className="-mx-6 px-6 overflow-x-auto no-scrollbar pb-4">
           <div className="flex gap-6 min-w-max">
-            {machines.map((machine, index) => {
+            {machines && machines.map((machine, index) => {
               const machineImg = getMachineImage(machine.id)
               return (
                 <Link
                   to={`/machines/${machine.id}`}
                   key={machine.id}
-                  className="group min-w-[260px] sm:min-w-[320px] lg:min-w-[380px] bg-white border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col"
+                  className="group min-w-[260px] sm:min-w-[320px] lg:min-w-[380px] bg-white border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col cursor-pointer"
                 >
                   <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-100 bg-neutral-50">
                     <span className="text-[11px] font-mono text-neutral-500">{machine.id}</span>
@@ -132,12 +73,12 @@ export default function MachinesSection() {
                     {machineImg ? (
                        <img src={machineImg} alt={machine.name} className="h-48 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500 mix-blend-multiply" />
                     ) : (
-                      <div className="text-neutral-300 text-[10px] tracking-[0.2em] uppercase">NO IMAGE</div>
+                      <div className="text-neutral-300 text-[10px] tracking-[0.2em] uppercase">{t('machinesSection.no_image') || 'NO IMAGE'}</div>
                     )}
                     
                     <div className="absolute inset-x-6 bottom-4 flex justify-between text-[10px] text-black/40 group-hover:text-black/60">
                       <span>{index + 1 < 10 ? `0${index + 1}` : index + 1}</span>
-                      <span>DETAYLAR</span>
+                      <span>{t('machinesSection.details')}</span>
                     </div>
                   </div>
 
@@ -146,15 +87,17 @@ export default function MachinesSection() {
                       {machine.name}
                     </h3>
                     <div className="space-y-2 text-[11px] text-neutral-500">
-                      {Object.entries(machine.specs).map(([key, val]) => (
+                      {machine.specs && Object.entries(machine.specs).map(([key, val]) => (
                         <div key={key} className="flex justify-between border-b border-dashed border-neutral-100 pb-1 capitalize">
                           <span>{key}</span>
-                          <span className="font-semibold text-neutral-900">{val}</span>
+                          <span className="font-semibold text-neutral-900">{val as string}</span>
                         </div>
                       ))}
                     </div>
                     <div className="mt-auto pt-4 flex items-center justify-between">
-                      <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">İNCELE</span>
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">
+                        {t('machinesSection.view')}
+                      </span>
                       <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
                     </div>
                   </div>

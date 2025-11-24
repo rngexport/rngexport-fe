@@ -1,0 +1,480 @@
+{
+  "header": {
+    "slogan": "INDUSTRIAL FIBER SOLUTIONS",
+    "quote_btn": "REQUEST A QUOTE",
+    "top_bar": "RNG EXPORT – FLAX & HEMP FIBER TECHNOLOGIES"
+  },
+  "nav": {
+    "home": "HOME",
+    "corporate": "ABOUT",
+    "lines": "LINES",
+    "machines": "MACHINES",
+    "process": "PROCESS",
+    "facilities": "FACILITIES",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "subtitle": "ENGINEERING & TRADE",
+    "title": "FLAX & HEMP <br /> FIBER SOLUTIONS",
+    "desc": "Highly specialized engineering lines that convert raw bales from the field into cleaned, standardized industrial-grade fiber.",
+    "btn_discover": "EXPLORE OUR LINES",
+    "btn_start": "START YOUR PROJECT"
+  },
+  "marquee": {
+    "items": [
+      "TURNKEY SOLUTIONS",
+      "FIBER PROCESSING",
+      "AUTOMATION",
+      "R&D ENGINEERING",
+      "GLOBAL LOGISTICS",
+      "SUSTAINABLE ENERGY"
+    ]
+  },
+  "corporate": {
+    "section_label": "ABOUT US",
+    "headline": "We focus only on this field. And we are the best at it.",
+    "p1": "RNG Export is an engineering and trading company fully dedicated to the pre-processing, fiber preparation and cottonization of flax and hemp fibers.",
+    "p2": "We do not treat flax and hemp fiber technologies as a side business in this geography. We are fully focused on this single domain.",
+    "p3": "RNG Export provides high-performance machinery lines, advanced engineering support and long-term process consultancy to globally investing companies.",
+    "mission_title": "OUR MISSION",
+    "mission_body": "To deliver fiber processing lines that are highly efficient, energy-conscious, maintenance-friendly, compliant with ATEX/Ex-Proof safety standards, modular and scalable – and to bring each investment safely into operation.",
+    "cta_detailed_info": "REQUEST DETAILED INFORMATION",
+    "vision_title": "OUR VISION",
+    "vision_body": "To become one of the most trusted brands worldwide in primary fiber preparation technologies for strategic raw materials such as flax and hemp.",
+    "vision_list": [
+      "Industrial fiber production",
+      "Cellulose production (alpha-cellulose)",
+      "Nitrocellulose and defence applications",
+      "Biocomposite and bioplastic",
+      "Nonwoven & textile industries"
+    ],
+    "stats": [
+      { "val": "9", "label": "CORE MACHINE GROUPS" },
+      { "val": "3", "label": "INTEGRATED LINES" },
+      { "val": "100%", "label": "DEDICATED FOCUS" }
+    ]
+  },
+  "lines": {
+    "section_label": "PRODUCTION LINES",
+    "section_title": "Three fully integrated solutions we offer to the global market.",
+    "items": [
+      {
+        "title": "KENEVA – Flax & Hemp Pre-Processing Line",
+        "subtext": "Pre-Processing & Opening Line",
+        "desc": "The line where raw bales from the field are opened for the first time, woody parts are separated from the main fiber, impurities are removed and a stable infeed flow is created.",
+        "outputs": [
+          "Opening bales without breaking their integrity",
+          "Downsizing large stalk fractions",
+          "Carding and opening the fiber",
+          "Separating shives, dust, straw and foreign material",
+          "Primary fiber cleaning",
+          "Creating a homogeneous feed material"
+        ],
+        "benefit": "Increases the efficiency of subsequent stages by 40–55%. An essential prerequisite for cellulose, biocomposite and cottonization applications."
+      },
+      {
+        "title": "KOTONEX – Flax & Hemp Cottonization Line",
+        "subtext": "Cottonization Line",
+        "desc": "This is the heart of the process. The cottonization line shortens the fiber length, refines and cleans the fibers, reduces weight and brings them into a cotton-like form.",
+        "applications": [
+          "Nonwovens",
+          "Blended yarn for textiles",
+          "Alpha-cellulose production",
+          "Nitrocellulose production",
+          "Propellant production for defence",
+          "Biocomposite reinforcement"
+        ],
+        "outputs": [
+          "Controlled fiber length",
+          "Refined, well-opened fibers",
+          "Material free from metals and dust",
+          "Continuous and stable throughput",
+          "Low moisture & homogeneous bulk density"
+        ]
+      },
+      {
+        "title": "Long Fiber Processing Line",
+        "subtext": "Long Fibre Line",
+        "desc": "This line produces long fibers specifically for technical textiles, automotive composites and construction reinforcement materials.",
+        "features": [
+          "Special openers preventing fiber length degradation",
+          "Low-speed controlled carding drums",
+          "Precise shaker screening",
+          "Metal and impurity separation"
+        ],
+        "applications": [
+          "Technical textiles",
+          "Automotive composites",
+          "Construction reinforcement materials"
+        ],
+        "outputs": [
+          "Flax-based composites",
+          "Fiber-reinforced plastics",
+          "Bio-fiber alternatives to glass fiber"
+        ]
+      }
+    ],
+    "list_titles": {
+      "features": "FEATURES",
+      "applications": "APPLICATION AREAS",
+      "outputs_long": "OUTPUT PRODUCTS",
+      "outputs_short": "KEY OUTPUTS",
+      "advantage": "ADVANTAGE:"
+    },
+    "zoom_hint": "Click to enlarge"
+  },
+  "process": {
+    "section_label": "RNG STANDARD PROCESS",
+    "section_title": "GOLD-STANDARD PROCESS FLOW",
+    "section_desc": "A proven process scheme applied across all our lines for maximum efficiency.",
+    "steps": [
+      "Raw Bale Feeding",
+      "KENEVA Pre-Opening",
+      "RODI Screening (1st Stage)",
+      "Shaker Fine Cleaning",
+      "Shive / Dust Extraction",
+      "Metal Detection",
+      "Cottonization Unit",
+      "Long Fiber Unit",
+      "Final Stabilization",
+      "Bale Pressing"
+    ],
+    "outputs_title": "PROCESS OUTPUT PRODUCTS",
+    "outputs": [
+      {
+        "title": "COTTONIZED FIBER",
+        "desc": "Industrial-grade fiber in a cotton-like form."
+      },
+      {
+        "title": "CLEANED LONG FIBER",
+        "desc": "Long fibers optimized for technical textile and composite applications."
+      },
+      {
+        "title": "SHORT FIBER",
+        "desc": "Standardized short fibers for nonwovens and biocomposites."
+      }
+    ]
+  },
+  "contact": {
+    "section_label": "CONTACT US",
+    "title": "LET’S <br /> START <br /> YOUR PROJECT",
+    "desc": "Take the first step towards high-performance machinery lines and advanced engineering solutions. Our expert team is ready to support you with feasibility and project planning.",
+    "global_center_title": "GLOBAL HEADQUARTERS",
+    "global_center_address": "Veliköy OSB Sanayi Bulvarı\nNo: 86/1 Çerkezköy / Tekirdağ",
+    "direct_contact_title": "DIRECT CONTACT",
+    "direct_contact_phone": "+90 242 502 17 72",
+    "direct_contact_mail": "info@rngexport.com",
+    "form": {
+      "name_label": "FULL NAME",
+      "name_placeholder": "Your name and surname",
+      "company_label": "COMPANY",
+      "company_placeholder": "Company name",
+      "email_label": "E-MAIL",
+      "email_placeholder": "name@company.com",
+      "project_label": "PROJECT DETAILS",
+      "project_placeholder": "Briefly describe your project...",
+      "submit": "SEND QUOTE REQUEST"
+    }
+  },
+  "machinesSection": {
+    "section_label": "MACHINE PARK",
+    "section_title": "Professional Machinery Solutions",
+    "section_desc": "Nine core units engineered specifically for flax and hemp processing.",
+    "details": "DETAILS",
+    "view": "VIEW"
+  },
+  "machines": {
+    "items": [
+      {
+        "id": "M-01",
+        "name": "KENEVA – Fiber Pre-Processing Unit",
+        "category": "Fiber Production",
+        "specs": { "Capacity": "High", "Power": "Optimized", "Automation": "PLC Control" },
+        "description": "The first major unit receiving input from raw bales. It opens the bale without destroying integrity, reduces large fractions, and separates fiber from the core to ensure stable intake flow.",
+        "features": [
+          "High-capacity drum opener technology",
+          "Reverse-direction internal drum blade geometry",
+          "Low-speed control minimizing dust generation",
+          "ATEX-compliant aspiration outlets",
+          "Automatic control system stabilizing feed density"
+        ],
+        "detailSpecs": {
+          "Function": "Bale opening, fiber shredding, coarse carding",
+          "Efficiency": "Increases downstream efficiency by 40-55%",
+          "Safety": "ATEX Compliant",
+          "Control": "Automatic Density Control"
+        }
+      },
+      {
+        "id": "M-02",
+        "name": "Fiber Cottonization Machine",
+        "category": "Cottonization",
+        "specs": { "Capacity": "Industrial", "Power": "Low Consumption", "Automation": "Fully Automatic" },
+        "description": "Performs the final and most critical transformation of the fiber. It refines fibers, stabilizes length, and brings them into a 'cotton-like' form. Produces the 'gold standard' raw material for cellulose, NC, biocomposite, yarn, and nonwoven production.",
+        "features": [
+          "Multi-stage carding system",
+          "High-speed rotors",
+          "30% yield increase in fiber opening",
+          "Low energy consumption",
+          "Design preventing fiber breakage"
+        ],
+        "detailSpecs": {
+          "Output": "Cotton-like, refined fiber",
+          "Application": "Nonwoven, yarn, biocomposite",
+          "Yield": "High-purity fiber",
+          "Energy": "Optimized low consumption"
+        }
+      },
+      {
+        "id": "M-03",
+        "name": "Long Fiber Processing Unit",
+        "category": "Long Fiber",
+        "specs": { "Capacity": "6-40 cm Fiber", "Power": "Precise", "Automation": "Servo" },
+        "description": "Processes flax/hemp long fibers (6–40 cm) while preserving their structure. Operates with special openers preventing fiber breakage and low-speed controlled carding drums.",
+        "features": [
+          "Low-torque opening preventing fiber breakage",
+          "Gentle carding technology",
+          "Long fiber selection and separation",
+          "Foreign material screening system"
+        ],
+        "detailSpecs": {
+          "Fiber Length": "6 - 40 cm",
+          "Usage": "Composite, technical textile, construction reinforcement",
+          "Technology": "Low-torque precision opening",
+          "Quality": "High-strength long fiber"
+        }
+      },
+      {
+        "id": "M-04",
+        "name": "RODI – Rotary Drum Screen",
+        "category": "Screening & Cleaning",
+        "specs": { "Capacity": "360° Drum", "Power": "High", "Automation": "ATEX" },
+        "description": "Critical screening technology used at every stage of flax and hemp processes. Separates dust, shives, and short particles from the fiber, determining product quality.",
+        "features": [
+          "360° rotary drum design",
+          "Adjustable screen aperture",
+          "ATEX-compliant dust outlet",
+          "Stainless steel drum body",
+          "Ensures homogeneous product density"
+        ],
+        "detailSpecs": {
+          "Type": "Rotary Drum",
+          "Material": "Stainless Steel",
+          "Safety": "ATEX Compliant Aspiration",
+          "Function": "Dust and shive separation"
+        }
+      },
+      {
+        "id": "M-05",
+        "name": "Vertical Bale Press",
+        "category": "Packaging",
+        "specs": { "Capacity": "150-350 kg", "Power": "Hydraulic", "Automation": "Automatic" },
+        "description": "Compact packaging solution for short fiber, cottonized fiber, and long fiber. Creates high-density bales with automatic compression.",
+        "features": [
+          "150–350 kg bale capacity",
+          "Powerful hydraulic unit",
+          "Fully protected steel body",
+          "Automatic compression cycle",
+          "High durability and safety"
+        ],
+        "detailSpecs": {
+          "Capacity": "150 - 350 kg/bale",
+          "System": "Hydraulic Power Unit",
+          "Body": "Steel Construction",
+          "Operation": "Semi-Automatic / Automatic"
+        }
+      },
+      {
+        "id": "M-06",
+        "name": "Horizontal Bale Press",
+        "category": "Packaging",
+        "specs": { "Capacity": "400-750 kg", "Power": "Servo Control", "Automation": "PLC" },
+        "description": "High-volume press system preferred by large-capacity facilities, suitable for continuous feeding.",
+        "features": [
+          "400–750 kg bale weight",
+          "Hydraulic servo control system",
+          "Horizontal feed hopper",
+          "Heavy-duty chassis",
+          "Automatic wire tying or steel strap option"
+        ],
+        "detailSpecs": {
+          "Capacity": "400 - 750 kg/bale",
+          "Control": "Hydraulic Servo",
+          "Feeding": "Continuous/Horizontal",
+          "Option": "Automatic Tying"
+        }
+      },
+      {
+        "id": "M-07",
+        "name": "Aspiration Unit",
+        "category": "Dust Collection",
+        "specs": { "Capacity": "Whole Line", "Power": "Central", "Automation": "Integrated" },
+        "description": "The brain of the entire line; collects dust, light particles, and fiber fly. Maintains facility air quality and ensures ATEX safety.",
+        "features": [
+          "High-capacity dust collection",
+          "Prevention of fiber fly",
+          "Shive separation integration",
+          "Fire and spark risk reduction",
+          "Air quality control"
+        ],
+        "detailSpecs": {
+          "Function": "Dust and particle suction",
+          "Safety": "ATEX Standards",
+          "Filter": "Industrial type",
+          "Protection": "Fire risk management"
+        }
+      },
+      {
+        "id": "M-08",
+        "name": "Magnetic Detector",
+        "category": "Safety",
+        "specs": { "Capacity": "Zero Error", "Power": "Sensor", "Automation": "Auto Stop" },
+        "description": "Protects the entire line and machines by separating metal parts coming from raw material. Critical for the safety of RODI and cottonization units.",
+        "features": [
+          "Reducing metal contamination to zero",
+          "Sensor-based automatic stop",
+          "Increasing operator safety",
+          "Protecting machinery park"
+        ],
+        "detailSpecs": {
+          "Type": "Magnetic / Sensor-based",
+          "Response Time": "Milliseconds",
+          "Protection": "All line equipment",
+          "Automation": "Auto Stop & Alarm"
+        }
+      },
+      {
+        "id": "M-09",
+        "name": "Shaker Unit",
+        "category": "Fine Cleaning",
+        "specs": { "Capacity": "Precise", "Power": "Vibration", "Automation": "Anti-blinding" },
+        "description": "Fine cleaning and separation machine that determines the final form of the fiber, separating remaining shives and sawdust.",
+        "features": [
+          "Multi-stage screen system",
+          "Vibration-controlled body",
+          "Anti-blinding mechanism",
+          "Integrated operation with aspiration",
+          "Stabilizing fiber flow rate"
+        ],
+        "detailSpecs": {
+          "System": "Vibrating Screen",
+          "Function": "Fine dust and shive separation",
+          "Technology": "Anti-blinding",
+          "Integration": "Aspiration compatible"
+        }
+      },
+      {
+        "id": "M-10",
+        "name": "Pellet Machine",
+        "category": "Pelletizing",
+        "specs": { "Capacity": "100 - 300 kg/h", "Power": "Hydraulic", "Automation": "Automatic" },
+        "description": "Converts production waste or by-products into pellet form.",
+        "features": [
+          "High compression ratio",
+          "Durable disk and roller system",
+          "Automatic lubrication",
+          "Overload protection"
+        ],
+        "detailSpecs": {
+          "Capacity": "100 - 300 kg/h",
+          "Power": "Hydraulic",
+          "Control": "Automatic",
+          "Output": "Industrial Pellet"
+        }
+      },
+      {
+        "id": "M-11",
+        "name": "Seed Screening Unit",
+        "category": "Seed Screening",
+        "specs": { "Capacity": "5-12 t/h" },
+        "description": "Used for separating and cleaning seeds after harvest.",
+        "features": [
+          "Sensitive screening technology",
+          "Adjustable for different seed sizes",
+          "Dust extraction system",
+          "Easy-to-clean structure"
+        ],
+        "detailSpecs": {
+          "Capacity": "5-12 t/h",
+          "Precision": "High",
+          "Screen": "Replaceable",
+          "Usage": "Seed Cleaning"
+        }
+      }
+    ],
+    "detail_labels": {
+      "features": "Key Features",
+      "specs": "Technical Specifications",
+      "cta": "Request Detailed Info",
+      "zoom_hint": "Click to Enlarge",
+      "back_home": "Back to Home",
+      "get_offer": "Get Offer",
+      "no_image": "NO IMAGE"
+    }
+  },
+  "facilities": {
+    "hero": {
+      "subtitle": "ENGINEERING & TRADE",
+      "title": "The Center of <br /> Industrial Strength",
+      "desc": "We monitor every step of flax and hemp production lines live in the field. In our plant investments, machinery park, engineering center and field operations come together on a single platform.",
+      "placeholder": "NO IMG"
+    },
+    "stories": [
+      {
+        "title": "Hemp Fiber Decortication",
+        "tag": "Belgium Production Complex",
+        "description": "We process long flax and hemp stalks through multi-stage cutting, separating and cleaning steps while preserving fiber length. This line provides continuous and homogeneous feeding for textile and biocomposite producers.",
+        "cta": "Discover the processing line"
+      },
+      {
+        "title": "Cretes Tech Center",
+        "tag": "Test & Training Facility",
+        "description": "In our demo line we run test trials with our customers’ raw materials and simulate different climate and humidity conditions. Our R&D engineers collect all field data points in this center.",
+        "cta": "Request a demo"
+      },
+      {
+        "title": "Textile Hemp Harvesting",
+        "tag": "Field Operations",
+        "description": "We carry out the harvest of long-fiber flax and hemp with our patented process. Harvested stalks are combed and pressed on mobile lines in the field and then transported to the plant.",
+        "cta": "Explore harvest solutions"
+      },
+      {
+        "title": "Cretes in the spotlight",
+        "tag": "Engineering Hub",
+        "description": "In our operations center, production engineers, automation team and quality lab work under one roof. For every project we receive live visuals from the customer site and provide real-time optimization feedback.",
+        "cta": "Watch the video tour"
+      }
+    ],
+    "contact": {
+      "label": "ON-SITE INSPECTION",
+      "title": "Visit the Facility on Site",
+      "desc": "Book a visit to see our production lines either on site or in our demo center. Our operations managers walk you through every step live.",
+      "email_cta": "info@rngexport.com",
+      "global_center_label": "Global Headquarters",
+      "global_center_address": "Veliköy OSB Sanayi Bulvarı\nNo: 86/1 Çerkezköy / Tekirdağ",
+      "phone_label": "Phone",
+      "phone_number": "+90 242 502 17 72",
+      "schedule_label": "Operations Schedule",
+      "schedule_items": [
+        "Demo line visits",
+        "On-site process validation",
+        "Operator trainings"
+      ]
+    }
+  },
+  "footer": {
+    "brand_text": "Your global engineering partner in flax and hemp fiber processing technologies. From field to final product, we deliver 100% expertise and efficiency-driven solutions.",
+    "quick_links": "QUICK LINKS",
+    "contact_center": "CONTACT CENTER",
+    "hq_label": "HEADQUARTERS",
+    "hq_address": "Veliköy OSB Sanayi Bulvarı No: 86/1\nÇerkezköy / Tekirdağ / Türkiye",
+    "factory_label": "PLANT",
+    "factory_address": "Çerkezköy Organized Industrial Zone\nTekirdağ",
+    "email_label": "E-MAIL",
+    "phone_label": "PHONE",
+    "bottom_text": "© 2025 RNG EXPORT. ALL RIGHTS RESERVED.",
+    "privacy": "PRIVACY POLICY",
+    "kvkk": "KVKK / DATA PROTECTION",
+    "cookies": "COOKIE POLICY"
+  }
+}

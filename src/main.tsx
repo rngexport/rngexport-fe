@@ -5,6 +5,7 @@ import App from './App'
 import MachineDetail from './MachineDetail'
 import Facilities from './Facilities'
 import './index.css'
+import './i18n' // i18n konfigürasyonunu başlat
 
 const rootElement = document.getElementById('root')
 

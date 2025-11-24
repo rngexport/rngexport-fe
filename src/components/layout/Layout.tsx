@@ -1,5 +1,6 @@
 import { ReactNode, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -9,6 +10,7 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   const { hash, pathname } = useLocation()
+  const { i18n } = useTranslation()
 
   useEffect(() => {
     if (hash) {
@@ -29,7 +31,12 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-white text-neutral-900 font-sans selection:bg-neutral-900 selection:text-white overflow-x-hidden">
       <Header />
-      <main>{children}</main>
+      <main 
+        key={i18n.language}
+        className="animate-in fade-in duration-700"
+      >
+        {children}
+      </main>
       <Footer />
     </div>
   )
