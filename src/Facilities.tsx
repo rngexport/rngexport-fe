@@ -134,7 +134,7 @@ function FacilityContact() {
             href="mailto:info@rngexport.com"
             className="inline-flex items-center gap-4 border border-neutral-900 px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] hover:bg-neutral-900 hover:text-white transition-all duration-300 cursor-pointer"
           >
-            {t("facilities.contact.email_cta")} <span>→</span>
+            INFO@RNGEXPORT.COM <span>→</span>
           </a>
         </div>
 

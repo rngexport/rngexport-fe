@@ -25,7 +25,7 @@ export default function Header() {
 
   const languages = [
     { code: 'tr', label: 'Türkçe' },
-    { code: 'en', label: 'English' },
+    { code: 'en', label: 'ENGLISH' },
     { code: 'ru', label: 'Русский' },
   ]
 
@@ -38,8 +38,8 @@ export default function Header() {
         <span className="hidden md:block">{t('header.top_bar')}</span>
         <div className="flex items-center gap-6">
           <div className="flex gap-6">
-            <a href="mailto:info@rngexport.com" className="hover:text-gray-300 transition-colors">
-              info@rngexport.com
+            <a href="mailto:info@rngexport.com" className="hover:text-gray-300 transition-colors" style={{ textTransform: 'none' }}>
+              INFO@RNGEXPORT.COM
             </a>
             <a href="tel:+902425021772" className="hover:text-gray-300 transition-colors">
               +90 242 502 17 72
@@ -84,13 +84,13 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setIsLangOpen((prev) => !prev)}
-                className={`flex items-center gap-3 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-300 rounded-sm cursor-pointer ${
+                className={`flex items-center gap-3 px-5 py-2.5 text-[11px] font-bold tracking-[0.15em] transition-all duration-300 rounded-sm cursor-pointer ${
                   isLangOpen 
                     ? 'bg-neutral-900 text-white' 
                     : 'bg-neutral-50 text-neutral-600 hover:bg-neutral-100 hover:text-black'
                 }`}
               >
-                <span>{currentLang.code}</span>
+                <span>{currentLang.code.toUpperCase()}</span>
                 <span className={`text-[8px] opacity-60 transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`}>▼</span>
               </button>
               
@@ -104,11 +104,12 @@ export default function Header() {
                           key={lng.code}
                           type="button"
                           onClick={() => changeLanguage(lng.code)}
-                          className={`w-full flex items-center justify-between px-6 py-3 text-[11px] tracking-[0.15em] uppercase transition-colors cursor-pointer ${
+                          className={`w-full flex items-center justify-between px-6 py-3 text-[11px] tracking-[0.15em] transition-colors cursor-pointer ${
                             isSelected 
                               ? 'bg-neutral-50 text-black font-bold' 
                               : 'text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900'
                           }`}
+                          style={lng.code === 'en' ? { textTransform: 'none' } : { textTransform: 'uppercase' }}
                         >
                           <span>{lng.label}</span>
                           {isSelected && (

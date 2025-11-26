@@ -169,7 +169,7 @@ export default function Footer() {
                       {t('footer.email_label')}
                     </span>
                     <a href="mailto:info@rngexport.com" className="text-lg text-white font-light hover:underline decoration-[#cf8300] decoration-1 underline-offset-4">
-                      info@rngexport.com
+                      INFO@RNGEXPORT.COM
                     </a>
                   </div>
                   <div className="group">

@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import 'react-medium-image-zoom/dist/styles.css'
 import logoDark from './assets/logo-dark.png'
 
-// Import images
 import kenevaImg from './images/machine-keneva.png'
 import kenevaImg2 from './images/machine-keneva-2.png'
 
@@ -46,7 +45,6 @@ import balyaImg2 from './images/balya-2.png'
 import balyaImg3 from './images/balya-3.png'
 import balyaImg4 from './images/balya-4.png'
 
-// Helper to get images by ID
 const getMachineImages = (id: string) => {
   switch (id) {
     case 'M-01': return [kenevaImg, kenevaImg2]
@@ -67,20 +65,51 @@ const getMachineImages = (id: string) => {
 export default function MachineDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   
-  // Get machines data from translation
   const machines = t('machines.items', { returnObjects: true }) as any[]
   const labels = t('machines.detail_labels', { returnObjects: true }) as any
   
   const machine = id ? machines.find(m => m.id === id) : null
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const [isZoomed, setIsZoomed] = useState(false)
+  const [isLangOpen, setIsLangOpen] = useState(false)
+
+  const languages = [
+    { code: 'tr', label: 'Türkçe' },
+    { code: 'en', label: 'ENGLISH' },
+    { code: 'ru', label: 'Русский' },
+  ]
+
+  const currentLangCode = (i18n.language || 'tr').slice(0, 2)
+  const currentLang = languages.find((l) => l.code === currentLangCode) || languages[0]
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng)
+    setIsLangOpen(false)
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
     setSelectedImageIndex(0)
   }, [id])
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (isLangOpen && !target.closest('.language-dropdown')) {
+        setIsLangOpen(false)
+      }
+    }
+
+    if (isLangOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isLangOpen])
 
   const handleZoomChange = useCallback((shouldZoom: boolean) => {
     setIsZoomed(shouldZoom)
@@ -100,7 +129,6 @@ export default function MachineDetail() {
 
   return (
     <div className="min-h-screen bg-white text-neutral-900 font-sans">
-      {/* Detail Navbar */}
       <nav className="sticky top-0 z-50 bg-white border-b border-neutral-200">
         <div className="max-w-[1800px] mx-auto px-6 h-20 flex items-center justify-between">
           <Link to="/" className="flex flex-col gap-1">
@@ -112,12 +140,56 @@ export default function MachineDetail() {
               {t('header.slogan')}
             </span>
           </Link>
-          <a href="#contact" className="bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-neutral-800 transition-colors cursor-pointer">
-            {labels?.get_offer || 'TEKLİF İSTE'}
-          </a>
+          
+          <div className="flex items-center gap-4">
+            <div className="relative language-dropdown">
+              <button
+                type="button"
+                onClick={() => setIsLangOpen((prev) => !prev)}
+                className={`flex items-center gap-3 px-5 py-2.5 text-[11px] font-bold tracking-[0.15em] transition-all duration-300 rounded-sm cursor-pointer ${
+                  isLangOpen 
+                    ? 'bg-neutral-900 text-white' 
+                    : 'bg-neutral-50 text-neutral-600 hover:bg-neutral-100 hover:text-black'
+                }`}
+              >
+                <span>{currentLang.code.toUpperCase()}</span>
+                <span className={`text-[8px] opacity-60 transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`}>▼</span>
+              </button>
+              
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white border border-neutral-100 shadow-2xl shadow-neutral-200 rounded-sm overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200">
+                  <div className="py-2">
+                    {languages.map((lng) => {
+                      const isSelected = lng.code === currentLang.code
+                      return (
+                        <button
+                          key={lng.code}
+                          type="button"
+                          onClick={() => changeLanguage(lng.code)}
+                          className={`w-full flex items-center justify-between px-6 py-3 text-[11px] tracking-[0.15em] transition-colors cursor-pointer ${
+                            isSelected 
+                              ? 'bg-neutral-50 text-black font-bold' 
+                              : 'text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900'
+                          }`}
+                          style={lng.code === 'en' ? { textTransform: 'none' } : { textTransform: 'uppercase' }}
+                        >
+                          <span>{lng.label}</span>
+                          {isSelected && (
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#cf8300]"></span>
+                          )}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+            <a href="#contact" className="bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-neutral-800 transition-colors cursor-pointer">
+              {labels?.get_offer || 'TEKLİF İSTE'}
+            </a>
+          </div>
         </div>
       </nav>
-
       <div className="max-w-[1800px] mx-auto px-6 py-8">
           <button 
             onClick={() => navigate('/')} 
@@ -127,13 +199,9 @@ export default function MachineDetail() {
             {labels?.back_home || 'ANA SAYFAYA DÖN'}
           </button>
       </div>
-
       <div className="max-w-[1800px] mx-auto px-6 pb-12 md:pb-20">
         <div className="grid lg:grid-cols-12 gap-16">
-          
-          {/* Left Column: Images & Key Info */}
           <div className="lg:col-span-7 space-y-8">
-            {/* Main Image */}
             <div className="relative flex items-center justify-center bg-neutral-50 border border-neutral-100 rounded-sm group">
                {hasImages ? (
                  <div className="w-full h-[400px] lg:h-[600px] flex items-center justify-center p-12">
@@ -160,8 +228,6 @@ export default function MachineDetail() {
                  </button>
                )}
             </div>
-            
-            {/* Thumbnails */}
             {hasImages && (
                 <div className="grid grid-cols-4 gap-4">
                 {images.map((img, i) => (
@@ -177,7 +243,6 @@ export default function MachineDetail() {
                 ))}
                 </div>
             )}
-
             <div className="pt-12 border-t border-neutral-200">
               <h3 className="text-xl font-bold uppercase tracking-widest mb-6">{labels?.features || 'ÖNE ÇIKAN ÖZELLİKLER'}</h3>
               <ul className="grid md:grid-cols-2 gap-4">
@@ -190,8 +255,6 @@ export default function MachineDetail() {
               </ul>
             </div>
           </div>
-
-          {/* Right Column: Specs & Description */}
           <div className="lg:col-span-5 sticky top-32 self-start">
             <div className="mb-8">
               <span className="text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase border border-neutral-200 px-3 py-1">

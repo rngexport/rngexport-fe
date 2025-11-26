@@ -5,7 +5,7 @@ import kenevaImg from '../../images/machine-keneva.png'
 import kotonexImg from '../../images/machine-kotonex.png'
 import uzunElyafImg from '../../images/machine-uzun-elyaf.png'
 import rodiImg from '../../images/machine-rodi.png'
-import presImg from '../../images/machine-pres-yatay.png' // Using for both presses for now
+import presImg from '../../images/machine-pres-yatay.png'
 import peletImg from '../../images/machine-pelet.png'
 import tohumImg from '../../images/machine-tohum-1.png'
 import aspImg from '../../images/asp-1.png'
@@ -13,7 +13,6 @@ import mdImg from '../../images/md-1.png'
 import shakerImg from '../../images/shaker-1.png'
 import balyaImg from '../../images/balya-1.png'
 
-// Helper to assign images based on ID
 const getMachineImage = (id: string) => {
   switch (id) {
     case 'M-01': return kenevaImg
@@ -34,7 +33,6 @@ const getMachineImage = (id: string) => {
 export default function MachinesSection() {
   const { t } = useTranslation()
   
-  // Fetch machines data dynamically from translation files
   const machines = t('machines.items', { returnObjects: true }) as any[]
 
   return (
