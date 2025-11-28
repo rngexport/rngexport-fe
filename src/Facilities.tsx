@@ -1,5 +1,13 @@
 import { useTranslation } from "react-i18next";
 import Layout from "./components/layout/Layout";
+import img1 from "./images/1.jpeg";
+import img2 from "./images/2.jpeg";
+import img3 from "./images/3.jpeg";
+import img4 from "./images/4.jpeg";
+import img5 from "./images/5.jpeg";
+import img6 from "./images/6.jpeg";
+import img7 from "./images/7.jpeg";
+import img8 from "./images/8.jpeg";
 
 export default function Facilities() {
   const { t } = useTranslation();
@@ -36,16 +44,17 @@ function FacilityHero() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0 mt-20 h-64 md:h-96 w-full">
-          {["#f0f0f0", "#e5e5e5", "#d4d4d4", "#a3a3a3"].map((color, idx) => (
+          {[img1, img2, img3, img4].map((img, idx) => (
             <div
               key={idx}
-              className="h-full w-full flex items-center justify-center relative group overflow-hidden"
-              style={{ backgroundColor: color }}
+              className="h-full w-full relative group overflow-hidden"
             >
-              <span className="z-10 text-xs font-bold tracking-[0.2em] text-neutral-500 group-hover:scale-110 transition-transform duration-500">
-                {t("facilities.hero.placeholder")}
-              </span>
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+              <img
+                src={img}
+                alt={`Facility ${idx + 1}`}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
             </div>
           ))}
         </div>
@@ -62,24 +71,25 @@ function FacilityStories() {
     cta: string;
     tag: string;
   }[];
-  const colors = ["#E5E5E5", "#D4D4D4", "#A3A3A3", "#737373"];
+  const storyImages = [img5, img6, img7, img8];
 
   return (
     <section className="bg-white pb-24">
       <div className="max-w-[1800px] mx-auto">
         {stories.map((story, idx) => (
           <div key={story.title} className="grid lg:grid-cols-2 gap-0">
-            {/* Image Area (Placeholder) */}
+            {/* Image Area */}
             <div
-              className={`h-[400px] lg:h-auto lg:min-h-[600px] flex items-center justify-center relative overflow-hidden group ${
+              className={`h-[400px] lg:h-auto lg:min-h-[600px] relative overflow-hidden group ${
                 idx % 2 === 1 ? "lg:order-2" : "lg:order-1"
               }`}
-              style={{ backgroundColor: colors[idx % colors.length] }}
             >
-              <span className="text-sm font-bold tracking-[0.3em] text-neutral-500/50 group-hover:text-neutral-500 transition-colors">
-                GÖRSEL ALANI ({story.tag})
-              </span>
-              <div className="absolute inset-0 border-[0.5px] border-neutral-900/5"></div>
+              <img
+                src={storyImages[idx] || storyImages[0]}
+                alt={story.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
             </div>
 
             {/* Content Area */}
@@ -159,7 +169,14 @@ function FacilityContact() {
               {t("facilities.contact.phone_label")}
             </p>
             <p className="font-medium text-neutral-900">
-              {t("facilities.contact.phone_number")}
+              {t("facilities.contact.phone_number")
+                .split("\n")
+                .map((line, idx) => (
+                  <span key={idx}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
             </p>
           </div>
           <div className="bg-white p-8 hover:bg-neutral-50 transition-colors col-span-full border-t border-neutral-200">

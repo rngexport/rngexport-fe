@@ -20,7 +20,7 @@ export default function HomeMarquee() {
         {items.map((item, index) => (
           <div key={`${item}-${index}`} className="flex items-center gap-8 px-4">
             <span className="text-sm font-bold uppercase tracking-[0.2em]">{item}</span>
-            <span className="text-neutral-600 text-xs">•</span>
+            <span className="text-white text-xs">•</span>
           </div>
         ))}
       </div>

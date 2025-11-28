@@ -38,12 +38,17 @@ export default function Header() {
         <span className="hidden md:block">{t('header.top_bar')}</span>
         <div className="flex items-center gap-6">
           <div className="flex gap-6">
-            <a href="mailto:info@rngexport.com" className="hover:text-gray-300 transition-colors" style={{ textTransform: 'none' }}>
+            <a href="mailto:info@rngexport.com" className="hover:text-white transition-colors text-white" style={{ textTransform: 'none' }}>
               INFO@RNGEXPORT.COM
             </a>
-            <a href="tel:+902425021772" className="hover:text-gray-300 transition-colors">
-              +90 242 502 17 72
-            </a>
+            <div className="flex flex-col gap-1">
+              <a href="tel:+902425021772" className="hover:text-white transition-colors text-white">
+                +90 242 502 17 72
+              </a>
+              <a href="tel:+905466804772" className="hover:text-white transition-colors text-white">
+                +90 546 680 47 72
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -55,7 +60,7 @@ export default function Header() {
               <img src={logo} alt="RNG Export" className="h-10 w-auto object-contain mb-0.5" />
               <span className="text-2xl font-bold tracking-tighter">EXPORT</span>
             </div>
-            <span className={`tracking-[0.3em] text-neutral-500 uppercase ml-2 ${currentLangCode === 'ru' ? 'text-[8px]' : 'text-[10px]'}`}>
+            <span className={`tracking-[0.3em] text-black uppercase ml-2 ${currentLangCode === 'ru' ? 'text-[8px]' : 'text-[10px]'}`}>
               {t('header.slogan')}
             </span>
           </Link>
@@ -69,7 +74,7 @@ export default function Header() {
                   to={item.href}
                   className={`font-bold uppercase tracking-widest transition-colors relative group ${
                     currentLangCode === 'ru' ? 'text-[10px]' : 'text-xs'
-                  } ${isActive ? 'text-black' : 'text-neutral-600 hover:text-black'}`}
+                  } ${isActive ? 'text-black' : 'text-black hover:text-black'}`}
                 >
                   {item.label}
                   <span className="absolute -bottom-8 left-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -87,7 +92,7 @@ export default function Header() {
                 className={`flex items-center gap-3 px-5 py-2.5 text-[11px] font-bold tracking-[0.15em] transition-all duration-300 rounded-sm cursor-pointer ${
                   isLangOpen 
                     ? 'bg-neutral-900 text-white' 
-                    : 'bg-neutral-50 text-neutral-600 hover:bg-neutral-100 hover:text-black'
+                    : 'bg-neutral-50 text-black hover:bg-neutral-100 hover:text-black'
                 }`}
               >
                 <span>{currentLang.code.toUpperCase()}</span>
@@ -107,7 +112,7 @@ export default function Header() {
                           className={`w-full flex items-center justify-between px-6 py-3 text-[11px] tracking-[0.15em] transition-colors cursor-pointer ${
                             isSelected 
                               ? 'bg-neutral-50 text-black font-bold' 
-                              : 'text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900'
+                              : 'text-black hover:bg-neutral-50 hover:text-black'
                           }`}
                           style={lng.code === 'en' ? { textTransform: 'none' } : { textTransform: 'uppercase' }}
                         >
@@ -126,7 +131,7 @@ export default function Header() {
             {/* CTA */}
             <a
               href="/#contact"
-              className="bg-neutral-900 text-white border border-neutral-900 px-8 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-neutral-900 transition-all duration-300 cursor-pointer"
+              className="bg-neutral-900 text-white border border-neutral-900 px-8 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
             >
               {t('header.quote_btn')}
             </a>

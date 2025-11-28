@@ -27,10 +27,10 @@ export default function ProductionLinesSection() {
     <section id="lines" className="bg-neutral-50 border-t border-neutral-200">
       <div className="max-w-[1800px] mx-auto px-6 py-24">
         <div className="mb-16">
-          <span className="block text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-4">
+          <span className="block text-xs font-bold tracking-[0.2em] text-black uppercase mb-4">
             {t('lines.section_label')}
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-neutral-900 max-w-3xl">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black max-w-3xl">
             {t('lines.section_title')}
           </h2>
         </div>
@@ -39,7 +39,7 @@ export default function ProductionLinesSection() {
           {lines.map((item, idx) => (
             <div 
               key={item.title} 
-              className="relative w-full overflow-hidden group rounded-sm bg-neutral-900 min-h-[600px] flex flex-col lg:flex-row"
+              className="relative w-full overflow-hidden group rounded-sm bg-gradient-to-br from-neutral-900 via-neutral-900 to-[#cf8300]/20 min-h-[600px] flex flex-col lg:flex-row border-2 border-[#cf8300]/30"
             >
               {/* Background Image Layer */}
               <div className="absolute inset-0 z-0">
@@ -57,11 +57,11 @@ export default function ProductionLinesSection() {
                   <div className="text-xs font-bold tracking-[0.2em] text-[#cf8300] mb-4">
                     0{idx + 1}
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-2 leading-tight">{item.title}</h3>
-                  <span className="text-xs font-mono text-neutral-400 block tracking-wider">{item.subtext}</span>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 leading-tight text-white">{item.title}</h3>
+                  <span className="text-sm font-mono text-white block tracking-wider">{item.subtext}</span>
                 </div>
 
-                <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-10 border-l-2 border-neutral-700 pl-6">
+                <p className="text-white text-base md:text-lg leading-relaxed mb-10 border-l-4 border-[#cf8300] pl-6">
                   {item.desc}
                 </p>
 
@@ -100,7 +100,7 @@ export default function ProductionLinesSection() {
                         className="w-full h-auto max-h-[500px] object-contain drop-shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500 cursor-zoom-in invert" 
                       />
                     </Zoom>
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-[10px] font-bold tracking-widest text-neutral-500 uppercase pointer-events-none">
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-[10px] font-bold tracking-widest text-white uppercase pointer-events-none">
                       {t('lines.zoom_hint')}
                     </div>
                  </div>
@@ -122,10 +122,10 @@ type ListBlockProps = {
 function ListBlock({ title, items }: ListBlockProps) {
   return (
     <div>
-      <h4 className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-4 border-b border-white/10 pb-2 inline-block">{title}</h4>
+      <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-4 border-b border-white/20 pb-2 inline-block">{title}</h4>
       <ul className="space-y-2">
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-3 text-xs text-neutral-400 leading-relaxed group hover:text-white transition-colors">
+          <li key={item} className="flex items-start gap-3 text-sm text-white leading-relaxed group hover:text-white transition-colors">
             <div className="w-1.5 h-1.5 bg-[#cf8300] flex-shrink-0 mt-1.5"></div>
             <span>{item}</span>
           </li>

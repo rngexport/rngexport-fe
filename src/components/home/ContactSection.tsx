@@ -9,25 +9,25 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="flex flex-col h-full justify-between">
             <div>
-              <span className="block text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-6">
+              <span className="block text-xs font-bold tracking-[0.2em] text-black uppercase mb-6">
                 {t('contact.section_label')}
               </span>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-10 text-neutral-900">
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-10 text-black">
                 <span
                   dangerouslySetInnerHTML={{ __html: t('contact.title') }}
                 />
               </h2>
-              <p className="text-xl text-neutral-600 max-w-md mb-12 font-light leading-relaxed">
+              <p className="text-lg md:text-xl text-black max-w-md mb-12 font-normal leading-relaxed">
                 {t('contact.desc')}
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-8 mt-auto pt-12 border-top border-neutral-100">
               <div>
-                <h4 className="text-[10px] uppercase tracking-widest text-neutral-400 mb-3">
+                <h4 className="text-[10px] uppercase tracking-widest text-black mb-3">
                   {t('contact.global_center_title')}
                 </h4>
-                <p className="font-medium text-neutral-900">
+                <p className="font-medium text-black text-lg">
                   {t('contact.global_center_address')
                     .split('\n')
                     .map((line, idx) => (
@@ -39,20 +39,26 @@ export default function ContactSection() {
                 </p>
               </div>
               <div>
-                <h4 className="text-[10px] uppercase tracking-widest text-neutral-400 mb-3">
+                <h4 className="text-[10px] uppercase tracking-widest text-black mb-3">
                   {t('contact.direct_contact_title')}
                 </h4>
-                <p className="font-medium text-neutral-900">
-                  {t('contact.direct_contact_phone')}
-                  <br />
+                <p className="font-medium text-black text-lg">
+                  {t('contact.direct_contact_phone')
+                    .split('\n')
+                    .map((line, idx) => (
+                      <span key={idx}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
                   {t('contact.direct_contact_mail')}
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-10 md:p-16 lg:p-20 border border-neutral-100 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-2 bg-[#cf8300]"></div>
+          <div className="bg-gradient-to-br from-white to-[#cf8300]/5 p-10 md:p-16 lg:p-20 border-2 border-[#cf8300]/30 relative overflow-hidden rounded-sm shadow-lg">
+            <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-[#cf8300] to-[#cf8300]/80"></div>
             <div className="space-y-10 relative z-10">
               <div className="grid md:grid-cols-2 gap-10">
                   <Field
@@ -70,7 +76,7 @@ export default function ContactSection() {
                   type="email"
                 />
               <div className="group">
-                <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-[#cf8300] transition-colors">
+                <label className="block text-xs font-bold uppercase tracking-widest text-black mb-2 group-focus-within:text-[#cf8300] transition-colors">
                   {t('contact.form.project_label')}
                 </label>
                 <textarea
@@ -102,7 +108,7 @@ type FieldProps = {
 function Field({ label, placeholder, type = 'text' }: FieldProps) {
   return (
     <div className="group">
-      <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-[#cf8300] transition-colors">
+      <label className="block text-xs font-bold uppercase tracking-widest text-black mb-2 group-focus-within:text-[#cf8300] transition-colors">
         {label}
       </label>
       <input

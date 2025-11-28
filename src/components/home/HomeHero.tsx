@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import facilityImg from '../../images/facility.png'
+import facilityImg from '../../images/hero.jpeg'
 
 export default function HomeHero() {
   const { t } = useTranslation()
@@ -21,22 +21,22 @@ export default function HomeHero() {
               {t('hero.subtitle')}
             </p>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter mb-8">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter mb-8 text-white">
             <Trans i18nKey="hero.title" components={{ br: <br /> }} />
           </h1>
-          <p className="text-lg md:text-2xl text-gray-200 max-w-2xl leading-relaxed mb-12 font-light">
+          <p className="text-lg md:text-xl lg:text-2xl text-white max-w-2xl leading-relaxed mb-12 font-normal">
             {t('hero.desc')}
           </p>
           <div className="flex flex-wrap gap-4">
             <a
               href="#lines"
-              className="bg-white text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors cursor-pointer"
+              className="bg-[#cf8300] text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-[#cf8300]/90 hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg"
             >
               {t('hero.btn_discover')}
             </a>
             <a
               href="#contact"
-              className="border border-white text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors cursor-pointer"
+              className="border-2 border-white text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-[#cf8300] transition-all duration-300 cursor-pointer hover:scale-105"
             >
               {t('hero.btn_start')}
             </a>
