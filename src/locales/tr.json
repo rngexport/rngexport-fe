@@ -165,6 +165,7 @@
     "direct_contact_phone": "+90 242 502 17 72\n+90 546 680 47 72",
     "direct_contact_mail": "INFO@RNGEXPORT.COM",
     "form": {
+      "title": "Bize Yazın",
       "name_label": "AD SOYAD",
       "name_placeholder": "İsim Soyisim",
       "company_label": "FİRMA",
@@ -415,19 +416,21 @@
   "facilities": {
     "hero": {
       "subtitle": "MÜHENDİSLİK & TİCARET",
-      "title": "Endüstriyel Gücün <br /> Merkezi",
-      "desc": "Keten ve kenevir üretim hatlarının tüm adımlarını sahada canlı olarak takip ediyoruz. Fabrika yatırımlarımızda makine parkuru, mühendislik merkezi ve tarla operasyonları tek platformda birleşiyor.",
-      "placeholder": "NO IMG"
-    },
+    "title": "Endüstriyel Gücün <br /> Merkezi",
+    "desc": "Keten ve kenevir üretim hatlarının tüm adımlarını sahada canlı olarak takip ediyoruz. Fabrika yatırımlarımızda makine parkuru, mühendislik merkezi ve tarla operasyonları tek platformda birleşiyor.",
+    "placeholder": "NO IMG",
+    "view_btn": "İNCELE",
+    "mosaic_title": "RNG EXPORT<br/>MÜHENDİSLİK"
+  },
     "stories": [
       {
         "title": "Kenevir Elyaf Soyma",
-        "tag": "Belçika Üretim Kompleksi",
+        "tag": "Entegre Üretim Tesisi",
         "description": "Metrelerce uzunluğa ulaşan keten ve kenevir saplarını çok kademeli kesme, ayırma ve temizleme süreçleriyle işleyerek lif boyunu koruyoruz. Bu hat, tekstil ve biyokompozit üreticileri için sürekli ve homojen besleme sağlıyor.",
         "cta": "İşleme hattını keşfedin"
       },
       {
-        "title": "Cretes Teknoloji Merkezi",
+        "title": "Elyaf Teknolojileri Merkezi",
         "tag": "Test & Eğitim Tesisi",
         "description": "Demo üretim hattımızda müşterilerimizin ham maddeleriyle test çalışmaları yapıyor, farklı iklim ve nem senaryolarını simüle ediyoruz. Ar-Ge mühendislerimiz sahadaki tüm veri noktalarını bu tesiste topluyor.",
         "cta": "Demo talep edin"
@@ -439,7 +442,7 @@
         "cta": "Hasat çözümlerini incele"
       },
       {
-        "title": "Cretes Mercek Altında",
+        "title": "Üretim Süreçleri Mercek Altında",
         "tag": "Mühendislik Merkezi",
         "description": "Operasyon merkezimizde üretim mühendisleri, otomasyon ekibi ve kalite laboratuvarı tek bir çatı altında bulunuyor. Her proje için müşteri sahasından canlı görüntüler alıp gerçek zamanlı iyileştirme önerileri sunuyoruz.",
         "cta": "Video turu izleyin"

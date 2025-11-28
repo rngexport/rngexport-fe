@@ -7,10 +7,12 @@ export default function Header() {
   const location = useLocation()
   const { t, i18n } = useTranslation()
   const [isLangOpen, setIsLangOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng)
     setIsLangOpen(false)
+    setIsMenuOpen(false)
   }
 
   const navItems = [
@@ -83,7 +85,7 @@ export default function Header() {
             })}
           </div>
           
-          <div className="hidden md:flex items-center gap-4 shrink-0">
+          <div className="hidden lg:flex items-center gap-4 shrink-0">
             {/* Language Dropdown */}
             <div className="relative">
               <button
@@ -136,6 +138,63 @@ export default function Header() {
               {t('header.quote_btn')}
             </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden flex flex-col gap-1.5 p-2 z-50"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
+
+          {/* Mobile Menu Overlay */}
+          {isMenuOpen && (
+            <div className="fixed inset-0 bg-white z-40 lg:hidden pt-24 pb-10 px-6 flex flex-col overflow-y-auto">
+              <div className="flex flex-col gap-8 mb-10">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-2xl font-bold uppercase tracking-tight text-black border-b border-neutral-100 pb-4"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="mt-auto flex flex-col gap-8">
+                <div className="flex flex-col gap-4">
+                   <span className="text-xs font-bold tracking-widest text-neutral-400 uppercase">DİL SEÇİMİ</span>
+                   <div className="flex gap-4">
+                     {languages.map((lng) => (
+                       <button
+                         key={lng.code}
+                         onClick={() => changeLanguage(lng.code)}
+                         className={`px-4 py-2 border text-sm font-bold uppercase tracking-widest ${
+                           lng.code === currentLang.code 
+                             ? 'border-black bg-black text-white' 
+                             : 'border-neutral-200 text-neutral-500'
+                         }`}
+                       >
+                         {lng.code}
+                       </button>
+                     ))}
+                   </div>
+                </div>
+
+                <a
+                  href="/#contact"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="w-full bg-[#cf8300] text-white text-center py-4 text-sm font-bold uppercase tracking-[0.2em]"
+                >
+                  {t('header.quote_btn')}
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
     </header>

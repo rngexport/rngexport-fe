@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import img1 from '../../images/1.jpeg'
 
 export default function CorporateSection() {
   const { t } = useTranslation()
@@ -6,72 +7,93 @@ export default function CorporateSection() {
   const stats = t('corporate.stats', { returnObjects: true }) as { val: string; label: string }[]
 
   return (
-    <section id="corporate" className="py-24 md:py-32 bg-white">
+    <section id="corporate" className="py-24 md:py-32 bg-white overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6">
-        <div className="max-w-3xl mb-16">
-          <span className="block text-xs font-bold tracking-[0.2em] text-black uppercase mb-6">
-            {t('corporate.section_label')}
-          </span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-black">
-            {t('corporate.headline').split('<br />')[0]}
-            <br />
-            {t('corporate.headline').split('<br />')[1] ?? ''}
-          </h2>
-        </div>
-
-        <div className="grid lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-5">
-            <p className="text-lg md:text-xl text-black leading-relaxed font-normal mb-8">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row gap-16 lg:items-end mb-24">
+          <div className="lg:w-2/3">
+            <span className="inline-block py-1 px-3 border border-black/10 bg-neutral-100 text-[10px] font-bold tracking-[0.2em] text-black uppercase mb-8">
+              {t('corporate.section_label')}
+            </span>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tighter text-black">
+              <span dangerouslySetInnerHTML={{ __html: t('corporate.headline') }} />
+            </h2>
+          </div>
+          <div className="lg:w-1/3 lg:pb-2">
+            <p className="text-xl text-neutral-600 leading-relaxed font-light border-l-4 border-[#cf8300] pl-6">
               {t('corporate.p1')}
             </p>
-            <p className="text-black text-base md:text-lg leading-relaxed mb-6">
-              {t('corporate.p2')}
-            </p>
-            <p className="text-black text-base md:text-lg leading-relaxed mb-8">
-              {t('corporate.p3')}
-            </p>
-            <div className="border-l-2 border-black pl-6 py-2 mb-8 bg-neutral-50">
-              <h4 className="font-bold uppercase tracking-widest text-xs mb-2 text-black">
-                {t('corporate.mission_title')}
-              </h4>
-              <p className="text-sm text-black">
-                {t('corporate.mission_body')}
-              </p>
-            </div>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest border-b border-black pb-1 hover:text-[#cf8300] hover:border-[#cf8300] transition-all cursor-pointer"
-            >
-              {t('corporate.cta_detailed_info')} <span className="text-lg">→</span>
-            </a>
+          </div>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
+          
+          {/* Left Column: Image & Stats */}
+          <div className="lg:col-span-5 flex flex-col gap-8">
+             <div className="relative h-[500px] w-full overflow-hidden group">
+                <img 
+                  src={img1} 
+                  alt="RNG Export Facility" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                
+                {/* Overlay Stats */}
+                <div className="absolute bottom-0 left-0 w-full bg-black/90 text-white p-8">
+                   <div className="grid grid-cols-3 divide-x divide-white/20">
+                      {stats.map((stat) => (
+                        <div key={stat.label} className="px-4 first:pl-0 text-center">
+                          <div className="text-2xl md:text-3xl font-bold text-[#cf8300] mb-1">{stat.val}</div>
+                          <div className="text-[8px] uppercase tracking-widest text-white/60">{stat.label}</div>
+                        </div>
+                      ))}
+                   </div>
+                </div>
+             </div>
           </div>
 
-          <div className="lg:col-span-7 flex flex-col gap-8">
-            <div className="bg-gradient-to-br from-[#cf8300]/10 to-[#cf8300]/5 p-10 border-2 border-[#cf8300]/20 rounded-sm">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-black">{t('corporate.vision_title')}</h3>
-              <p className="text-base md:text-lg text-black mb-6">
-                {t('corporate.vision_body')}
-              </p>
-              <ul className="grid md:grid-cols-2 gap-4">
-                {visionList.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-black text-base font-medium group">
-                    <div className="w-1.5 h-1.5 bg-black flex-shrink-0"></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="grid grid-cols-3 divide-x divide-neutral-200 border-2 border-[#cf8300]/20 bg-white rounded-sm overflow-hidden">
-              {stats.map((stat) => (
-                <div key={stat.label} className="p-8 text-center hover:bg-[#cf8300]/5 transition-colors duration-300 group cursor-default">
-                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tighter text-[#cf8300] group-hover:text-[#cf8300] transition-colors">
-                    {stat.val}
-                  </div>
-                  <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-black group-hover:text-[#cf8300] transition-colors">
-                    {stat.label}
-                  </div>
+          {/* Right Column: Text Content */}
+          <div className="lg:col-span-7 flex flex-col justify-between">
+            <div className="space-y-8">
+              <div className="prose prose-lg max-w-none text-neutral-800">
+                <p className="text-lg leading-relaxed">{t('corporate.p2')}</p>
+                <p className="text-lg leading-relaxed">{t('corporate.p3')}</p>
+              </div>
+              
+              <div className="bg-neutral-50 p-8 md:p-10 border border-neutral-100">
+                 <h4 className="font-bold uppercase tracking-widest text-xs mb-6 text-black flex items-center gap-3">
+                   <span className="w-8 h-[2px] bg-[#cf8300]"></span>
+                   {t('corporate.mission_title')}
+                 </h4>
+                 <p className="text-xl font-light italic text-neutral-700 mb-0">
+                   "{t('corporate.mission_body')}"
+                 </p>
+              </div>
+
+              <div>
+                <h4 className="font-bold uppercase tracking-widest text-xs mb-6 text-black flex items-center gap-3">
+                   <span className="w-8 h-[2px] bg-[#cf8300]"></span>
+                   {t('corporate.vision_title')}
+                 </h4>
+                <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                  {visionList.map((item) => (
+                    <div key={item} className="flex items-start gap-3 group">
+                      <span className="w-2 h-2 bg-[#cf8300] mt-1.5 shrink-0 group-hover:scale-110 transition-transform"></span>
+                      <span className="text-neutral-700 font-medium">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+            </div>
+            
+            <div className="mt-12">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-4 bg-black text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-[#cf8300] transition-colors duration-300"
+              >
+                {t('corporate.cta_detailed_info')}
+              </a>
             </div>
           </div>
         </div>
@@ -79,4 +101,3 @@ export default function CorporateSection() {
     </section>
   )
 }
-

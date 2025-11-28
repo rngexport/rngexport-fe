@@ -165,6 +165,7 @@
     "direct_contact_phone": "+90 242 502 17 72\n+90 546 680 47 72",
     "direct_contact_mail": "INFO@RNGEXPORT.COM",
     "form": {
+      "title": "Write to Us",
       "name_label": "FULL NAME",
       "name_placeholder": "Your name and surname",
       "company_label": "COMPANY",
@@ -415,19 +416,21 @@
   "facilities": {
     "hero": {
       "subtitle": "ENGINEERING & TRADE",
-      "title": "The Center of <br /> Industrial Strength",
-      "desc": "We monitor every step of flax and hemp production lines live in the field. In our plant investments, machinery park, engineering center and field operations come together on a single platform.",
-      "placeholder": "NO IMG"
-    },
+    "title": "The Center of <br /> Industrial Strength",
+    "desc": "We monitor every step of flax and hemp production lines live in the field. In our plant investments, machinery park, engineering center and field operations come together on a single platform.",
+    "placeholder": "NO IMG",
+    "view_btn": "VIEW",
+    "mosaic_title": "RNG EXPORT<br/>ENGINEERING"
+  },
     "stories": [
       {
         "title": "Hemp Fiber Decortication",
-        "tag": "Belgium Production Complex",
+        "tag": "Integrated Production Complex",
         "description": "We process long flax and hemp stalks through multi-stage cutting, separating and cleaning steps while preserving fiber length. This line provides continuous and homogeneous feeding for textile and biocomposite producers.",
         "cta": "Discover the processing line"
       },
       {
-        "title": "Cretes Tech Center",
+        "title": "Fiber Tech Center",
         "tag": "Test & Training Facility",
         "description": "In our demo line we run test trials with our customers’ raw materials and simulate different climate and humidity conditions. Our R&D engineers collect all field data points in this center.",
         "cta": "Request a demo"
@@ -439,7 +442,7 @@
         "cta": "Explore harvest solutions"
       },
       {
-        "title": "Cretes in the spotlight",
+        "title": "Production in the spotlight",
         "tag": "Engineering Hub",
         "description": "In our operations center, production engineers, automation team and quality lab work under one roof. For every project we receive live visuals from the customer site and provide real-time optimization feedback.",
         "cta": "Watch the video tour"

@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
 import MachineDetail from './MachineDetail'
 import Facilities from './Facilities'
+import Lines from './Lines'
+import Contact from './Contact'
+import Machines from './Machines'
 import './index.css'
 import './i18n' // i18n konfigürasyonunu başlat
 
@@ -18,8 +21,11 @@ createRoot(rootElement).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/machines" element={<Machines />} />
         <Route path="/machines/:id" element={<MachineDetail />} />
-            <Route path="/facilities" element={<Facilities />} />
+        <Route path="/facilities" element={<Facilities />} />
+        <Route path="/lines" element={<Lines />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

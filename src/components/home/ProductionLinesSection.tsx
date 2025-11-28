@@ -126,7 +126,7 @@ function ListBlock({ title, items }: ListBlockProps) {
       <ul className="space-y-2">
         {items.map((item) => (
           <li key={item} className="flex items-start gap-3 text-sm text-white leading-relaxed group hover:text-white transition-colors">
-            <div className="w-1.5 h-1.5 bg-[#cf8300] flex-shrink-0 mt-1.5"></div>
+            <div className="w-2 h-2 bg-[#cf8300] flex-shrink-0 mt-1.5 rounded-none group-hover:scale-110 transition-transform"></div>
             <span>{item}</span>
           </li>
         ))}

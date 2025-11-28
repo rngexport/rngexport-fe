@@ -36,22 +36,37 @@ export default function ProcessSection() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto border-t border-neutral-800 pt-16">
-          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center uppercase tracking-widest text-white">
-            {t('process.outputs_title')}
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {outputs.map((product) => (
-              <div key={product.title} className="bg-gradient-to-br from-neutral-800 to-neutral-900 border-2 border-[#cf8300]/30 p-8 hover:bg-gradient-to-br hover:from-[#cf8300]/20 hover:to-neutral-800 hover:border-[#cf8300] hover:shadow-xl transition-all duration-300 group cursor-default rounded-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 bg-[#cf8300] group-hover:bg-[#cf8300] group-hover:scale-125 transition-all duration-300 rounded-full"></div>
-                  <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#cf8300] transition-colors duration-300">
+        <div className="max-w-6xl mx-auto border-t border-neutral-800 pt-16">
+          <div className="flex items-center justify-center gap-4 mb-12">
+             <span className="w-12 h-[2px] bg-[#cf8300]"></span>
+             <h3 className="text-2xl md:text-3xl font-bold text-center uppercase tracking-widest text-white">
+               {t('process.outputs_title')}
+             </h3>
+             <span className="w-12 h-[2px] bg-[#cf8300]"></span>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {outputs.map((product, idx) => (
+              <div key={product.title} className="relative group">
+                {/* Background Effect */}
+                <div className="absolute inset-0 bg-[#cf8300] transform translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                
+                <div className="h-full bg-neutral-800 border border-neutral-700 p-10 hover:border-[#cf8300] transition-colors duration-300 flex flex-col">
+                  <div className="flex items-start justify-between mb-6">
+                    <span className="text-[#cf8300] text-5xl font-bold opacity-20 group-hover:opacity-100 transition-opacity duration-300">
+                      0{idx + 1}
+                    </span>
+                    <div className="w-3 h-3 bg-[#cf8300] group-hover:animate-pulse"></div>
+                  </div>
+                  
+                  <h4 className="text-lg font-bold uppercase tracking-widest text-white mb-4 group-hover:text-[#cf8300] transition-colors">
                     {product.title}
                   </h4>
+                  
+                  <p className="text-neutral-400 leading-relaxed group-hover:text-white transition-colors text-sm">
+                    {product.desc}
+                  </p>
                 </div>
-                <p className="text-base text-white leading-relaxed group-hover:text-white transition-colors duration-300">
-                  {product.desc}
-                </p>
               </div>
             ))}
           </div>

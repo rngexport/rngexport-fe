@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import logoLight from '../../assets/favicon.png'
-import facilityImg from '../../images/1.jpeg'
+import facilityImg from '../../images/10.jpeg'
 import { NAV_ITEMS } from '../../constants/navigation'
 
 export default function Footer() {
