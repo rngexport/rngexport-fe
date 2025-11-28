@@ -17,7 +17,7 @@ export default function HomeHero() {
       <div className="relative z-10 max-w-[1800px] mx-auto px-6 w-full">
         <div className="max-w-4xl text-white">
           <div className="inline-block border-l-4 border-[#cf8300] pl-4 mb-6 md:mb-8">
-            <p className="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-[#cf8300]">
+            <p className="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-white">
               {t('hero.subtitle')}
             </p>
           </div>

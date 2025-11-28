@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import img1 from "./images/1.jpeg";
+import img1 from "./images/14.jpeg";
 import img2 from "./images/2.jpeg";
 import img3 from "./images/3.jpeg";
 import img4 from "./images/4.jpeg";

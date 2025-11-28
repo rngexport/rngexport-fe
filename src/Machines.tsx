@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Layout from './components/layout/Layout'
-import img1 from './images/1.jpeg'
-
+import img1 from './images/16.jpeg'
 import kenevaImg from './images/machine-keneva.png'
 import kotonexImg from './images/machine-kotonex.png'
 import uzunElyafImg from './images/machine-uzun-elyaf.png'
@@ -34,6 +33,7 @@ const getMachineImage = (id: string) => {
 
 export default function Machines() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const machines = t('machines.items', { returnObjects: true }) as any[]
 
   return (
@@ -58,6 +58,25 @@ export default function Machines() {
           </h1>
         </div>
       </section>
+
+      {/* Breadcrumb & Navigation */}
+      <div className="bg-neutral-50 border-b border-neutral-200">
+        <div className="max-w-[1800px] mx-auto px-6 py-6 flex items-center justify-between">
+           <div className="flex items-center gap-3 text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-400">
+             <Link to="/" className="hover:text-black transition-colors">HOME</Link>
+             <span>/</span>
+             <span className="text-black">MACHINES</span>
+           </div>
+           
+           <button 
+            onClick={() => navigate('/')} 
+            className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-500 hover:text-black transition-colors group cursor-pointer"
+          >
+            <span className="text-base group-hover:-translate-x-1 transition-transform">←</span>
+            GERİ DÖN
+          </button>
+        </div>
+      </div>
 
       {/* Grid Content */}
       <section className="py-16 md:py-24 bg-white">
@@ -120,4 +139,3 @@ export default function Machines() {
     </Layout>
   )
 }
-
