@@ -30,7 +30,7 @@ export default function Footer() {
         <img
           src={facilityImg}
           alt=""
-          className="w-full h-full object-cover object-right-bottom opacity-[0.03] grayscale"
+          className="w-full h-full object-cover object-right-bottom opacity-[0.03]"
           style={{
             maskImage: 'radial-gradient(circle at 100% 100%, black 0%, transparent 70%)',
             WebkitMaskImage: 'radial-gradient(circle at 100% 100%, black 0%, transparent 70%)'

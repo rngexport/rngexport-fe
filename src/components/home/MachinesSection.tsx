@@ -148,7 +148,7 @@ export default function MachinesSection() {
 
                   <div className="h-64 bg-neutral-50 relative overflow-hidden flex items-center justify-center p-6">
                     {machineImg ? (
-                       <img src={machineImg} alt={machine.name} className="h-48 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500 mix-blend-multiply" />
+                       <img src={machineImg} alt={machine.name} className="h-48 w-auto object-contain transition-all duration-500 mix-blend-multiply" />
                     ) : (
                       <div className="text-neutral-300 text-[10px] tracking-[0.2em] uppercase">{t('machinesSection.no_image') || 'NO IMAGE'}</div>
                     )}

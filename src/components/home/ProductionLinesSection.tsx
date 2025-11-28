@@ -97,7 +97,7 @@ export default function ProductionLinesSection() {
                       <img 
                         src={lineVisuals[idx]?.image}
                         alt={item.title} 
-                        className="w-full h-auto max-h-[500px] object-contain drop-shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500 cursor-zoom-in invert" 
+                        className="w-full h-auto max-h-[500px] object-contain drop-shadow-2xl transition-all duration-500 cursor-zoom-in invert" 
                       />
                     </Zoom>
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-[10px] font-bold tracking-widest text-white uppercase pointer-events-none">

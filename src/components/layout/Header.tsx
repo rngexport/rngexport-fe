@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import logo from '../../assets/logo-dark.png'
@@ -8,6 +8,18 @@ export default function Header() {
   const { t, i18n } = useTranslation()
   const [isLangOpen, setIsLangOpen] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng)
@@ -36,8 +48,8 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="bg-neutral-900 text-white text-[10px] tracking-[0.2em] uppercase py-2 px-6 flex justify-between items-center">
-        <span className="hidden md:block">{t('header.top_bar')}</span>
+      <div className="hidden md:flex bg-neutral-900 text-white text-[10px] tracking-[0.2em] uppercase py-2 px-6 justify-between items-center">
+        <span>{t('header.top_bar')}</span>
         <div className="flex items-center gap-6">
           <div className="flex gap-6">
             <a href="mailto:info@rngexport.com" className="hover:text-white transition-colors text-white" style={{ textTransform: 'none' }}>
@@ -151,8 +163,8 @@ export default function Header() {
 
           {/* Mobile Menu Overlay */}
           {isMenuOpen && (
-            <div className="fixed inset-0 bg-white z-40 lg:hidden pt-24 pb-10 px-6 flex flex-col overflow-y-auto">
-              <div className="flex flex-col gap-8 mb-10">
+            <div className="fixed inset-0 bg-white z-40 lg:hidden pt-[88px] pb-10 px-6 flex flex-col overflow-y-auto">
+              <div className="flex flex-col gap-4 mb-4 mt-0">
                 {navItems.map((item) => (
                   <Link
                     key={item.label}
@@ -166,6 +178,14 @@ export default function Header() {
               </div>
 
               <div className="mt-auto flex flex-col gap-8">
+                <div className="flex flex-col gap-4 text-sm">
+                  <a href="mailto:info@rngexport.com" className="font-bold text-black">INFO@RNGEXPORT.COM</a>
+                  <div className="flex flex-col gap-1 text-neutral-600">
+                    <a href="tel:+902425021772">+90 242 502 17 72</a>
+                    <a href="tel:+905466804772">+90 546 680 47 72</a>
+                  </div>
+                </div>
+
                 <div className="flex flex-col gap-4">
                    <span className="text-xs font-bold tracking-widest text-neutral-400 uppercase">DİL SEÇİMİ</span>
                    <div className="flex gap-4">

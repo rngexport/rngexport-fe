@@ -35,7 +35,7 @@ export default function CorporateSection() {
                 <img 
                   src={img1} 
                   alt="RNG Export Facility" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                 
