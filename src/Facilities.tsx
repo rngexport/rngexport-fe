@@ -44,7 +44,7 @@ function FacilityHero() {
       </div>
 
       <div className="relative z-10 max-w-[1800px] mx-auto px-6 text-center">
-        <span className="inline-block py-1 px-4 border-2 border-white/30 text-xs font-bold tracking-[0.3em] uppercase text-white mb-8 backdrop-blur-sm bg-black/20">
+        <span className="block text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-8">
           {t("facilities.hero.subtitle")}
         </span>
         <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter text-white mb-10 max-w-5xl mx-auto leading-[0.9]">
@@ -181,7 +181,7 @@ function FacilityContact() {
         <div className="bg-black/80 border-2 border-white/10 backdrop-blur-md p-8 md:p-12 lg:p-24">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <span className="block text-[#cf8300] text-xs font-bold tracking-[0.3em] uppercase mb-6">
+              <span className="block text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase mb-6">
                 {t("facilities.contact.label")}
               </span>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[0.9] mb-8 md:mb-10 text-white">

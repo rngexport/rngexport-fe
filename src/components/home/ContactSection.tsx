@@ -1,105 +1,101 @@
 import { useTranslation } from 'react-i18next'
+import contactImg from '../../images/16.jpeg'
 
 export default function ContactSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 bg-neutral-900 text-white overflow-hidden">
-      <div className="max-w-[1800px] mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
-
-          <div className="lg:col-span-5 flex flex-col justify-between">
-            <div>
-              <span className="inline-block py-1 px-3 border border-white/20 bg-white/5 text-[10px] font-bold tracking-[0.2em] text-[#cf8300] uppercase mb-8">
-                {t('contact.section_label')}
-              </span>
-              <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9] mb-8 text-white">
-                <span dangerouslySetInnerHTML={{ __html: t('contact.title') }} />
-              </h2>
-              <p className="text-lg text-white max-w-md mb-16 font-light leading-relaxed">
-                {t('contact.desc')}
-              </p>
-            </div>
-
-            <div className="space-y-12">
-              <div className="group">
-                 <h4 className="text-[10px] uppercase tracking-widest text-[#cf8300] mb-4 flex items-center gap-2">
-                   <span className="w-2 h-2 bg-[#cf8300] rounded-none"></span>
-                   {t('contact.global_center_title')}
+    <section id="contact" className="relative bg-white text-black border-t border-neutral-200">
+      <div className="grid lg:grid-cols-2 min-h-[600px]">
+        
+        {/* Left: Image Side */}
+        <div className="relative h-64 lg:h-auto overflow-hidden order-2 lg:order-1 group">
+          <div className="absolute inset-0 bg-[#cf8300]/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+          <img 
+            src={contactImg} 
+            alt="Contact" 
+            className="w-full h-full object-cover grayscale-0 transition-transform duration-700 group-hover:scale-105"
+          />
+          
+          {/* Overlay Info Box on Image */}
+          <div className="absolute bottom-0 left-0 w-full bg-black/80 text-white p-8 md:p-12 backdrop-blur-sm z-20 border-t-4 border-[#cf8300]">
+             <h3 className="text-xl font-bold uppercase tracking-widest mb-6 text-[#cf8300]">
+                {t('contact.global_center_title')}
+             </h3>
+             <p className="text-lg font-light leading-relaxed mb-8 max-w-md">
+                {t('contact.global_center_address')}
+             </p>
+             
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+               <div>
+                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-2">
+                   {t('contact.direct_contact_title')}
                  </h4>
-                 <p className="text-2xl font-light text-white leading-normal group-hover:text-white/80 transition-colors">
-                    {t('contact.global_center_address')}
-                 </p>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-[10px] uppercase tracking-widest text-[#cf8300] mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-[#cf8300] rounded-none"></span>
-                    {t('contact.direct_contact_title')}
-                  </h4>
-                  <div className="flex flex-col gap-2">
-                    {t('contact.direct_contact_phone').split('\n').map((phone, i) => (
-                      <a key={i} href={`tel:${phone.replace(/\s/g, '')}`} className="text-lg hover:text-[#cf8300] transition-colors">
-                        {phone}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                   <h4 className="text-[10px] uppercase tracking-widest text-[#cf8300] mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-[#cf8300] rounded-none"></span>
-                    E-MAIL
-                  </h4>
-                  <a href={`mailto:${t('contact.direct_contact_mail')}`} className="text-lg hover:text-[#cf8300] transition-colors break-words">
-                    {t('contact.direct_contact_mail')}
-                  </a>
-                </div>
-              </div>
-            </div>
+                 <div className="flex flex-col gap-1">
+                   {t('contact.direct_contact_phone').split('\n').map((phone, i) => (
+                     <a key={i} href={`tel:${phone.replace(/\s/g, '')}`} className="text-white hover:text-[#cf8300] transition-colors font-medium">
+                       {phone}
+                     </a>
+                   ))}
+                 </div>
+               </div>
+               <div>
+                  <h4 className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-2">
+                   E-MAIL
+                 </h4>
+                 <a href={`mailto:${t('contact.direct_contact_mail')}`} className="text-white hover:text-[#cf8300] transition-colors font-medium">
+                   {t('contact.direct_contact_mail')}
+                 </a>
+               </div>
+             </div>
           </div>
+        </div>
 
-          <div className="lg:col-span-7">
-            <div className="bg-white p-8 md:p-12 lg:p-16 shadow-2xl h-full flex flex-col justify-center relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#cf8300]/10 rounded-bl-full -mr-16 -mt-16"></div>
-              
-              <h3 className="text-3xl font-bold text-black mb-8 tracking-tight">{t('contact.form.title')}</h3>
-              
-              <form className="space-y-8 relative z-10">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <Field 
-                    label={t('contact.form.name_label')} 
-                    placeholder={t('contact.form.name_placeholder')} 
-                  />
-                  <Field 
-                    label={t('contact.form.company_label')} 
-                    placeholder={t('contact.form.company_placeholder')} 
-                  />
-                </div>
-                
+        {/* Right: Form Side */}
+        <div className="p-8 md:p-16 lg:p-24 flex flex-col justify-center order-1 lg:order-2 bg-white relative">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-neutral-50 rounded-bl-full -z-0"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#cf8300]/5 rounded-tr-full -z-0"></div>
+
+          <div className="relative z-10">
+            <span className="block text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase mb-6">
+              {t('contact.section_label')}
+            </span>
+            <h2 className="text-4xl md:text-5xl font-light text-black mb-6 leading-tight">
+              <span dangerouslySetInnerHTML={{ __html: t('contact.title') }} />
+            </h2>
+            <p className="text-black text-base leading-relaxed mb-12 font-medium max-w-md">
+              {t('contact.desc')}
+            </p>
+
+            <form className="space-y-6">
+              <div className="grid grid-cols-2 gap-6">
                 <Field 
-                  label={t('contact.form.email_label')} 
-                  placeholder={t('contact.form.email_placeholder')} 
-                  type="email"
+                  placeholder={t('contact.form.name_placeholder')} 
                 />
+                <Field 
+                  placeholder={t('contact.form.company_placeholder')} 
+                />
+              </div>
+              
+              <Field 
+                placeholder={t('contact.form.email_placeholder')} 
+                type="email"
+              />
 
-                <div className="group">
-                  <label className="block text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-[#cf8300] transition-colors">
-                    {t('contact.form.project_label')}
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full bg-neutral-50 border border-neutral-200 p-4 text-black focus:outline-none focus:border-[#cf8300] focus:bg-white transition-all resize-none"
-                    placeholder={t('contact.form.project_placeholder')}
-                  ></textarea>
-                </div>
+              <div className="group">
+                <textarea
+                  rows={4}
+                  className="w-full bg-neutral-50 border border-neutral-200 p-4 text-sm text-black placeholder-neutral-500 focus:outline-none focus:border-[#cf8300] focus:bg-white transition-all resize-none font-medium"
+                  placeholder={t('contact.form.project_placeholder')}
+                ></textarea>
+              </div>
 
-                <button className="w-full bg-black text-white py-5 text-sm font-bold uppercase tracking-[0.2em] hover:bg-[#cf8300] transition-colors duration-300 flex items-center justify-center gap-4 cursor-pointer">
-                  <span>{t('contact.form.submit')}</span>
-                  <span>→</span>
-                </button>
-              </form>
-            </div>
+              <button className="w-full bg-black text-white py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#cf8300] transition-colors duration-300 cursor-pointer flex items-center justify-center gap-3 group">
+                <span>{t('contact.form.submit')}</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </button>
+            </form>
           </div>
 
         </div>
@@ -109,20 +105,16 @@ export default function ContactSection() {
 }
 
 type FieldProps = {
-  label: string
   placeholder: string
   type?: string
 }
 
-function Field({ label, placeholder, type = 'text' }: FieldProps) {
+function Field({ placeholder, type = 'text' }: FieldProps) {
   return (
-    <div className="group">
-      <label className="block text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-[#cf8300] transition-colors">
-        {label}
-      </label>
+    <div>
       <input
         type={type}
-        className="w-full bg-neutral-50 border border-neutral-200 p-4 text-black focus:outline-none focus:border-[#cf8300] focus:bg-white transition-all"
+        className="w-full bg-neutral-50 border border-neutral-200 p-4 text-sm text-black placeholder-neutral-500 focus:outline-none focus:border-[#cf8300] focus:bg-white transition-all font-medium"
         placeholder={placeholder}
       />
     </div>

@@ -27,7 +27,7 @@ export default function ProductionLinesSection() {
     <section id="lines" className="bg-neutral-50 border-t border-neutral-200">
       <div className="max-w-[1800px] mx-auto px-6 py-24">
         <div className="mb-16">
-          <span className="block text-xs font-bold tracking-[0.2em] text-black uppercase mb-4">
+          <span className="block text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase mb-4">
             {t('lines.section_label')}
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black max-w-3xl">

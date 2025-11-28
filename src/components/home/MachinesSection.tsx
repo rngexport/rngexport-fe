@@ -109,7 +109,7 @@ export default function MachinesSection() {
       <div className="max-w-[1800px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12">
           <div className="max-w-xl">
-            <span className="block text-xs font-bold tracking-[0.2em] text-black uppercase mb-4">
+            <span className="block text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase mb-4">
               {t('machinesSection.section_label')}
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black">

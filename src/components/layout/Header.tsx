@@ -52,7 +52,7 @@ export default function Header() {
         <span>{t('header.top_bar')}</span>
         <div className="flex items-center gap-6">
           <div className="flex gap-6">
-            <a href="mailto:info@rngexport.com" className="hover:text-white transition-colors text-white" style={{ textTransform: 'none' }}>
+            <a href="mailto:INFO@RNGEXPORT.COM" className="hover:text-white transition-colors text-white" style={{ textTransform: 'none' }}>
               INFO@RNGEXPORT.COM
             </a>
             <div className="flex flex-col gap-1">
@@ -69,12 +69,14 @@ export default function Header() {
 
       <nav className="bg-white border-b border-neutral-200">
         <div className="max-w-[1800px] mx-auto px-6 h-24 flex items-center justify-between">
-          <Link to="/" className="flex flex-col gap-1 shrink-0">
+          
+          {/* Logo Section - Matches Footer Style */}
+          <Link to="/" className="flex flex-col gap-1 shrink-0 group">
             <div className="flex items-center gap-1.5">
               <img src={logo} alt="RNG Export" className="h-10 w-auto object-contain mb-0.5" />
-              <span className="text-2xl font-bold tracking-tighter">EXPORT</span>
+              <span className="text-2xl font-bold tracking-tighter text-black">EXPORT</span>
             </div>
-            <span className={`tracking-[0.3em] text-black uppercase ml-2 ${currentLangCode === 'ru' ? 'text-[8px]' : 'text-[10px]'}`}>
+            <span className="tracking-[0.3em] text-black uppercase ml-2 text-[10px]">
               {t('header.slogan')}
             </span>
           </Link>
@@ -179,7 +181,7 @@ export default function Header() {
 
               <div className="mt-auto flex flex-col gap-8">
                 <div className="flex flex-col gap-4 text-sm">
-                  <a href="mailto:info@rngexport.com" className="font-bold text-black">INFO@RNGEXPORT.COM</a>
+                  <a href="mailto:INFO@RNGEXPORT.COM" className="font-bold text-black">INFO@RNGEXPORT.COM</a>
                   <div className="flex flex-col gap-1 text-neutral-600">
                     <a href="tel:+902425021772">+90 242 502 17 72</a>
                     <a href="tel:+905466804772">+90 546 680 47 72</a>
@@ -220,4 +222,3 @@ export default function Header() {
     </header>
   )
 }
-

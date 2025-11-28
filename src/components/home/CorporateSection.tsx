@@ -12,7 +12,7 @@ export default function CorporateSection() {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row gap-16 lg:items-end mb-24">
           <div className="lg:w-2/3">
-            <span className="inline-block py-1 px-3 border border-black/10 bg-neutral-100 text-[10px] font-bold tracking-[0.2em] text-black uppercase mb-8">
+            <span className="block text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase mb-6">
               {t('corporate.section_label')}
             </span>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tighter text-black">
