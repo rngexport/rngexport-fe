@@ -419,8 +419,8 @@
     "title": "Центр Промышленной <br /> Силы",
     "desc": "Мы вживую следим за каждым шагом линий производства льна и конопли на местах. В наших заводских инвестициях машинный парк, инженерный центр и полевые операции объединяются на одной платформе.",
     "placeholder": "НЕТ ФОТО",
-    "view_btn": "ОБЗОР",
-    "mosaic_title": "RNG EXPORT<br/>ИНЖИНИРИНГ"
+    "view_machines_btn": "ОБЗОР",
+    "engineering_badge": "RNG EXPORT<br/>ИНЖИНИРИНГ"
   },
     "stories": [
       {
@@ -475,7 +475,7 @@
     "factory_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Турция",
     "email_label": "E-MAIL",
     "phone_label": "ТЕЛЕФОН",
-    "bottom_text": "© 2025 RNG EXPORT. ВСЕ ПРАВА ЗАЩИЩЕНЫ.",
+    "bottom_text": "ВСЕ ПРАВА ЗАЩИЩЕНЫ.",
     "privacy": "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ",
     "kvkk": "ЗАЩИТА ДАННЫХ",
     "cookies": "ПОЛИТИКА COOKIE"

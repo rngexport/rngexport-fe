@@ -138,7 +138,7 @@ function FacilityContent() {
                 ) : (
                   <div className="w-full h-full flex items-center justify-center p-8 text-center">
                     <span className="text-white/50 text-xs font-bold tracking-[0.3em] uppercase">
-                       <span dangerouslySetInnerHTML={{ __html: t('facilities.mosaic_title') }} />
+                       <span dangerouslySetInnerHTML={{ __html: t('facilities.engineering_badge') }} />
                     </span>
                   </div>
                 )}
@@ -156,7 +156,7 @@ function FacilityContent() {
              >
                 <div className="relative z-10 text-white">
                   <span className="block text-4xl mb-2 font-bold">→</span>
-                  <span className="text-xs font-bold tracking-[0.3em] uppercase">{t('facilities.view_btn')}</span>
+                  <span className="text-xs font-bold tracking-[0.3em] uppercase">{t('facilities.view_machines_btn')}</span>
                 </div>
                 <div className="absolute inset-0 bg-black/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
              </Link>

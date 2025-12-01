@@ -419,8 +419,8 @@
     "title": "Endüstriyel Gücün <br /> Merkezi",
     "desc": "Keten ve kenevir üretim hatlarının tüm adımlarını sahada canlı olarak takip ediyoruz. Fabrika yatırımlarımızda makine parkuru, mühendislik merkezi ve tarla operasyonları tek platformda birleşiyor.",
     "placeholder": "NO IMG",
-    "view_btn": "İNCELE",
-    "mosaic_title": "RNG EXPORT<br/>MÜHENDİSLİK"
+    "view_machines_btn": "İNCELE",
+    "engineering_badge": "RNG EXPORT<br/>MÜHENDİSLİK"
   },
     "stories": [
       {
@@ -475,7 +475,7 @@
     "factory_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
     "email_label": "E-POSTA",
     "phone_label": "TELEFON",
-    "bottom_text": "© 2025 RNG EXPORT. TÜM HAKLARI SAKLIDIR.",
+    "bottom_text": "TÜM HAKLARI SAKLIDIR.",
     "privacy": "GİZLİLİK POLİTİKASI",
     "kvkk": "KVKK",
     "cookies": "ÇEREZ POLİTİKASI"
