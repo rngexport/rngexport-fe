@@ -17,6 +17,21 @@ import img13 from "./images/13.jpeg";
 import img14 from "./images/14.jpeg";
 import img15 from "./images/15.jpeg";
 import img16 from "./images/16.jpeg";
+import img17 from "./images/17.jpeg";
+import img18 from "./images/18.jpeg";
+import img19 from "./images/19.jpeg";
+import img20 from "./images/20.jpeg";
+import img21 from "./images/21.jpeg";
+import img22 from "./images/22.jpeg";
+import img23 from "./images/23.jpeg";
+import img24 from "./images/24.jpeg";
+import img25 from "./images/25.jpeg";
+import img26 from "./images/26.jpeg";
+import img27 from "./images/27.jpeg";
+import img28 from "./images/28.jpeg";
+import img29 from "./images/29.jpeg";
+import img30 from "./images/30.jpeg";
+import img31 from "./images/31.jpeg";
 
 export default function Facilities() {
   return (
@@ -33,7 +48,6 @@ function FacilityHero() {
 
   return (
     <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center bg-neutral-900 overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
           src={img1} 
@@ -69,27 +83,21 @@ function FacilityContent() {
     tag: string;
   }[];
   
-  // Tüm 16 görseli bir havuzda topluyoruz
-  // Hero'da img1 kullanıldı, Contact'ta img16 kullanılacak
-  // Kalanlar içerikte kullanılacak
   const storyImages = [
-    [img2, img3], // Story 1 için 2 görsel
-    [img4, img5], // Story 2 için 2 görsel
-    [img6, img7, img8], // Story 3 için 3 görsel
-    [img9, img10, img11], // Story 4 için 3 görsel
+    [img2, img3, img23],
+    [img4, img5, img30],
+    [img6, img7, img8, img20],
+    [img9, img10, img11, img17],
   ];
 
-  // Ekstra görselleri dekoratif gridler için kullanacağız
-  const extraImages = [img12, img13, img14, img15];
+  const extraImages = [img23, img30, img20, img17, img24, img28, img19, img29, img22, img18, img27, img31, img21, img26, img25];
 
   return (
     <section className="bg-white">
       {stories.map((story, idx) => (
         <div key={idx} className="flex flex-col">
-          {/* Main Story Row - Zero Gap */}
           <div className={`flex flex-col lg:flex-row ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
             
-            {/* Image Block */}
             <div className="w-full lg:w-1/2 h-[400px] lg:h-[800px] relative group overflow-hidden">
               <img 
                 src={storyImages[idx][0]} 
@@ -102,7 +110,6 @@ function FacilityContent() {
               </div>
             </div>
 
-            {/* Text Block */}
             <div className="w-full lg:w-1/2 bg-neutral-50 flex flex-col justify-center p-8 md:p-16 lg:p-32 relative">
               
               <div className="text-[#cf8300] text-4xl md:text-6xl font-bold opacity-20 mb-6 select-none">
@@ -124,32 +131,31 @@ function FacilityContent() {
             </div>
           </div>
 
-          {/* Mosaic / Filler Row between stories - Zero Gap */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 h-[200px] md:h-[300px] lg:h-[400px]">
-             {/* Story'nin ikinci görseli */}
+          <div className="grid grid-cols-2 lg:grid-cols-6 h-[200px] md:h-[300px] lg:h-[400px]">
              <div className="relative overflow-hidden group">
                 <img src={storyImages[idx][1]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
              </div>
              
-             {/* Eğer varsa üçüncü görsel, yoksa ekstra görsel */}
-             <div className="relative overflow-hidden group bg-neutral-900">
+             <div className="relative overflow-hidden group">
                 {storyImages[idx][2] ? (
                   <img src={storyImages[idx][2]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center p-8 text-center">
-                    <span className="text-white/50 text-xs font-bold tracking-[0.3em] uppercase">
-                       <span dangerouslySetInnerHTML={{ __html: t('facilities.engineering_badge') }} />
-                    </span>
-                  </div>
+                  <img src={extraImages[idx * 2]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 )}
              </div>
 
-             {/* Ekstra görsel sırasından */}
              <div className="relative overflow-hidden group">
-                <img src={extraImages[idx]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={extraImages[idx * 2 + 1] || extraImages[0]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
              </div>
 
-             {/* Metin kutusu */}
+             <div className="relative overflow-hidden group">
+                <img src={extraImages[idx * 2 + 2] || extraImages[1]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+             </div>
+
+             <div className="relative overflow-hidden group">
+                <img src={extraImages[idx * 2 + 3] || extraImages[2]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+             </div>
+
              <Link 
                 to="/machines"
                 className="bg-[#cf8300] flex items-center justify-center p-8 text-center group cursor-pointer overflow-hidden relative block h-full"
@@ -172,7 +178,6 @@ function FacilityContact() {
 
   return (
     <section className="relative py-20 md:py-32 lg:py-48 bg-black text-white overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0 opacity-40">
         <img src={img16} alt="" className="w-full h-full object-cover" />
       </div>

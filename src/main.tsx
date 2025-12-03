@@ -8,7 +8,7 @@ import Lines from './Lines'
 import Contact from './Contact'
 import Machines from './Machines'
 import './index.css'
-import './i18n' // i18n konfigürasyonunu başlat
+import './i18n'
 
 const rootElement = document.getElementById('root')
 

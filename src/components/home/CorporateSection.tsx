@@ -1,15 +1,59 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import img1 from '../../images/1.jpeg'
+import img2 from '../../images/2.jpeg'
+import img3 from '../../images/3.jpeg'
+import img4 from '../../images/4.jpeg'
+import img5 from '../../images/5.jpeg'
+import img6 from '../../images/6.jpeg'
+import img7 from '../../images/7.jpeg'
+import img8 from '../../images/8.jpeg'
+import img9 from '../../images/9.jpeg'
+import img10 from '../../images/10.jpeg'
+import img11 from '../../images/11.jpeg'
+import img12 from '../../images/12.jpeg'
+import img13 from '../../images/13.jpeg'
+import img14 from '../../images/14.jpeg'
+import img15 from '../../images/15.jpeg'
+import img16 from '../../images/16.jpeg'
+import img17 from '../../images/17.jpeg'
+import img18 from '../../images/18.jpeg'
+import img19 from '../../images/19.jpeg'
+import img20 from '../../images/20.jpeg'
+import img21 from '../../images/21.jpeg'
+import img22 from '../../images/22.jpeg'
+import img23 from '../../images/23.jpeg'
+import img24 from '../../images/24.jpeg'
+import img25 from '../../images/25.jpeg'
+import img26 from '../../images/26.jpeg'
+import img27 from '../../images/27.jpeg'
+import img28 from '../../images/28.jpeg'
+import img29 from '../../images/29.jpeg'
+import img30 from '../../images/30.jpeg'
+import img31 from '../../images/31.jpeg'
 
 export default function CorporateSection() {
   const { t } = useTranslation()
   const visionList = t('corporate.vision_list', { returnObjects: true }) as string[]
+  const visionDetails = t('corporate.vision_details', { returnObjects: true }) as Array<{
+    title: string
+    description: string
+    features: string[]
+    applications: string[]
+  }>
   const stats = t('corporate.stats', { returnObjects: true }) as { val: string; label: string }[]
+  const [selectedVisionIndex, setSelectedVisionIndex] = useState<number | null>(null)
+
+  const visionImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31]
+
+  const getVisionImages = (index: number) => {
+    const startIndex = index % visionImages.length
+    return [visionImages[startIndex], visionImages[(startIndex + 1) % visionImages.length], visionImages[(startIndex + 2) % visionImages.length]]
+  }
 
   return (
     <section id="corporate" className="py-24 md:py-32 bg-white overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6">
-        {/* Header Section */}
         <div className="flex flex-col lg:flex-row gap-16 lg:items-end mb-24">
           <div className="lg:w-2/3">
             <span className="block text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase mb-6">
@@ -26,20 +70,16 @@ export default function CorporateSection() {
           </div>
         </div>
 
-        {/* Main Content Grid */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
           
-          {/* Left Column: Image & Stats */}
           <div className="lg:col-span-5 flex flex-col gap-8">
              <div className="relative h-[500px] w-full overflow-hidden group">
                 <img 
-                  src={img1} 
+                  src={img23} 
                   alt="RNG Export Facility" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
-                
-                {/* Overlay Stats */}
                 <div className="absolute bottom-0 left-0 w-full bg-black/90 text-white p-8">
                    <div className="grid grid-cols-3 divide-x divide-white/20">
                       {stats.map((stat) => (
@@ -53,7 +93,6 @@ export default function CorporateSection() {
              </div>
           </div>
 
-          {/* Right Column: Text Content */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <div className="space-y-8">
               <div className="prose prose-lg max-w-none text-neutral-800">
@@ -77,11 +116,15 @@ export default function CorporateSection() {
                    {t('corporate.vision_title')}
                  </h4>
                 <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
-                  {visionList.map((item) => (
-                    <div key={item} className="flex items-start gap-3 group">
-                      <span className="w-2 h-2 bg-[#cf8300] mt-1.5 shrink-0 group-hover:scale-110 transition-transform"></span>
-                      <span className="text-neutral-700 font-medium">{item}</span>
-                    </div>
+                  {visionList.map((item, idx) => (
+                    <button
+                      key={item}
+                      onClick={() => setSelectedVisionIndex(idx)}
+                      className="flex items-start gap-3 group text-left cursor-pointer hover:text-[#cf8300] transition-colors"
+                    >
+                      <span className="w-2 h-2 bg-[#cf8300] mt-1.5 shrink-0 group-hover:scale-110 transition-transform rounded-none"></span>
+                      <span className="text-neutral-700 font-medium group-hover:text-[#cf8300] transition-colors">{item}</span>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -98,6 +141,84 @@ export default function CorporateSection() {
           </div>
         </div>
       </div>
+
+      {selectedVisionIndex !== null && visionDetails[selectedVisionIndex] && (
+        <div 
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 md:p-8 overflow-y-auto"
+          onClick={() => setSelectedVisionIndex(null)}
+        >
+          <div 
+            className="bg-white max-w-6xl w-full rounded-sm shadow-2xl my-8 max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="sticky top-0 bg-white border-b border-neutral-200 px-6 md:px-12 py-6 flex items-center justify-between z-10">
+              <div>
+                <h3 className="text-2xl md:text-4xl font-bold uppercase tracking-tight text-black">
+                  {visionDetails[selectedVisionIndex].title}
+                </h3>
+              </div>
+              <button
+                onClick={() => setSelectedVisionIndex(null)}
+                className="text-black hover:text-[#cf8300] transition-colors text-3xl font-bold w-10 h-10 flex items-center justify-center"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="px-6 md:px-12 py-8 md:py-12">
+              <p className="text-lg md:text-xl text-black leading-relaxed mb-8">
+                {visionDetails[selectedVisionIndex].description}
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                {getVisionImages(selectedVisionIndex).map((img, idx) => (
+                  <div 
+                    key={idx}
+                    className="relative overflow-hidden group cursor-pointer rounded-sm"
+                  >
+                    <img 
+                      src={img} 
+                      alt={`${visionDetails[selectedVisionIndex].title} - ${idx + 1}`}
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mb-8">
+                <h4 className="text-lg font-bold uppercase tracking-widest text-black mb-6 flex items-center gap-3">
+                  <span className="w-8 h-[2px] bg-[#cf8300]"></span>
+                  {t('machines.features_title')}
+                </h4>
+                <ul className="grid md:grid-cols-2 gap-4">
+                  {visionDetails[selectedVisionIndex].features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-4 text-base text-black">
+                      <div className="w-2 h-2 bg-[#cf8300] mt-2 flex-shrink-0 rounded-none"></div>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-bold uppercase tracking-widest text-black mb-6 flex items-center gap-3">
+                  <span className="w-8 h-[2px] bg-[#cf8300]"></span>
+                  {t('machines.applications_title')}
+                </h4>
+                <ul className="grid md:grid-cols-2 gap-4">
+                  {visionDetails[selectedVisionIndex].applications.map((application, idx) => (
+                    <li key={idx} className="flex items-start gap-4 text-base text-black">
+                      <div className="w-2 h-2 bg-[#cf8300] mt-2 flex-shrink-0 rounded-none"></div>
+                      <span>{application}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

@@ -9,7 +9,6 @@ export default function Header() {
   const [isLangOpen, setIsLangOpen] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -70,7 +69,6 @@ export default function Header() {
       <nav className="bg-white border-b border-neutral-200">
         <div className="max-w-[1800px] mx-auto px-6 h-24 flex items-center justify-between">
           
-          {/* Logo Section - Matches Footer Style */}
           <Link to="/" className="flex flex-col gap-1 shrink-0 group">
             <div className="flex items-center gap-1.5">
               <img src={logo} alt="RNG Export" className="h-10 w-auto object-contain mb-0.5" />
@@ -100,7 +98,6 @@ export default function Header() {
           </div>
           
           <div className="hidden lg:flex items-center gap-4 shrink-0">
-            {/* Language Dropdown */}
             <div className="relative">
               <button
                 type="button"
@@ -144,7 +141,6 @@ export default function Header() {
               )}
             </div>
 
-            {/* CTA */}
             <a
               href="/#contact"
               className="bg-neutral-900 text-white border border-neutral-900 px-8 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
@@ -153,7 +149,6 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-2 z-50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -163,7 +158,6 @@ export default function Header() {
             <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </button>
 
-          {/* Mobile Menu Overlay */}
           {isMenuOpen && (
             <div className="fixed inset-0 bg-white z-40 lg:hidden pt-[88px] pb-10 px-6 flex flex-col overflow-y-auto">
               <div className="flex flex-col gap-4 mb-4 mt-0">

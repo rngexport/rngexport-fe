@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import logoLight from '../../assets/favicon.png'
 import { NAV_ITEMS } from '../../constants/navigation'
-import footerImg from '../../images/16.jpeg'
+import footerImg from '../../images/factory.jpeg'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -25,19 +25,15 @@ export default function Footer() {
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setIsHovering(false)}
     >
-      {/* Decorative Top Border */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#cf8300] to-transparent z-20"></div>
       
-      {/* Background Image - Full Width with Gradient Fade */}
       <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none select-none z-0">
-        {/* Base faded image */}
         <img
           src={footerImg}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-right-bottom opacity-[0.03]"
+          className="absolute inset-0 w-full h-full object-contain object-right-bottom opacity-[0.03]"
         />
         
-        {/* Spotlight reveal on hover */}
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-200"
           style={{
@@ -49,20 +45,17 @@ export default function Footer() {
           <img
             src={footerImg}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover object-right-bottom opacity-50 grayscale-0"
+            className="absolute inset-0 w-full h-full object-contain object-right-bottom opacity-50 grayscale-0"
           />
         </div>
         
-        {/* Gradient fade from left to right */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent pointer-events-none"></div>
       </div>
       
       <div className="max-w-[1800px] mx-auto px-6 pt-16 pb-8 relative z-10">
         
-        {/* Main Content */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
           
-          {/* Brand Section - Enhanced */}
           <div className="lg:col-span-4">
             <Link to="/" className="flex flex-col gap-1 shrink-0 mb-6 group">
               <div className="flex items-center gap-1.5">
@@ -78,7 +71,6 @@ export default function Footer() {
               {t('footer.brand_text')}
             </p>
 
-            {/* Social Media - Enhanced */}
             <div className="flex gap-3">
               {['IN', 'IG', 'TW'].map((social) => (
                 <a
@@ -92,7 +84,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation Section - Enhanced */}
           <div className="lg:col-span-4">
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6 flex items-center gap-3">
               <span className="w-10 h-px bg-gradient-to-r from-[#cf8300] to-transparent"></span>
@@ -128,7 +119,6 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Contact Section - Enhanced */}
           <div className="lg:col-span-4">
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6 flex items-center gap-3">
               <span className="w-10 h-px bg-gradient-to-r from-[#cf8300] to-transparent"></span>
@@ -136,7 +126,6 @@ export default function Footer() {
             </h4>
             
             <div className="space-y-5">
-              {/* HQ */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 hover:border-[#cf8300]/50 transition-all duration-300">
                 <span className="text-[#cf8300] text-[10px] uppercase tracking-widest font-bold block mb-2">
                   {t('footer.hq_label')}
@@ -146,7 +135,6 @@ export default function Footer() {
                 </p>
               </div>
               
-              {/* Factory */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 hover:border-[#cf8300]/50 transition-all duration-300">
                 <span className="text-[#cf8300] text-[10px] uppercase tracking-widest font-bold block mb-2">
                   {t('footer.factory_label')}
@@ -156,7 +144,6 @@ export default function Footer() {
                 </p>
               </div>
 
-              {/* Contact Info */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 hover:border-[#cf8300]/50 transition-all duration-300">
                 <div className="space-y-3">
                   <div>
@@ -184,7 +171,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar - Enhanced */}
         <div className="pt-8 pb-0 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[10px] tracking-[0.2em] text-neutral-400 uppercase">

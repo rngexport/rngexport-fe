@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import facilityImg from '../../images/hero.jpeg'
+import heroImg from '../../images/14.jpeg'
 
 export default function HomeHero() {
   const { t } = useTranslation()
@@ -8,7 +8,7 @@ export default function HomeHero() {
     <header className="relative min-h-screen md:h-[85vh] bg-neutral-100 overflow-hidden flex items-center py-32 md:py-0">
       <div className="absolute inset-0">
         <img 
-          src={facilityImg} 
+          src={heroImg} 
           alt="Production Facility" 
           className="w-full h-full object-cover"
         />

@@ -48,6 +48,98 @@
       "Biyokompozit ve biyoplastik",
       "Nonwoven & tekstil sanayi"
     ],
+    "vision_details": [
+      {
+        "title": "Endüstriyel elyaf üretimi",
+        "description": "Keten ve kenevir gibi doğal lif kaynaklarından endüstriyel kalitede elyaf üretimi. RNG Export'un gelişmiş işleme teknolojileri ile ham balyalardan başlayarak, kotonize elyaf, uzun elyaf ve kısa elyaf gibi çeşitli formatta endüstriyel ürünler üretilmektedir. Bu elyaflar, tekstil, kompozit, nonwoven ve biyokompozit sektörlerinde kritik hammadde olarak kullanılmaktadır.",
+        "features": [
+          "Çok kademeli işleme teknolojisi",
+          "Yüksek saflık oranı",
+          "Homojen kalite kontrolü",
+          "Sürdürülebilir üretim",
+          "Endüstriyel standartlara uygunluk"
+        ],
+        "applications": [
+          "Nonwoven tekstil üretimi",
+          "İplik ve dokuma endüstrisi",
+          "Kompozit malzeme üretimi",
+          "Biyokompozit uygulamaları",
+          "Teknik tekstil sektörü"
+        ]
+      },
+      {
+        "title": "Selüloz üretimi (alpha-selüloz)",
+        "description": "Yüksek saflıkta alpha-selüloz üretimi için optimize edilmiş elyaf işleme süreçleri. Alpha-selüloz, kağıt, kimyasal endüstri ve özel uygulamalar için kritik bir hammaddedir. RNG Export'un teknolojisi, yüksek saflık oranları ve tutarlı kalite ile endüstriyel selüloz üretimine hazır elyaf sağlar.",
+        "features": [
+          "Yüksek saflık alpha-selüloz",
+          "Kimyasal işleme uygunluğu",
+          "Tutarlı kalite standartları",
+          "Endüstriyel ölçek üretim",
+          "Çevre dostu proses"
+        ],
+        "applications": [
+          "Kağıt ve karton üretimi",
+          "Kimyasal endüstri",
+          "Selüloz türevleri",
+          "Özel kimyasal uygulamalar",
+          "Biyo-rafineri süreçleri"
+        ]
+      },
+      {
+        "title": "Nitroselüloz ve savunma sanayi",
+        "description": "Savunma sanayi ve özel uygulamalar için nitroselüloz üretimine uygun yüksek kaliteli elyaf işleme. Nitroselüloz, propellant, patlayıcı ve özel kimyasal uygulamalarda kullanılan kritik bir hammaddedir. RNG Export'un titiz kalite kontrol süreçleri ile savunma sanayi standartlarına uygun elyaf üretimi gerçekleştirilmektedir.",
+        "features": [
+          "Savunma sanayi standartlarına uygunluk",
+          "Yüksek saflık ve kalite kontrolü",
+          "Güvenlik sertifikasyonları",
+          "Özel uygulama odaklı",
+          "Kritik sektör desteği"
+        ],
+        "applications": [
+          "Propellant üretimi",
+          "Patlayıcı endüstrisi",
+          "Savunma sanayi uygulamaları",
+          "Özel kimyasal üretim",
+          "Güvenlik kritik uygulamalar"
+        ]
+      },
+      {
+        "title": "Biyokompozit ve biyoplastik",
+        "description": "Sürdürülebilir biyokompozit ve biyoplastik üretimi için optimize edilmiş elyaf işleme teknolojileri. Doğal liflerden üretilen biyokompozitler, otomotiv, mobilya, ambalaj ve inşaat sektörlerinde sentetik malzemelere sürdürülebilir alternatifler sunar. RNG Export'un elyaf işleme teknolojisi, yüksek performanslı biyokompozit üretimi için ideal hammadde sağlar.",
+        "features": [
+          "Sürdürülebilir malzeme üretimi",
+          "Yüksek performans özellikleri",
+          "Çevre dostu proses",
+          "Otomotiv uygulamalarına uygun",
+          "Geri dönüştürülebilir"
+        ],
+        "applications": [
+          "Otomotiv kompozitleri",
+          "Mobilya endüstrisi",
+          "Ambalaj malzemeleri",
+          "İnşaat uygulamaları",
+          "Biyoplastik üretimi"
+        ]
+      },
+      {
+        "title": "Nonwoven & tekstil sanayi",
+        "description": "Nonwoven ve tekstil sanayi için özel olarak geliştirilmiş elyaf işleme çözümleri. Kotonize elyaf, kısa elyaf ve uzun elyaf formatlarında üretilen ürünler, hijyen, medikal, filtre, temizlik ve teknik tekstil uygulamalarında kullanılmaktadır. RNG Export'un teknolojisi, yüksek kalite ve homojen yapı ile tekstil üretim hatlarına hazır hammadde sağlar.",
+        "features": [
+          "Nonwoven uygulamalarına optimize",
+          "Yüksek emici özellikler",
+          "Homojen lif dağılımı",
+          "Tekstil üretim hatlarına uygun",
+          "Geniş uygulama yelpazesi"
+        ],
+        "applications": [
+          "Hijyen ürünleri (bebek bezi, ped)",
+          "Medikal tekstiller",
+          "Filtre malzemeleri",
+          "Temizlik ürünleri",
+          "Teknik tekstil uygulamaları"
+        ]
+      }
+    ],
     "stats": [
       { "val": "9", "label": "ANA MAKİNE GRUBU" },
       { "val": "3", "label": "ENTEGRE HAT" },
@@ -116,7 +208,7 @@
     ],
     "list_titles": {
       "features": "ÖZELLİKLER",
-      "applications": "UYGULAMA ALANLARI",
+      "applications": "KULLANIM SEKTÖRLERİ",
       "outputs_long": "ÇIKTI ÜRÜNLER",
       "outputs_short": "TEMEL ÇIKTILAR",
       "advantage": "AVANTAJ:"
@@ -139,6 +231,58 @@
       "Final Stabilizasyon",
       "Balya Presleme"
     ],
+    "step_details": [
+      {
+        "title": "Ham Balya Besleme",
+        "description": "İşleme hattına ham balyaların otomatik veya manuel olarak beslenmesi aşaması. Balyaların düzenli ve kontrollü şekilde sisteme girişi sağlanır.",
+        "features": ["Otomatik besleme sistemi", "Kontrollü yoğunluk", "Sürekli üretim akışı"]
+      },
+      {
+        "title": "KENEVA Ön Açma",
+        "description": "Balyaların açılması ve liflerin ilk parçalanması işlemi. Bu aşama, sonraki işlemlerin verimliliğini artırmak için kritik öneme sahiptir.",
+        "features": ["Yüksek verimlilik", "Lif koruma", "Otomatik kontrol"]
+      },
+      {
+        "title": "RODI Eleme (1. Kademe)",
+        "description": "Döner tamburlu elek sistemi ile ilk aşama eleme işlemi. Toz, kırpık ve kısa parçacıklar ayrılır.",
+        "features": ["360° döner tambur", "ATEX uyumlu", "Yüksek temizlik oranı"]
+      },
+      {
+        "title": "Shaker İnce Temizlik",
+        "description": "Titreşimli elek sistemi ile ince temizlik aşaması. Küçük partiküller ve tozlar tamamen ayrılır.",
+        "features": ["Hassas eleme", "Düşük enerji tüketimi", "Yüksek kalite"]
+      },
+      {
+        "title": "Kırpık/Toz Çıkarma",
+        "description": "Lif içindeki kırpık ve toz parçacıklarının aspirasyon sistemi ile çıkarılması. Ürün kalitesi bu aşamada belirlenir.",
+        "features": ["Güçlü aspirasyon", "Toz filtreleme", "Çevre dostu"]
+      },
+      {
+        "title": "Metal Kontrol",
+        "description": "Metal dedektör sistemi ile lif içindeki metal parçacıkların tespit edilmesi ve çıkarılması. Makine güvenliği için kritik aşama.",
+        "features": ["Yüksek hassasiyet", "Otomatik red", "Güvenlik odaklı"]
+      },
+      {
+        "title": "Kotonizasyon Ünitesi",
+        "description": "Liflerin pamuksu forma dönüştürüldüğü kritik aşama. Çok kademeli tarak sistemi ile lifler inceltilir ve standardize edilir.",
+        "features": ["Çok kademeli sistem", "Yüksek kalite", "Enerji verimli"]
+      },
+      {
+        "title": "Uzun Elyaf Ünitesi",
+        "description": "6-40 cm arası uzun liflerin korunarak işlendiği özel ünite. Teknik tekstil ve kompozit uygulamaları için optimize edilmiştir.",
+        "features": ["Lif koruma", "Hassas işleme", "Yüksek mukavemet"]
+      },
+      {
+        "title": "Final Stabilizasyon",
+        "description": "İşlenmiş liflerin son kalite kontrolü ve stabilizasyon aşaması. Ürün standardizasyonu sağlanır.",
+        "features": ["Kalite kontrolü", "Stabilizasyon", "Standartlaştırma"]
+      },
+      {
+        "title": "Balya Presleme",
+        "description": "İşlenmiş liflerin otomatik presleme sistemi ile balyalanması. Yüksek yoğunluklu, taşımaya uygun balyalar oluşturulur.",
+        "features": ["Otomatik presleme", "Yüksek yoğunluk", "Taşıma uygunluğu"]
+      }
+    ],
     "outputs_title": "PROSES ÇIKTI ÜRÜNLERİ",
     "outputs": [
       {
@@ -152,6 +296,74 @@
       {
         "title": "KISA ELYAF",
         "desc": "Nonwoven ve biyokompozit sektörleri için standartlaştırılmış kısa elyaf."
+      }
+    ],
+    "output_details": [
+      {
+        "title": "KOTONİZE ELYAF",
+        "description": "Keten ve kenevir liflerinin çok kademeli tarak sistemi ile pamuksu forma dönüştürüldüğü, endüstriyel kalitede işlenmiş premium elyaf. Bu ürün, liflerin inceltilmesi ve standardize edilmesi sürecinden geçerek, pamuk benzeri yapı ve dokunuş kazanır. Yüksek saflık oranı ve homojen lif dağılımı sayesinde nonwoven, iplik, biyokompozit ve selüloz üretimi gibi kritik endüstriyel uygulamalarda kullanıma hazırdır. RNG Export'un gelişmiş kotonizasyon teknolojisi ile üretilen bu elyaf, sürdürülebilir ve çevre dostu bir alternatif sunarak tekstil ve kompozit sektörlerinde öncü bir rol oynar.",
+        "features": [
+          "Pamuk benzeri yapı ve dokunuş özellikleri",
+          "%95+ saflık oranı ile yüksek kalite",
+          "Homojen lif dağılımı ve standartlaştırılmış boyut",
+          "Nonwoven ve iplik üretimi için optimize edilmiş",
+          "Biyokompozit ve selüloz uygulamalarına uygun",
+          "Düşük nem içeriği ve stabil yapı",
+          "Metal ve tozdan tamamen arındırılmış"
+        ],
+        "applications": [
+          "Nonwoven tekstil üretimi (hijyen, medikal, filtre)",
+          "İplik ve dokuma endüstrisi (karışım iplikleri)",
+          "Biyokompozit malzeme üretimi (otomatik parçalar)",
+          "Selüloz üretimi (alfa-selüloz, nitroselüloz)",
+          "Teknik tekstil uygulamaları (koruyucu kıyafetler)",
+          "Savunma sanayi propellant üretimi",
+          "Kağıt ve karton endüstrisi"
+        ]
+      },
+      {
+        "title": "TEMİZLENMİŞ UZUN ELYAF",
+        "description": "6-40 cm arası uzun liflerin bütünlüğü korunarak işlendiği, teknik tekstil ve kompozit uygulamaları için özel olarak optimize edilmiş premium ürün. RNG Export'un gelişmiş uzun elyaf işleme teknolojisi sayesinde, liflerin doğal mukavemeti ve dayanıklılığı korunurken, metal parçacıkları ve tozdan tamamen arındırılır. Bu ürün, cam elyaf ve sentetik fiberlere sürdürülebilir bir alternatif sunarak, otomotiv, havacılık, inşaat ve denizcilik sektörlerinde yüksek performanslı kompozit malzemelerin üretiminde kullanılır. Homojen kalite ve tutarlı lif boyu dağılımı ile endüstriyel standartlara uygun, güvenilir bir hammadde sağlar.",
+        "features": [
+          "6-40 cm lif boyu korunur (maksimum mukavemet)",
+          "Yüksek çekme mukavemeti değerleri",
+          "Metal ve tozdan tamamen arındırılmış",
+          "Homojen kalite ve tutarlı lif dağılımı",
+          "Kompozit uygulamaları için optimize edilmiş",
+          "Düşük nem içeriği ve stabil yapı",
+          "Çevre dostu ve sürdürülebilir"
+        ],
+        "applications": [
+          "Kompozit malzeme üretimi (otomatik parçalar, paneller)",
+          "Teknik tekstil uygulamaları (koruyucu kıyafetler, çadır)",
+          "İnşaat güçlendirme (beton takviye, geotekstil)",
+          "Otomotiv endüstrisi (interior, exterior parçalar)",
+          "Cam elyaf alternatifi (hafif ve dayanıklı)",
+          "Denizcilik ve havacılık kompozitleri",
+          "Spor ekipmanları (kayak, bisiklet frame)"
+        ]
+      },
+      {
+        "title": "KISA ELYAF",
+        "description": "Nonwoven ve biyokompozit sektörleri için özel olarak standartlaştırılmış, yüksek kalitede işlenmiş kısa elyaf. RNG Export'un titiz kalite kontrol süreçleri sayesinde, homojen boyut dağılımı ve tutarlı kalite ile endüstriyel uygulamalara hazır formatta üretilir. Bu ürün, dolgu malzemeleri, izolasyon ürünleri ve ambalaj endüstrisi gibi geniş bir kullanım alanına sahiptir. Yüksek emici özellikleri ve çevre dostu yapısı ile sürdürülebilir üretim süreçlerinde tercih edilen bir hammaddedir. Standartlaştırılmış boyut ve homojen dağılım sayesinde, üretim hatlarında sorunsuz işlenebilir ve tutarlı sonuçlar sağlar.",
+        "features": [
+          "Standartlaştırılmış boyut ve homojen dağılım",
+          "Yüksek kalite kontrolü ve tutarlılık",
+          "Nonwoven uygulamaları için optimize edilmiş",
+          "Biyokompozit üretimi için ideal özellikler",
+          "Yüksek emici kapasite",
+          "Düşük nem içeriği",
+          "Çevre dostu ve geri dönüştürülebilir"
+        ],
+        "applications": [
+          "Nonwoven tekstil üretimi (hijyen, medikal, temizlik)",
+          "Biyokompozit malzemeler (otomatik, mobilya)",
+          "Dolgu malzemeleri (yastık, yorgan, oyuncak)",
+          "İzolasyon ürünleri (ses, ısı, nem)",
+          "Ambalaj endüstrisi (koruyucu ambalaj)",
+          "Otomotiv iç mekan dolguları",
+          "Bahçe ve tarım uygulamaları (malç, toprak iyileştirme)"
+        ]
       }
     ]
   },
@@ -411,7 +623,9 @@
       "back_home": "Ana Sayfaya Dön",
       "get_offer": "Teklif Al",
       "no_image": "GÖRSEL YOK"
-    }
+    },
+    "features_title": "ÖZELLİKLER",
+    "applications_title": "KULLANIM SEKTÖRLERİ"
   },
   "facilities": {
     "hero": {

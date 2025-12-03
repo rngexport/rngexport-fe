@@ -6,7 +6,7 @@ import kenevaImg from './images/machine-keneva.png'
 import kotonexImg from './images/machine-kotonex.png'
 import uzunElyafImg from './images/machine-uzun-elyaf.png'
 import rodiImg from './images/machine-rodi.png'
-import presImg from './images/machine-pres-yatay.png'
+import dikeyBalyaImg from './images/dikey-balya-1.png'
 import peletImg from './images/machine-pelet.png'
 import tohumImg from './images/machine-tohum-1.png'
 import aspImg from './images/asp-1.png'
@@ -20,7 +20,7 @@ const getMachineImage = (id: string) => {
     case 'M-02': return kotonexImg
     case 'M-03': return uzunElyafImg
     case 'M-04': return rodiImg
-    case 'M-05': return presImg
+    case 'M-05': return dikeyBalyaImg
     case 'M-06': return balyaImg
     case 'M-07': return aspImg
     case 'M-08': return mdImg
@@ -38,7 +38,6 @@ export default function Machines() {
 
   return (
     <Layout>
-      {/* Page Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-neutral-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
@@ -59,7 +58,6 @@ export default function Machines() {
         </div>
       </section>
 
-      {/* Breadcrumb & Navigation */}
       <div className="bg-neutral-50 border-b border-neutral-200">
         <div className="max-w-[1800px] mx-auto px-6 py-6 flex items-center justify-between">
            <div className="flex items-center gap-3 text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-400">
@@ -78,7 +76,6 @@ export default function Machines() {
         </div>
       </div>
 
-      {/* Grid Content */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-[1800px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

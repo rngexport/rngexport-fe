@@ -48,6 +48,98 @@
       "Biocomposite and bioplastic",
       "Nonwoven & textile industries"
     ],
+    "vision_details": [
+      {
+        "title": "Industrial fiber production",
+        "description": "Production of industrial-grade fibers from natural fiber sources such as flax and hemp. Through RNG Export's advanced processing technologies, various industrial products are produced in formats such as cottonized fiber, long fiber, and short fiber, starting from raw bales. These fibers are used as critical raw materials in textile, composite, nonwoven, and biocomposite sectors.",
+        "features": [
+          "Multi-stage processing technology",
+          "High purity ratio",
+          "Homogeneous quality control",
+          "Sustainable production",
+          "Compliance with industrial standards"
+        ],
+        "applications": [
+          "Nonwoven textile production",
+          "Yarn and weaving industry",
+          "Composite material production",
+          "Biocomposite applications",
+          "Technical textile sector"
+        ]
+      },
+      {
+        "title": "Cellulose production (alpha-cellulose)",
+        "description": "Fiber processing processes optimized for high-purity alpha-cellulose production. Alpha-cellulose is a critical raw material for paper, chemical industry, and special applications. RNG Export's technology provides fiber ready for industrial cellulose production with high purity ratios and consistent quality.",
+        "features": [
+          "High purity alpha-cellulose",
+          "Suitability for chemical processing",
+          "Consistent quality standards",
+          "Industrial scale production",
+          "Eco-friendly process"
+        ],
+        "applications": [
+          "Paper and cardboard production",
+          "Chemical industry",
+          "Cellulose derivatives",
+          "Special chemical applications",
+          "Bio-refinery processes"
+        ]
+      },
+      {
+        "title": "Nitrocellulose and defence applications",
+        "description": "High-quality fiber processing suitable for nitrocellulose production for defense industry and special applications. Nitrocellulose is a critical raw material used in propellants, explosives, and special chemical applications. Through RNG Export's rigorous quality control processes, fiber production compliant with defense industry standards is carried out.",
+        "features": [
+          "Compliance with defense industry standards",
+          "High purity and quality control",
+          "Security certifications",
+          "Special application focused",
+          "Critical sector support"
+        ],
+        "applications": [
+          "Propellant production",
+          "Explosive industry",
+          "Defense industry applications",
+          "Special chemical production",
+          "Security critical applications"
+        ]
+      },
+      {
+        "title": "Biocomposite and bioplastic",
+        "description": "Fiber processing technologies optimized for sustainable biocomposite and bioplastic production. Biocomposites produced from natural fibers offer sustainable alternatives to synthetic materials in automotive, furniture, packaging, and construction sectors. RNG Export's fiber processing technology provides ideal raw materials for high-performance biocomposite production.",
+        "features": [
+          "Sustainable material production",
+          "High performance properties",
+          "Eco-friendly process",
+          "Suitable for automotive applications",
+          "Recyclable"
+        ],
+        "applications": [
+          "Automotive composites",
+          "Furniture industry",
+          "Packaging materials",
+          "Construction applications",
+          "Bioplastic production"
+        ]
+      },
+      {
+        "title": "Nonwoven & textile industries",
+        "description": "Fiber processing solutions specially developed for nonwoven and textile industries. Products produced in cottonized fiber, short fiber, and long fiber formats are used in hygiene, medical, filtration, cleaning, and technical textile applications. RNG Export's technology provides raw materials ready for textile production lines with high quality and homogeneous structure.",
+        "features": [
+          "Optimized for nonwoven applications",
+          "High absorbent properties",
+          "Homogeneous fiber distribution",
+          "Suitable for textile production lines",
+          "Wide application range"
+        ],
+        "applications": [
+          "Hygiene products (diapers, pads)",
+          "Medical textiles",
+          "Filter materials",
+          "Cleaning products",
+          "Technical textile applications"
+        ]
+      }
+    ],
     "stats": [
       { "val": "9", "label": "CORE MACHINE GROUPS" },
       { "val": "3", "label": "INTEGRATED LINES" },
@@ -116,7 +208,7 @@
     ],
     "list_titles": {
       "features": "FEATURES",
-      "applications": "APPLICATION AREAS",
+      "applications": "INDUSTRY SECTORS",
       "outputs_long": "OUTPUT PRODUCTS",
       "outputs_short": "KEY OUTPUTS",
       "advantage": "ADVANTAGE:"
@@ -139,6 +231,58 @@
       "Final Stabilization",
       "Bale Pressing"
     ],
+    "step_details": [
+      {
+        "title": "Raw Bale Feeding",
+        "description": "The stage where raw bales are fed into the processing line automatically or manually. Ensures regular and controlled entry of bales into the system.",
+        "features": ["Automatic feeding system", "Controlled density", "Continuous production flow"]
+      },
+      {
+        "title": "KENEVA Pre-Opening",
+        "description": "The process of opening bales and initial fiber separation. This stage is critical for increasing the efficiency of subsequent processes.",
+        "features": ["High efficiency", "Fiber protection", "Automatic control"]
+      },
+      {
+        "title": "RODI Screening (1st Stage)",
+        "description": "First stage screening process with rotary drum screen system. Dust, shives and short particles are separated.",
+        "features": ["360° rotary drum", "ATEX compliant", "High cleaning rate"]
+      },
+      {
+        "title": "Shaker Fine Cleaning",
+        "description": "Fine cleaning stage with vibrating screen system. Small particles and dust are completely separated.",
+        "features": ["Precise screening", "Low energy consumption", "High quality"]
+      },
+      {
+        "title": "Shive / Dust Extraction",
+        "description": "Removal of shives and dust particles from fibers through aspiration system. Product quality is determined at this stage.",
+        "features": ["Powerful aspiration", "Dust filtration", "Environmentally friendly"]
+      },
+      {
+        "title": "Metal Detection",
+        "description": "Detection and removal of metal particles in fibers through metal detector system. Critical stage for machine safety.",
+        "features": ["High sensitivity", "Automatic rejection", "Safety focused"]
+      },
+      {
+        "title": "Cottonization Unit",
+        "description": "Critical stage where fibers are converted to cotton-like form. Fibers are refined and standardized through multi-stage carding system.",
+        "features": ["Multi-stage system", "High quality", "Energy efficient"]
+      },
+      {
+        "title": "Long Fiber Unit",
+        "description": "Special unit where 6-40 cm long fibers are processed while preserving their length. Optimized for technical textile and composite applications.",
+        "features": ["Fiber protection", "Precise processing", "High strength"]
+      },
+      {
+        "title": "Final Stabilization",
+        "description": "Final quality control and stabilization stage of processed fibers. Product standardization is achieved.",
+        "features": ["Quality control", "Stabilization", "Standardization"]
+      },
+      {
+        "title": "Bale Pressing",
+        "description": "Baling of processed fibers with automatic pressing system. High-density, transport-ready bales are created.",
+        "features": ["Automatic pressing", "High density", "Transport ready"]
+      }
+    ],
     "outputs_title": "PROCESS OUTPUT PRODUCTS",
     "outputs": [
       {
@@ -152,6 +296,74 @@
       {
         "title": "SHORT FIBER",
         "desc": "Standardized short fibers for nonwovens and biocomposites."
+      }
+    ],
+    "output_details": [
+      {
+        "title": "COTTONIZED FIBER",
+        "description": "Premium industrial-grade processed fiber transformed from flax and hemp fibers into cotton-like form through RNG Export's advanced multi-stage carding system. This product undergoes a sophisticated refinement and standardization process, acquiring cotton-like structure and feel. With high purity ratios and homogeneous fiber distribution, it is ready for critical industrial applications such as nonwoven, yarn, biocomposite, and cellulose production. Manufactured using RNG Export's advanced cottonization technology, this fiber offers a sustainable and eco-friendly alternative, playing a pioneering role in textile and composite sectors.",
+        "features": [
+          "Cotton-like structure and tactile properties",
+          "95%+ purity ratio for high quality",
+          "Homogeneous fiber distribution and standardized size",
+          "Optimized for nonwoven and yarn production",
+          "Suitable for biocomposite and cellulose applications",
+          "Low moisture content and stable structure",
+          "Completely free from metal and dust"
+        ],
+        "applications": [
+          "Nonwoven textile production (hygiene, medical, filtration)",
+          "Yarn and weaving industry (blended yarns)",
+          "Biocomposite material production (automotive parts)",
+          "Cellulose production (alpha-cellulose, nitrocellulose)",
+          "Technical textile applications (protective clothing)",
+          "Defense industry propellant production",
+          "Paper and cardboard industry"
+        ]
+      },
+      {
+        "title": "CLEANED LONG FIBER",
+        "description": "Premium product specially optimized for technical textile and composite applications, processed while preserving the integrity of 6-40 cm long fibers. Thanks to RNG Export's advanced long fiber processing technology, natural fiber strength and durability are preserved while completely removing metal particles and dust. This product offers a sustainable alternative to glass fiber and synthetic fibers, used in the production of high-performance composite materials in automotive, aerospace, construction, and maritime sectors. With homogeneous quality and consistent fiber length distribution, it provides a reliable raw material that meets industrial standards.",
+        "features": [
+          "6-40 cm fiber length preserved (maximum strength)",
+          "High tensile strength values",
+          "Completely free from metal and dust",
+          "Homogeneous quality and consistent fiber distribution",
+          "Optimized for composite applications",
+          "Low moisture content and stable structure",
+          "Eco-friendly and sustainable"
+        ],
+        "applications": [
+          "Composite material production (automotive parts, panels)",
+          "Technical textile applications (protective clothing, tents)",
+          "Construction reinforcement (concrete reinforcement, geotextiles)",
+          "Automotive industry (interior, exterior parts)",
+          "Glass fiber alternative (lightweight and durable)",
+          "Maritime and aerospace composites",
+          "Sports equipment (skiing, bicycle frames)"
+        ]
+      },
+      {
+        "title": "SHORT FIBER",
+        "description": "Specially standardized, high-quality processed short fiber for nonwoven and biocomposite sectors. Through RNG Export's rigorous quality control processes, it is produced in industrial-ready format with homogeneous size distribution and consistent quality. This product has a wide range of applications including filling materials, insulation products, and packaging industry. With high absorbent properties and eco-friendly structure, it is a preferred raw material in sustainable production processes. Thanks to standardized size and homogeneous distribution, it can be processed smoothly in production lines and provides consistent results.",
+        "features": [
+          "Standardized size and homogeneous distribution",
+          "High quality control and consistency",
+          "Optimized for nonwoven applications",
+          "Ideal properties for biocomposite production",
+          "High absorbent capacity",
+          "Low moisture content",
+          "Eco-friendly and recyclable"
+        ],
+        "applications": [
+          "Nonwoven textile production (hygiene, medical, cleaning)",
+          "Biocomposite materials (automotive, furniture)",
+          "Filling materials (pillows, quilts, toys)",
+          "Insulation products (sound, heat, moisture)",
+          "Packaging industry (protective packaging)",
+          "Automotive interior fillings",
+          "Garden and agricultural applications (mulch, soil improvement)"
+        ]
       }
     ]
   },
@@ -411,7 +623,9 @@
       "back_home": "Back to Home",
       "get_offer": "Get Offer",
       "no_image": "NO IMAGE"
-    }
+    },
+    "features_title": "FEATURES",
+    "applications_title": "INDUSTRY SECTORS"
   },
   "facilities": {
     "hero": {

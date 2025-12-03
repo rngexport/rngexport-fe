@@ -18,9 +18,6 @@ import rodiImg from './images/machine-rodi.png'
 import rodiImg2 from './images/machine-rodi-2.png'
 import rodiImg3 from './images/machine-rodi-3.png'
 
-import presImg from './images/machine-pres-yatay.png'
-import presImg2 from './images/machine-shaker-yatay-2.png'
-
 import peletImg from './images/machine-pelet.png'
 import peletImg2 from './images/machine-pelet-2.png'
 
@@ -41,13 +38,14 @@ import shakerImg from './images/shaker-1.png'
 import shakerImg2 from './images/shaker-2.png'
 
 import balyaImg from './images/balya-1.png'
+import dikeyBalyaImg from './images/dikey-balya-1.png'
 const getMachineImages = (id: string) => {
   switch (id) {
     case 'M-01': return [kenevaImg, kenevaImg2]
     case 'M-02': return [kotonexImg, kotonexImg2]
     case 'M-03': return [uzunElyafImg, uzunElyafImg2]
     case 'M-04': return [rodiImg, rodiImg2, rodiImg3]
-    case 'M-05': return [presImg, presImg2]
+    case 'M-05': return [dikeyBalyaImg]
     case 'M-06': return [balyaImg]
     case 'M-07': return [aspImg, aspImg2, aspImg3, aspImg4]
     case 'M-08': return [mdImg, mdImg2, mdImg3, mdImg4]
@@ -125,7 +123,6 @@ export default function MachineDetail() {
 
   return (
     <div className="min-h-screen bg-white text-neutral-900 font-sans">
-      {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-neutral-200">
         <div className="max-w-[1800px] mx-auto px-6 h-24 flex items-center justify-between">
           <Link to="/" className="flex flex-col gap-1 group">
@@ -191,7 +188,6 @@ export default function MachineDetail() {
         </div>
       </nav>
 
-      {/* Breadcrumb Area */}
       <div className="bg-neutral-50 border-b border-neutral-200">
         <div className="max-w-[1800px] mx-auto px-6 py-6 flex items-center justify-between">
            <div className="flex items-center gap-3 text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-400">
@@ -212,11 +208,9 @@ export default function MachineDetail() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="max-w-[1800px] mx-auto px-6 py-12 md:py-20">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
           
-          {/* Left Column: Gallery */}
           <div className="lg:col-span-7 space-y-8">
             <div className="relative bg-white border border-neutral-100 rounded-sm group overflow-hidden">
                {hasImages ? (
@@ -248,7 +242,6 @@ export default function MachineDetail() {
                )}
             </div>
 
-            {/* Thumbnails */}
             {hasImages && images.length > 1 && (
                 <div className="grid grid-cols-5 gap-4">
                 {images.map((img, i) => (
@@ -265,7 +258,6 @@ export default function MachineDetail() {
                 </div>
             )}
 
-            {/* Features Section - Desktop */}
             <div className="hidden lg:block pt-12 border-t border-neutral-100">
               <h3 className="text-lg font-bold uppercase tracking-widest mb-8 flex items-center gap-3">
                 <span className="w-8 h-[2px] bg-[#cf8300]"></span>
@@ -282,11 +274,9 @@ export default function MachineDetail() {
             </div>
           </div>
 
-          {/* Right Column: Info */}
           <div className="lg:col-span-5">
             <div className="sticky top-32 space-y-12">
               
-              {/* Header Info */}
               <div className="space-y-6 border-b border-neutral-200 pb-12">
                 <span className="inline-block text-[10px] font-bold tracking-[0.2em] text-white bg-black px-3 py-1.5 uppercase">
                   {machine.category}
@@ -301,7 +291,6 @@ export default function MachineDetail() {
                 </p>
               </div>
 
-              {/* Specs Table */}
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-black mb-8">
                   {labels?.specs || 'TEKNİK ÖZELLİKLER'}
@@ -316,7 +305,6 @@ export default function MachineDetail() {
                 </div>
               </div>
 
-              {/* Features - Mobile Only */}
               <div className="lg:hidden pt-8 border-t border-neutral-200">
                 <h3 className="text-sm font-bold uppercase tracking-widest mb-6">{labels?.features || 'ÖZELLİKLER'}</h3>
                 <ul className="space-y-4">
@@ -329,7 +317,6 @@ export default function MachineDetail() {
                 </ul>
               </div>
 
-              {/* Actions */}
               <div className="space-y-4 pt-4">
                 <a 
                   href="mailto:INFO@RNGEXPORT.COM" 
