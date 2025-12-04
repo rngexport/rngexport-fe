@@ -31,7 +31,6 @@ import img27 from "./images/27.jpeg";
 import img28 from "./images/28.jpeg";
 import img29 from "./images/29.jpeg";
 import img30 from "./images/30.jpeg";
-import img31 from "./images/31.jpeg";
 
 export default function Facilities() {
   return (
@@ -90,7 +89,7 @@ function FacilityContent() {
     [img9, img10, img11, img17],
   ];
 
-  const extraImages = [img23, img30, img20, img17, img24, img28, img19, img29, img22, img18, img27, img31, img21, img26, img25];
+  const extraImages = [img23, img30, img20, img17, img24, img28, img19, img29, img22, img18, img27, img21, img26, img25];
 
   return (
     <section className="bg-white">

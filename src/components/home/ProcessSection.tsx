@@ -30,7 +30,6 @@ import img27 from '../../images/27.jpeg'
 import img28 from '../../images/28.jpeg'
 import img29 from '../../images/29.jpeg'
 import img30 from '../../images/30.jpeg'
-import img31 from '../../images/31.jpeg'
 
 export default function ProcessSection() {
   const { t } = useTranslation()
@@ -57,7 +56,7 @@ export default function ProcessSection() {
     features?: string[]
   }>
 
-  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31]
+  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30]
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
   const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null)
   const [selectedOutputIndex, setSelectedOutputIndex] = useState<number | null>(null)
