@@ -6,6 +6,7 @@ import ProductionLinesSection from './components/home/ProductionLinesSection'
 import MachinesSection from './components/home/MachinesSection'
 import ProcessSection from './components/home/ProcessSection'
 import ContactSection from './components/home/ContactSection'
+import FactorySection from './components/home/FactorySection'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <MachinesSection />
       <ProcessSection />
       <ContactSection />
+      <FactorySection />
     </Layout>
   )
 }

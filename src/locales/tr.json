@@ -389,6 +389,28 @@
       "submit": "TEKLİFİ GÖNDER"
     }
   },
+  "factory": {
+    "section_label": "FABRİKAMIZ",
+    "title": "RNG EXPORT ÜRETİM MERKEZİ",
+    "description": "Antalya Organize Sanayi Bölgesi'ndeki entegre tesisimizde üretim hatları, demo merkezleri ve ziyaretçi turları tek bir kampüste buluşuyor.",
+    "cards": [
+      {
+        "title": "Üretim Holü",
+        "description": "12 metre tavan yüksekliğine sahip montaj hattı, tam kapasiteli test düzenekleri ve 24/7 operasyon planlaması.",
+        "meta": "24/7 OPERASYON"
+      },
+      {
+        "title": "Ar-Ge & Demo Merkezi",
+        "description": "Müşteri hammaddesiyle pilot üretim yapabildiğimiz test laboratuvarları, veri izleme odaları ve operatör eğitim stüdyoları.",
+        "meta": "MÜHENDİSLİK"
+      },
+      {
+        "title": "Ziyaretçi Koridoru",
+        "description": "Projeler için ayrılan cam koridorlu tur güzergâhı, sesli rehber sistemi ve interaktif bilgi panelleri.",
+        "meta": "ZİYARET"
+      }
+    ]
+  },
   "machinesSection": {
     "section_label": "MAKİNE PARKURU",
     "section_title": "Profesyonel Makine Çözümleri",

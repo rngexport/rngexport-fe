@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Layout from "./components/layout/Layout";
 import ContactSection from "./components/home/ContactSection";
+import FactorySection from "./components/home/FactorySection";
 import img16 from "./images/16.jpeg";
 
 export default function Contact() {
@@ -29,6 +30,7 @@ export default function Contact() {
       </section>
 
       <ContactSection />
+      <FactorySection />
     </Layout>
   );
 }

@@ -389,6 +389,28 @@
       "submit": "SEND QUOTE REQUEST"
     }
   },
+  "factory": {
+    "section_label": "OUR FACTORY",
+    "title": "RNG EXPORT MANUFACTURING CAMPUS",
+    "description": "Inside the Antalya industrial zone we unite production halls, demo lines and guided visits under one roof for investors and partners.",
+    "cards": [
+      {
+        "title": "Production Hall",
+        "description": "12-meter ceiling assembly line with full-capacity testing bays and continuous operations planning.",
+        "meta": "24/7 OPERATIONS"
+      },
+      {
+        "title": "R&D & Demo Center",
+        "description": "Pilot production labs, data monitoring rooms and operator training studios tailored to customer raw materials.",
+        "meta": "ENGINEERING"
+      },
+      {
+        "title": "Visitor Corridor",
+        "description": "Glass-walled tour path with audio guidance and interactive info panels for project owners.",
+        "meta": "VISITORS"
+      }
+    ]
+  },
   "machinesSection": {
     "section_label": "MACHINE PARK",
     "section_title": "Professional Machinery Solutions",
