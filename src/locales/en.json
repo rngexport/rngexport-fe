@@ -1,4 +1,31 @@
 {
+  "seo": {
+    "home": {
+      "title": "Hemp Machinery Manufacturer & Fiber Processing - RNG Export",
+      "description": "RNG Export offers industrial hemp processing machinery, flax fiber production lines, and engineering solutions. Meet Keneva and Kotonex.",
+      "keywords": "hemp machinery, hemp processing, fiber production line, flax machine, rng export"
+    },
+    "machines": {
+      "title": "Hemp Processing Machinery & Equipment - RNG Export",
+      "description": "Industrial hemp processing machines by RNG Export: Keneva, Kotonex, RODI, Shaker, Bale Presses. See technical details and specs.",
+      "keywords": "hemp machinery manufacturer, hemp processing equipment, flax machinery, fiber machinery, shaker, bale press"
+    },
+    "lines": {
+      "title": "Turnkey Flax & Hemp Production Lines - RNG Export",
+      "description": "Keneva Pre-Processing, Kotonex Cottonization, and Long Fibre lines. Fully integrated solutions from field to final product.",
+      "keywords": "hemp production line, flax production line, cottonization, pre-processing line, long fibre line"
+    },
+    "facilities": {
+      "title": "Hemp Fiber Facilities and Machinery Park - RNG Export",
+      "description": "Explore integrated production lines, demo center, and live field operations for flax and hemp fibers. Discover our machinery park and facility infrastructure.",
+      "keywords": "hemp machinery manufacturer, hemp processing facility, flax fiber plant, fiber production lines, rng export facilities"
+    },
+    "contact": {
+      "title": "RNG Export | Contact and Quote Request",
+      "description": "Request a quote for flax and hemp fiber processing lines. Visit our Antalya industrial campus, book demo and on-site assessments.",
+      "keywords": "rng export contact, hemp machinery quote, flax fiber plant visit"
+    }
+  },
   "header": {
     "slogan": "INDUSTRIAL FIBER SOLUTIONS",
     "quote_btn": "REQUEST A QUOTE",

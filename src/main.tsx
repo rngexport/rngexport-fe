@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import MachineDetail from './MachineDetail'
 import Facilities from './Facilities'
@@ -18,15 +19,17 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/machines" element={<Machines />} />
-        <Route path="/machines/:id" element={<MachineDetail />} />
-        <Route path="/facilities" element={<Facilities />} />
-        <Route path="/lines" element={<Lines />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/machines" element={<Machines />} />
+          <Route path="/machines/:id" element={<MachineDetail />} />
+          <Route path="/facilities" element={<Facilities />} />
+          <Route path="/lines" element={<Lines />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>,
 )

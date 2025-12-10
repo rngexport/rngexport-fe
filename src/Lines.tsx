@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import Layout from "./components/layout/Layout";
 import ProductionLinesSection from "./components/home/ProductionLinesSection";
@@ -8,6 +9,18 @@ export default function Lines() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{t('seo.lines.title', 'Anahtar Teslim Kenevir & Keten Üretim Hatları - RNG Export')}</title>
+        <meta 
+          name="description" 
+          content={t('seo.lines.description', 'Keneva Ön İşleme, Kotonex Kotonizasyon ve Uzun Elyaf işleme hatları. Tarladan son ürüne tam entegre endüstriyel çözümler.')} 
+        />
+        <meta
+          name="keywords"
+          content={t('seo.lines.keywords', 'kenevir üretim hattı, keten üretim hattı, kotonizasyon, ön açma hattı, uzun elyaf hattı')}
+        />
+        <link rel="canonical" href="https://www.rngexport.com/lines" />
+      </Helmet>
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-neutral-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 

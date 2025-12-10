@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Layout from "./components/layout/Layout";
@@ -12,10 +14,6 @@ import img8 from "./images/8.jpeg";
 import img9 from "./images/9.jpeg";
 import img10 from "./images/10.jpeg";
 import img11 from "./images/11.jpeg";
-import img12 from "./images/12.jpeg";
-import img13 from "./images/13.jpeg";
-import img14 from "./images/14.jpeg";
-import img15 from "./images/15.jpeg";
 import img16 from "./images/16.jpeg";
 import img17 from "./images/17.jpeg";
 import img18 from "./images/18.jpeg";
@@ -33,31 +31,77 @@ import img29 from "./images/29.jpeg";
 import img30 from "./images/30.jpeg";
 
 export default function Facilities() {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const { t } = useTranslation();
+
   return (
     <Layout>
-      <FacilityHero />
-      <FacilityContent />
-      <FacilityContact />
+      <Helmet>
+        <title>{t('seo.facilities.title', 'Kenevir Elyaf Tesisleri ve Makina Parkı - RNG Export')}</title>
+        <meta
+          name="description"
+          content={t('seo.facilities.description', 'Kenevir ve keten elyafı için entegre üretim hatları, demo merkezi ve saha operasyonlarını canlı izleyin. Makina parkımızı ve tesis altyapımızı keşfedin.')}
+        />
+        <meta
+          name="keywords"
+          content={t('seo.facilities.keywords', 'kenevir makinaları üreticileri, kenevir işleme tesisi, keten elyaf fabrikası, elyaf üretim hatları, rng export tesisleri')}
+        />
+        <link rel="canonical" href="https://www.rngexport.com/facilities" />
+      </Helmet>
+      <FacilityHero onImageClick={setLightboxImage} />
+      <FacilityContent onImageClick={setLightboxImage} />
+      <FacilityContact onImageClick={setLightboxImage} />
+
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 z-[80] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={() => setLightboxImage(null)}
+        >
+          <div
+            className="relative max-w-[90vw] max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={lightboxImage}
+              alt="Facility"
+              className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl"
+            />
+            <button
+              type="button"
+              aria-label="Kapat"
+              onClick={() => setLightboxImage(null)}
+              className="absolute -top-4 -right-4 w-10 h-10 bg-white text-black font-bold text-xl flex items-center justify-center shadow-lg hover:bg-neutral-200 transition-colors"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }
 
-function FacilityHero() {
+function FacilityHero({ onImageClick }: { onImageClick: (src: string) => void }) {
   const { t } = useTranslation();
 
   return (
     <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center bg-neutral-900 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={img1} 
-          alt="Facility Hero" 
-          className="w-full h-full object-cover opacity-60" 
+      <button
+        type="button"
+        className="absolute inset-0 z-0"
+        onClick={() => onImageClick(img1)}
+        aria-label="Görseli büyüt"
+      >
+        <img
+          src={img1}
+          alt="Facility Hero"
+          className="w-full h-full object-cover opacity-60 pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent"></div>
-      </div>
+      </button>
 
       <div className="relative z-10 max-w-[1800px] mx-auto px-6 text-center">
-        <span className="block text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase mb-8">
+        <span className="block text-xs font-bold tracking-[0.2em] text-neutral-300 uppercase mb-8">
           {t("facilities.hero.subtitle")}
         </span>
         <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter text-white mb-10 max-w-5xl mx-auto leading-[0.9]">
@@ -73,7 +117,7 @@ function FacilityHero() {
   );
 }
 
-function FacilityContent() {
+function FacilityContent({ onImageClick }: { onImageClick: (src: string) => void }) {
   const { t } = useTranslation();
   const stories = t("facilities.stories", { returnObjects: true }) as {
     title: string;
@@ -101,7 +145,8 @@ function FacilityContent() {
               <img 
                 src={storyImages[idx][0]} 
                 alt={story.title} 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+                onClick={() => onImageClick(storyImages[idx][0])}
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 cursor-zoom-in" 
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
               <div className="absolute bottom-0 left-0 bg-black/80 text-white px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase">
@@ -132,27 +177,57 @@ function FacilityContent() {
 
           <div className="grid grid-cols-2 lg:grid-cols-6 h-[200px] md:h-[300px] lg:h-[400px]">
              <div className="relative overflow-hidden group">
-                <img src={storyImages[idx][1]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img 
+                  src={storyImages[idx][1]} 
+                  alt="" 
+                  onClick={() => onImageClick(storyImages[idx][1])}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
+                />
              </div>
              
              <div className="relative overflow-hidden group">
                 {storyImages[idx][2] ? (
-                  <img src={storyImages[idx][2]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img 
+                    src={storyImages[idx][2]} 
+                    alt="" 
+                    onClick={() => onImageClick(storyImages[idx][2])}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
+                  />
                 ) : (
-                  <img src={extraImages[idx * 2]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img 
+                    src={extraImages[idx * 2]} 
+                    alt="" 
+                    onClick={() => onImageClick(extraImages[idx * 2])}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
+                  />
                 )}
              </div>
 
              <div className="relative overflow-hidden group">
-                <img src={extraImages[idx * 2 + 1] || extraImages[0]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img 
+                  src={extraImages[idx * 2 + 1] || extraImages[0]} 
+                  alt="" 
+                  onClick={() => onImageClick(extraImages[idx * 2 + 1] || extraImages[0])}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
+                />
              </div>
 
              <div className="relative overflow-hidden group">
-                <img src={extraImages[idx * 2 + 2] || extraImages[1]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img 
+                  src={extraImages[idx * 2 + 2] || extraImages[1]} 
+                  alt="" 
+                  onClick={() => onImageClick(extraImages[idx * 2 + 2] || extraImages[1])}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
+                />
              </div>
 
              <div className="relative overflow-hidden group">
-                <img src={extraImages[idx * 2 + 3] || extraImages[2]} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img 
+                  src={extraImages[idx * 2 + 3] || extraImages[2]} 
+                  alt="" 
+                  onClick={() => onImageClick(extraImages[idx * 2 + 3] || extraImages[2])}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
+                />
              </div>
 
              <Link 
@@ -161,7 +236,7 @@ function FacilityContent() {
              >
                 <div className="relative z-10 text-white">
                   <span className="block text-4xl mb-2 font-bold">→</span>
-                  <span className="text-xs font-bold tracking-[0.3em] uppercase">{t('facilities.view_machines_btn')}</span>
+                  <span className="text-xs font-bold tracking-[0.3em] uppercase">{t('facilities.hero.view_machines_btn')}</span>
                 </div>
                 <div className="absolute inset-0 bg-black/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
              </Link>
@@ -172,14 +247,19 @@ function FacilityContent() {
   );
 }
 
-function FacilityContact() {
+function FacilityContact({ onImageClick }: { onImageClick: (src: string) => void }) {
   const { t } = useTranslation();
 
   return (
     <section className="relative py-20 md:py-32 lg:py-48 bg-black text-white overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-40">
-        <img src={img16} alt="" className="w-full h-full object-cover" />
-      </div>
+      <button
+        type="button"
+        className="absolute inset-0 z-0 opacity-40"
+        onClick={() => onImageClick(img16)}
+        aria-label="Görseli büyüt"
+      >
+        <img src={img16} alt="" className="w-full h-full object-cover pointer-events-none" />
+      </button>
       
       <div className="max-w-[1800px] mx-auto px-6 relative z-10">
         <div className="bg-black/80 border-2 border-white/10 backdrop-blur-md p-8 md:p-12 lg:p-24">

@@ -1,4 +1,31 @@
 {
+  "seo": {
+    "home": {
+      "title": "Kenevir Makinaları Üreticisi & Elyaf İşleme - RNG Export",
+      "description": "RNG Export, endüstriyel kenevir işleme makinaları, keten elyaf üretim hatları ve mühendislik çözümleri sunar. Keneva ve Kotonex ile tanışın.",
+      "keywords": "kenevir makinaları, kenevir işleme, elyaf üretim hattı, keten makinası, rng export"
+    },
+    "machines": {
+      "title": "Kenevir İşleme Makinaları & Ekipmanları - RNG Export",
+      "description": "RNG Export tarafından üretilen endüstriyel kenevir işleme makinaları: Keneva, Kotonex, RODI, Shaker ve Balya Presleri. Teknik özellikler ve detaylar.",
+      "keywords": "kenevir makinaları üreticileri, kenevir işleme makinaları, keten makinaları, elyaf makinası, shaker, balya presi"
+    },
+    "lines": {
+      "title": "Anahtar Teslim Kenevir & Keten Üretim Hatları - RNG Export",
+      "description": "Keneva Ön İşleme, Kotonex Kotonizasyon ve Uzun Elyaf hatları. Tarladan son ürüne tam entegre endüstriyel çözümler.",
+      "keywords": "kenevir üretim hattı, keten üretim hattı, kotonizasyon, ön açma hattı, uzun elyaf hattı"
+    },
+    "facilities": {
+      "title": "Kenevir Elyaf Tesisleri ve Makina Parkı - RNG Export",
+      "description": "Kenevir ve keten elyafı için entegre üretim hatları, demo merkezi ve saha operasyonlarını canlı izleyin. Makina parkımızı ve tesis altyapımızı keşfedin.",
+      "keywords": "kenevir makinaları üreticileri, kenevir işleme tesisi, keten elyaf fabrikası, elyaf üretim hatları, rng export tesisleri"
+    },
+    "contact": {
+      "title": "RNG Export | İletişim ve Teklif Talebi",
+      "description": "Kenevir ve keten elyaf işleme hatları için teklif isteyin. Antalya AOSB’deki tesisimizi ziyaret edin, demo ve saha inceleme randevusu alın.",
+      "keywords": "rng export iletişim, kenevir makinası teklif, keten elyaf tesisi ziyaret"
+    }
+  },
   "header": {
     "slogan": "ENDÜSTRİYEL ÇÖZÜMLER",
     "quote_btn": "TEKLİF İSTE",

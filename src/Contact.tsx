@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import Layout from "./components/layout/Layout";
 import ContactSection from "./components/home/ContactSection";
@@ -9,6 +10,18 @@ export default function Contact() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{t('seo.contact.title', 'RNG Export | İletişim ve Teklif Talebi')}</title>
+        <meta
+          name="description"
+          content={t('seo.contact.description', 'Kenevir ve keten elyaf işleme hatları için teklif isteyin. Antalya AOSB’deki tesisimizi ziyaret edin, demo ve saha inceleme randevusu alın.')}
+        />
+        <meta
+          name="keywords"
+          content={t('seo.contact.keywords', 'rng export iletişim, kenevir makinası teklif, keten elyaf tesisi ziyaret')}
+        />
+        <link rel="canonical" href="https://www.rngexport.com/contact" />
+      </Helmet>
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-neutral-500 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 

@@ -42,6 +42,7 @@ export default function CorporateSection() {
   }>
   const stats = t('corporate.stats', { returnObjects: true }) as { val: string; label: string }[]
   const [selectedVisionIndex, setSelectedVisionIndex] = useState<number | null>(null)
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null)
 
   const visionImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30]
 
@@ -71,8 +72,14 @@ export default function CorporateSection() {
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
           
-          <div className="lg:col-span-5 flex flex-col gap-8">
-             <div className="relative h-[500px] w-full overflow-hidden group">
+         <div className="lg:col-span-5 flex flex-col gap-8">
+             <div 
+               className="relative h-[500px] w-full overflow-hidden group cursor-zoom-in" 
+               onClick={() => setLightboxImage(img23)} 
+               role="button" 
+               tabIndex={0} 
+               aria-label="Görseli büyüt"
+             >
                 <img 
                   src={img23} 
                   alt="RNG Export Facility" 
@@ -174,6 +181,10 @@ export default function CorporateSection() {
                   <div 
                     key={idx}
                     className="relative overflow-hidden group cursor-pointer rounded-sm"
+                    onClick={() => setLightboxImage(img)}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Görseli büyüt"
                   >
                     <img 
                       src={img} 
@@ -215,6 +226,31 @@ export default function CorporateSection() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      )}
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 z-[70] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={() => setLightboxImage(null)}
+        >
+          <div
+            className="relative max-w-[90vw] max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={lightboxImage}
+              alt="RNG Export"
+              className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl"
+            />
+            <button
+              type="button"
+              aria-label="Kapat"
+              onClick={() => setLightboxImage(null)}
+              className="absolute -top-4 -right-4 w-10 h-10 bg-white text-black font-bold text-xl flex items-center justify-center shadow-lg hover:bg-neutral-200 transition-colors"
+            >
+              ✕
+            </button>
           </div>
         </div>
       )}

@@ -66,74 +66,51 @@ export default function ContactSection() {
           <div className="lg:col-span-7">
             <div className="bg-white p-8 md:p-12 shadow-2xl border border-neutral-100 relative">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-black via-[#cf8300] to-black"></div>
-              
-              <h3 className="text-2xl font-bold text-black mb-8 tracking-tight flex items-center gap-3">
-                {t('contact.form.title')}
-                <span className="w-12 h-px bg-neutral-200 flex-1"></span>
-              </h3>
-              
-              <form className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <Field 
-                    label={t('contact.form.name_label')} 
-                    placeholder={t('contact.form.name_placeholder')} 
-                  />
-                  <Field 
-                    label={t('contact.form.company_label')} 
-                    placeholder={t('contact.form.company_placeholder')} 
-                  />
-                </div>
-                
-                <Field 
-                  label={t('contact.form.email_label')} 
-                  placeholder={t('contact.form.email_placeholder')} 
-                  type="email"
-                />
-
-                <div className="group">
-                  <label className="block text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-[#cf8300] transition-colors">
-                    {t('contact.form.project_label')}
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full bg-neutral-50 border-b-2 border-neutral-200 p-4 text-black focus:outline-none focus:border-[#cf8300] focus:bg-white transition-all resize-none font-medium placeholder-neutral-400"
-                    placeholder={t('contact.form.project_placeholder')}
-                  ></textarea>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-black tracking-tight">
+                    {t('contact.direct_contact_title')}
+                  </h3>
+                  <div className="flex flex-col gap-2">
+                    {t('contact.direct_contact_phone').split('\n').map((phone, i) => (
+                      <a
+                        key={i}
+                        href={`tel:${phone.replace(/\s/g, '')}`}
+                        className="text-lg font-medium text-black hover:text-[#cf8300] transition-colors"
+                      >
+                        {phone}
+                      </a>
+                    ))}
+                  </div>
+                  <a
+                    href={`mailto:${t('contact.direct_contact_mail')}`}
+                    className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] px-4 py-3 border border-black hover:bg-black hover:text-white transition-colors"
+                  >
+                    {t('contact.direct_contact_mail')}
+                    <span>→</span>
+                  </a>
                 </div>
 
-                <button className="w-full bg-black text-white py-6 text-sm font-bold uppercase tracking-[0.2em] hover:bg-[#cf8300] transition-all duration-300 flex items-center justify-center gap-4 group cursor-pointer">
-                  <span>{t('contact.form.submit')}</span>
-                  <span className="group-hover:translate-x-2 transition-transform">→</span>
-                </button>
-              </form>
+                <div className="space-y-4">
+                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    {t('contact.global_center_title')}
+                  </h4>
+                  <p className="text-lg text-black leading-relaxed">
+                    {t('contact.global_center_address')}
+                  </p>
+                  <div className="text-sm text-neutral-600 space-y-1">
+                    {t('contact.direct_contact_phone').split('\n').map((phone, i) => (
+                      <div key={i}>{phone}</div>
+                    ))}
+                    <div>{t('contact.direct_contact_mail')}</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
     </section>
-  )
-}
-
-type FieldProps = {
-  label?: string
-  placeholder: string
-  type?: string
-}
-
-function Field({ label, placeholder, type = 'text' }: FieldProps) {
-  return (
-    <div className="group">
-      {label && (
-        <label className="block text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-[#cf8300] transition-colors">
-          {label}
-        </label>
-      )}
-      <input
-        type={type}
-        className="w-full bg-neutral-50 border-b-2 border-neutral-200 p-4 text-black focus:outline-none focus:border-[#cf8300] focus:bg-white transition-all font-medium placeholder-neutral-400"
-        placeholder={placeholder}
-      />
-    </div>
   )
 }

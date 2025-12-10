@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Layout from './components/layout/Layout'
@@ -38,6 +39,18 @@ export default function Machines() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{t('seo.machines.title', 'Kenevir İşleme Makinaları & Ekipmanları - RNG Export')}</title>
+        <meta 
+          name="description" 
+          content={t('seo.machines.description', 'RNG Export tarafından üretilen endüstriyel kenevir işleme makinaları: Keneva, Kotonex, RODI, Shaker ve Balya Presleri. Teknik özellikler ve detaylar.')} 
+        />
+        <meta 
+          name="keywords" 
+          content={t('seo.machines.keywords', 'kenevir makinaları üreticileri, kenevir işleme makinaları, keten makinaları, elyaf makinası, shaker, balya presi')} 
+        />
+        <link rel="canonical" href="https://www.rngexport.com/machines" />
+      </Helmet>
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-neutral-900 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
