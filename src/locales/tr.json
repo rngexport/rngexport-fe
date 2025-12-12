@@ -1,9 +1,9 @@
 {
   "seo": {
     "home": {
-      "title": "Kenevir Makinaları Üreticisi & Elyaf İşleme - RNG Export",
-      "description": "RNG Export, endüstriyel kenevir işleme makinaları, keten elyaf üretim hatları ve mühendislik çözümleri sunar. Keneva ve Kotonex ile tanışın.",
-      "keywords": "kenevir makinaları, kenevir işleme, elyaf üretim hattı, keten makinası, rng export"
+      "title": "Kenevir Makina Üreticileri & Elyaf İşleme Teknolojileri - RNG Export",
+      "description": "Lider kenevir makina üreticileri arasında yer alan RNG Export, endüstriyel kenevir işleme makinaları, keten elyaf üretim hatları ve anahtar teslim çözümler sunar.",
+      "keywords": "kenevir makina üreticileri, kenevir makinaları, kenevir işleme, elyaf üretim hattı, keten makinası, rng export"
     },
     "machines": {
       "title": "Kenevir İşleme Makinaları & Ekipmanları - RNG Export",
@@ -42,16 +42,17 @@
   },
   "hero": {
     "subtitle": "MÜHENDİSLİK & TİCARET",
-    "title": "KETEN & KENEVİR <br /> ELYAF ÇÖZÜMLERİ",
-    "desc": "Tarladan çıkan ham balyayı, endüstriyel kaliteye sahip temizlenmiş, standardize edilmiş elyaf formatına dönüştüren %100 uzmanlaşmış mühendislik hatları.",
+    "title": "KENEVİR MAKİNA & <br /> ELYAF TEKNOLOJİLERİ",
+    "desc": "Tarladan çıkan ham balyayı, endüstriyel kaliteye sahip temizlenmiş, standardize edilmiş elyaf formatına dönüştüren profesyonel makina üreticisi.",
     "btn_discover": "HATLARIMIZI KEŞFEDİN",
     "btn_start": "PROJENİZİ BAŞLATIN"
   },
   "marquee": {
     "items": [
+      "KENEVİR MAKİNA ÜRETİCİSİ",
       "ANAHTAR TESLİM ÇÖZÜMLER",
-      "ELYAF İŞLEME",
-      "OTOMASYON",
+      "ELYAF İŞLEME TEKNOLOJİLERİ",
+      "OTOMASYON & YAZILIM",
       "AR-GE MÜHENDİSLİĞİ",
       "GLOBAL LOJİSTİK",
       "SÜRDÜRÜLEBİLİR ENERJİ"
@@ -729,7 +730,7 @@
     }
   },
   "footer": {
-    "brand_text": "Keten ve kenevir elyaf işleme teknolojilerinde global mühendislik ortağınız. Tarladan son ürüne kadar %100 uzmanlık ve verimlilik odaklı çözümler sunuyoruz.",
+    "brand_text": "Kenevir makina üreticileri arasında öncü olan RNG Export, keten ve kenevir elyaf işleme teknolojilerinde global mühendislik ortağınızdır. Tarladan son ürüne kadar anahtar teslim fabrika çözümleri sunuyoruz.",
     "quick_links": "HIZLI ERİŞİM",
     "contact_center": "İLETİŞİM MERKEZİ",
     "hq_label": "GENEL MERKEZ",

@@ -88,7 +88,7 @@ function FacilityHero({ onImageClick }: { onImageClick: (src: string) => void })
     <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center bg-neutral-900 overflow-hidden">
       <button
         type="button"
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 cursor-zoom-in"
         onClick={() => onImageClick(img1)}
         aria-label="Görseli büyüt"
       >
@@ -97,7 +97,7 @@ function FacilityHero({ onImageClick }: { onImageClick: (src: string) => void })
           alt="Facility Hero"
           className="w-full h-full object-cover opacity-60 pointer-events-none"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent pointer-events-none"></div>
       </button>
 
       <div className="relative z-10 max-w-[1800px] mx-auto px-6 text-center">
@@ -119,6 +119,9 @@ function FacilityHero({ onImageClick }: { onImageClick: (src: string) => void })
 
 function FacilityContent({ onImageClick }: { onImageClick: (src: string) => void }) {
   const { t } = useTranslation();
+  const handleImageClick = (src?: string) => {
+    if (src) onImageClick(src);
+  };
   const stories = t("facilities.stories", { returnObjects: true }) as {
     title: string;
     description: string;
@@ -145,10 +148,10 @@ function FacilityContent({ onImageClick }: { onImageClick: (src: string) => void
               <img 
                 src={storyImages[idx][0]} 
                 alt={story.title} 
-                onClick={() => onImageClick(storyImages[idx][0])}
+                onClick={() => handleImageClick(storyImages[idx][0])}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 cursor-zoom-in" 
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 bg-black/80 text-white px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase">
                 {story.tag}
               </div>
@@ -180,7 +183,7 @@ function FacilityContent({ onImageClick }: { onImageClick: (src: string) => void
                 <img 
                   src={storyImages[idx][1]} 
                   alt="" 
-                  onClick={() => onImageClick(storyImages[idx][1])}
+                  onClick={() => handleImageClick(storyImages[idx][1])}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
                 />
              </div>
@@ -190,14 +193,14 @@ function FacilityContent({ onImageClick }: { onImageClick: (src: string) => void
                   <img 
                     src={storyImages[idx][2]} 
                     alt="" 
-                    onClick={() => onImageClick(storyImages[idx][2])}
+                    onClick={() => handleImageClick(storyImages[idx][2])}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
                   />
                 ) : (
                   <img 
                     src={extraImages[idx * 2]} 
                     alt="" 
-                    onClick={() => onImageClick(extraImages[idx * 2])}
+                    onClick={() => handleImageClick(extraImages[idx * 2])}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
                   />
                 )}
@@ -207,7 +210,7 @@ function FacilityContent({ onImageClick }: { onImageClick: (src: string) => void
                 <img 
                   src={extraImages[idx * 2 + 1] || extraImages[0]} 
                   alt="" 
-                  onClick={() => onImageClick(extraImages[idx * 2 + 1] || extraImages[0])}
+                  onClick={() => handleImageClick(extraImages[idx * 2 + 1] || extraImages[0])}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
                 />
              </div>
@@ -216,7 +219,7 @@ function FacilityContent({ onImageClick }: { onImageClick: (src: string) => void
                 <img 
                   src={extraImages[idx * 2 + 2] || extraImages[1]} 
                   alt="" 
-                  onClick={() => onImageClick(extraImages[idx * 2 + 2] || extraImages[1])}
+                  onClick={() => handleImageClick(extraImages[idx * 2 + 2] || extraImages[1])}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
                 />
              </div>
@@ -225,7 +228,7 @@ function FacilityContent({ onImageClick }: { onImageClick: (src: string) => void
                 <img 
                   src={extraImages[idx * 2 + 3] || extraImages[2]} 
                   alt="" 
-                  onClick={() => onImageClick(extraImages[idx * 2 + 3] || extraImages[2])}
+                  onClick={() => handleImageClick(extraImages[idx * 2 + 3] || extraImages[2])}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-zoom-in" 
                 />
              </div>

@@ -41,6 +41,22 @@ export default function Layout({ children }: LayoutProps) {
             name: 'RNG Export',
             url: 'https://www.rngexport.com/',
             logo: 'https://www.rngexport.com/assets/logo-dark.png',
+            description: 'RNG Export, endüstriyel kenevir makina üreticileri arasında lider konumdadır. Kenevir işleme makinaları, keten elyaf üretim hatları ve anahtar teslim fabrika çözümleri sunar.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'AOSB 1. kısım Atatürk Bulvarı No: 10/1',
+              addressLocality: 'Döşemealtı',
+              addressRegion: 'Antalya',
+              postalCode: '07190',
+              addressCountry: 'TR'
+            },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+90-242-502-1772',
+              contactType: 'sales',
+              areaServed: ['TR', 'RU', 'US', 'EU'],
+              availableLanguage: ['Turkish', 'English', 'Russian']
+            },
             sameAs: [
               'https://www.linkedin.com/company/rngexport'
             ]
