@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import logo from '../../assets/logo-dark.png'
+import logo from '../../assets/logo-dark.png' // Logo will need update
 
 export default function Header() {
   const location = useLocation()
@@ -10,14 +10,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
-    return () => {
-      document.body.style.overflow = ''
-    }
+    document.body.style.overflow = isMenuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
   }, [isMenuOpen])
 
   const changeLanguage = (lng: string) => {
@@ -29,185 +23,114 @@ export default function Header() {
   const navItems = [
     { label: t('nav.home'), href: '/' },
     { label: t('nav.corporate'), href: '/#corporate' },
-    { label: t('nav.lines'), href: '/#lines' },
-    { label: t('nav.machines'), href: '/#machines' },
-    { label: t('nav.process'), href: '/#process' },
-    { label: t('nav.facilities'), href: '/facilities' },
+    { label: t('nav.services'), href: '/#services' },
+    { label: t('nav.industries'), href: '/#industries' },
+    { label: t('nav.projects'), href: '/#projects' },
+    { label: t('nav.rd'), href: '/#rd' },
+    { label: t('nav.blog'), href: '/#blog' },
     { label: t('nav.contact'), href: '/#contact' },
   ]
 
   const languages = [
-    { code: 'tr', label: 'Türkçe' },
-    { code: 'en', label: 'ENGLISH' },
-    { code: 'ru', label: 'Русский' },
+    { code: 'tr', label: 'TR' },
+    { code: 'en', label: 'EN' },
+    { code: 'ru', label: 'RU' },
   ]
 
   const currentLangCode = (i18n.language || 'tr').slice(0, 2)
-  const currentLang = languages.find((l) => l.code === currentLangCode) || languages[0]
 
   return (
-    <header className="sticky top-0 z-50">
-      <div className="hidden md:flex bg-neutral-900 text-white text-[10px] tracking-[0.2em] uppercase py-2 px-6 justify-between items-center">
+    <header className="sticky top-0 z-50 bg-neutral-950 border-b border-neutral-800">
+      {/* Top Bar - Tech Style */}
+      <div className="hidden md:flex bg-black text-[#00f0ff] text-[9px] tracking-[0.3em] uppercase py-1.5 px-6 justify-between items-center border-b border-white/5">
         <span>{t('header.top_bar')}</span>
         <div className="flex items-center gap-6">
-          <div className="flex gap-6">
-            <a href="mailto:INFO@RNGEXPORT.COM" className="hover:text-white transition-colors text-white" style={{ textTransform: 'none' }}>
-              INFO@RNGEXPORT.COM
-            </a>
-            <div className="flex flex-col gap-1">
-              <a href="tel:+902425021772" className="hover:text-white transition-colors text-white">
-                +90 242 502 17 72
-              </a>
-              <a href="tel:+905466804772" className="hover:text-white transition-colors text-white">
-                +90 546 680 47 72
-              </a>
-            </div>
-          </div>
+          <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          <span>SYSTEM ONLINE</span>
         </div>
       </div>
 
-      <nav className="bg-white border-b border-neutral-200">
-        <div className="max-w-[1800px] mx-auto px-6 h-24 flex items-center justify-between">
+      <nav className="relative">
+        <div className="max-w-[1920px] mx-auto px-6 h-20 flex items-center justify-between">
           
-          <Link to="/" className="flex flex-col gap-1 shrink-0 group">
-            <div className="flex items-center gap-1.5">
-              <img src={logo} alt="RNG Export" className="h-10 w-auto object-contain mb-0.5" />
-              <span className="text-2xl font-bold tracking-tighter text-black">EXPORT</span>
-            </div>
-            <span className="tracking-[0.3em] text-black uppercase ml-2 text-[10px]">
-              {t('header.slogan')}
+          <Link to="/" className="flex flex-col gap-0 shrink-0 group">
+            <span className="text-2xl font-black tracking-tighter text-white">TRAKYA</span>
+            <span className="text-xs font-bold tracking-[0.4em] text-[#00f0ff] uppercase group-hover:tracking-[0.6em] transition-all duration-300">
+              DESIGN
             </span>
           </Link>
 
-          <div className={`hidden lg:flex items-center ${currentLangCode === 'ru' ? 'gap-6' : 'gap-10'}`}>
+          {/* Desktop Nav */}
+          <div className="hidden xl:flex items-center gap-8">
             {navItems.map((item) => {
               const isActive = location.pathname === item.href
               return (
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`font-bold uppercase tracking-widest transition-colors relative group ${
-                    currentLangCode === 'ru' ? 'text-[10px]' : 'text-xs'
-                  } ${isActive ? 'text-black' : 'text-black hover:text-black'}`}
+                  className={`text-[11px] font-bold uppercase tracking-widest transition-all relative group py-2
+                    ${isActive ? 'text-[#00f0ff]' : 'text-neutral-400 hover:text-white'}`}
                 >
                   {item.label}
-                  <span className="absolute -bottom-8 left-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#00f0ff] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </Link>
               )
             })}
           </div>
           
-          <div className="hidden lg:flex items-center gap-4 shrink-0">
+          <div className="hidden xl:flex items-center gap-6 shrink-0">
+            {/* Lang Switcher - Cyber Style */}
             <div className="relative">
-              <button
-                type="button"
-                onClick={() => setIsLangOpen((prev) => !prev)}
-                className={`flex items-center gap-3 px-5 py-2.5 text-[11px] font-bold tracking-[0.15em] transition-all duration-300 rounded-sm cursor-pointer ${
-                  isLangOpen 
-                    ? 'bg-neutral-900 text-white' 
-                    : 'bg-neutral-50 text-black hover:bg-neutral-100 hover:text-black'
-                }`}
-              >
-                <span>{currentLang.code.toUpperCase()}</span>
-                <span className={`text-[8px] opacity-60 transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`}>▼</span>
-              </button>
-              
-              {isLangOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white border border-neutral-100 shadow-2xl shadow-neutral-200 rounded-sm overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200">
-                  <div className="py-2">
-                    {languages.map((lng) => {
-                      const isSelected = lng.code === currentLang.code
-                      return (
-                        <button
-                          key={lng.code}
-                          type="button"
-                          onClick={() => changeLanguage(lng.code)}
-                          className={`w-full flex items-center justify-between px-6 py-3 text-[11px] tracking-[0.15em] transition-colors cursor-pointer ${
-                            isSelected 
-                              ? 'bg-neutral-50 text-black font-bold' 
-                              : 'text-black hover:bg-neutral-50 hover:text-black'
-                          }`}
-                          style={lng.code === 'en' ? { textTransform: 'none' } : { textTransform: 'uppercase' }}
-                        >
-                          <span>{lng.label}</span>
-                          {isSelected && (
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#cf8300]"></span>
-                          )}
-                        </button>
-                      )
-                    })}
-                  </div>
-                </div>
-              )}
+              <div className="flex bg-neutral-900 border border-neutral-800 rounded-sm">
+                {languages.map((lng) => (
+                  <button
+                    key={lng.code}
+                    onClick={() => changeLanguage(lng.code)}
+                    className={`px-3 py-1.5 text-[10px] font-bold hover:text-[#00f0ff] transition-colors ${
+                      currentLangCode === lng.code ? 'text-[#00f0ff] bg-white/5' : 'text-neutral-500'
+                    }`}
+                  >
+                    {lng.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <a
               href="/#contact"
-              className="bg-neutral-900 text-white border border-neutral-900 px-8 py-2.5 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+              className="bg-[#00f0ff] text-black px-6 py-2 text-[10px] font-black uppercase tracking-[0.15em] hover:bg-white hover:scale-105 transition-all duration-300 clip-path-polygon"
+              style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)' }}
             >
               {t('header.quote_btn')}
             </a>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden flex flex-col gap-1.5 p-2 z-50"
+            className="xl:hidden text-white p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            <div className="space-y-1.5">
+              <span className={`block w-8 h-0.5 bg-[#00f0ff] transition-all ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`block w-8 h-0.5 bg-white transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block w-8 h-0.5 bg-[#00f0ff] transition-all ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </div>
           </button>
 
+          {/* Mobile Menu Overlay */}
           {isMenuOpen && (
-            <div className="fixed inset-0 bg-white z-40 lg:hidden pt-[88px] pb-10 px-6 flex flex-col overflow-y-auto">
-              <div className="flex flex-col gap-4 mb-4 mt-0">
+            <div className="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 xl:hidden pt-32 pb-10 px-6 flex flex-col overflow-y-auto">
+              <div className="flex flex-col gap-6">
                 {navItems.map((item) => (
                   <Link
                     key={item.label}
                     to={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-2xl font-bold uppercase tracking-tight text-black border-b border-neutral-100 pb-4"
+                    className="text-xl font-bold uppercase tracking-widest text-white border-l-2 border-transparent hover:border-[#00f0ff] hover:pl-4 transition-all duration-300"
                   >
                     {item.label}
                   </Link>
                 ))}
-              </div>
-
-              <div className="mt-auto flex flex-col gap-8">
-                <div className="flex flex-col gap-4 text-sm">
-                  <a href="mailto:INFO@RNGEXPORT.COM" className="font-bold text-black">INFO@RNGEXPORT.COM</a>
-                  <div className="flex flex-col gap-1 text-neutral-600">
-                    <a href="tel:+902425021772">+90 242 502 17 72</a>
-                    <a href="tel:+905466804772">+90 546 680 47 72</a>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-4">
-                   <span className="text-xs font-bold tracking-widest text-neutral-400 uppercase">DİL SEÇİMİ</span>
-                   <div className="flex gap-4">
-                     {languages.map((lng) => (
-                       <button
-                         key={lng.code}
-                         onClick={() => changeLanguage(lng.code)}
-                         className={`px-4 py-2 border text-sm font-bold uppercase tracking-widest ${
-                           lng.code === currentLang.code 
-                             ? 'border-black bg-black text-white' 
-                             : 'border-neutral-200 text-neutral-500'
-                         }`}
-                       >
-                         {lng.code}
-                       </button>
-                     ))}
-                   </div>
-                </div>
-
-                <a
-                  href="/#contact"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="w-full bg-[#cf8300] text-white text-center py-4 text-sm font-bold uppercase tracking-[0.2em]"
-                >
-                  {t('header.quote_btn')}
-                </a>
               </div>
             </div>
           )}

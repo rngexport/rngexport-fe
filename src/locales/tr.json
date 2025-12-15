@@ -1,747 +1,134 @@
 {
   "seo": {
     "home": {
-      "title": "Kenevir Makina Üreticileri & Elyaf İşleme Teknolojileri - RNG Export",
-      "description": "Lider kenevir makina üreticileri arasında yer alan RNG Export, endüstriyel kenevir işleme makinaları, keten elyaf üretim hatları ve anahtar teslim çözümler sunar.",
-      "keywords": "kenevir makina üreticileri, kenevir makinaları, kenevir işleme, elyaf üretim hattı, keten makinası, rng export"
-    },
-    "machines": {
-      "title": "Kenevir İşleme Makinaları & Ekipmanları - RNG Export",
-      "description": "RNG Export tarafından üretilen endüstriyel kenevir işleme makinaları: Keneva, Kotonex, RODI, Shaker ve Balya Presleri. Teknik özellikler ve detaylar.",
-      "keywords": "kenevir makinaları üreticileri, kenevir işleme makinaları, keten makinaları, elyaf makinası, shaker, balya presi"
-    },
-    "lines": {
-      "title": "Anahtar Teslim Kenevir & Keten Üretim Hatları - RNG Export",
-      "description": "Keneva Ön İşleme, Kotonex Kotonizasyon ve Uzun Elyaf hatları. Tarladan son ürüne tam entegre endüstriyel çözümler.",
-      "keywords": "kenevir üretim hattı, keten üretim hattı, kotonizasyon, ön açma hattı, uzun elyaf hattı"
-    },
-    "facilities": {
-      "title": "Kenevir Elyaf Tesisleri ve Makina Parkı - RNG Export",
-      "description": "Kenevir ve keten elyafı için entegre üretim hatları, demo merkezi ve saha operasyonlarını canlı izleyin. Makina parkımızı ve tesis altyapımızı keşfedin.",
-      "keywords": "kenevir makinaları üreticileri, kenevir işleme tesisi, keten elyaf fabrikası, elyaf üretim hatları, rng export tesisleri"
-    },
-    "contact": {
-      "title": "RNG Export | İletişim ve Teklif Talebi",
-      "description": "Kenevir ve keten elyaf işleme hatları için teklif isteyin. Antalya AOSB’deki tesisimizi ziyaret edin, demo ve saha inceleme randevusu alın.",
-      "keywords": "rng export iletişim, kenevir makinası teklif, keten elyaf tesisi ziyaret"
+      "title": "RNG Export",
+      "description": "Trakya Design, kenevir işleme makinaları, keten elyaf üretim hatları ve endüstriyel elyaf işleme tesisleri kuran lider üreticidir. Kotonizasyon, soyma ve balyalama çözümleri.",
+      "keywords": "kenevir makinası, keten işleme makinaları, elyaf işleme, elyaf üretim hattı, kenevir soyma, keten hasat, kotonizasyon, endüstriyel elyaf, trakya design, kenevir sapı işleme, keten sapı işleme, doğal elyaf makinaları, kenevir lifi çıkarma, keten lifi ayırma, dekortikatör, dekortikasyon makinası, şifanoz makinası, tarak makinası, tekstil keneviri, endüstriyel kenevir tesisi, elyaf açma makinası, balya açıcı, elyaf temizleme hattı, kenevir fabrikası kurulumu, anahtar teslim elyaf tesisi"
     }
   },
   "header": {
-    "slogan": "ENDÜSTRİYEL ÇÖZÜMLER",
-    "quote_btn": "TEKLİF İSTE",
-    "top_bar": "RNG DIŞ TİCARET - KETEN & KENEVİR ELYAF TEKNOLOJİLERİ"
+    "top_bar": "TRAKYA DESIGN - INDUSTRIAL INTELLIGENCE & AUTOMATION ENGINEERING",
+    "slogan": "WE BUILD THE BRAIN OF THE PROCESS",
+    "quote_btn": "MÜHENDİSLİK BAŞLAT"
   },
   "nav": {
     "home": "ANASAYFA",
     "corporate": "KURUMSAL",
-    "lines": "HATLARIMIZ",
-    "machines": "MAKİNELER",
-    "process": "PROSES",
-    "facilities": "TESİSLER",
+    "services": "HİZMETLER",
+    "industries": "SEKTÖRLER",
+    "technologies": "TEKNOLOJİLER",
+    "projects": "PROJELER",
+    "rd": "AR-GE & LAB",
+    "blog": "TECH LIBRARY",
     "contact": "İLETİŞİM"
   },
   "hero": {
-    "subtitle": "MÜHENDİSLİK & TİCARET",
-    "title": "KENEVİR MAKİNA & <br /> ELYAF TEKNOLOJİLERİ",
-    "desc": "Tarladan çıkan ham balyayı, endüstriyel kaliteye sahip temizlenmiş, standardize edilmiş elyaf formatına dönüştüren profesyonel makina üreticisi.",
-    "btn_discover": "HATLARIMIZI KEŞFEDİN",
-    "btn_start": "PROJENİZİ BAŞLATIN"
+    "subtitle": "INDUSTRIAL INTELLIGENCE & AUTOMATION ENGINEERING",
+    "title": "WE BUILD THE <br /> BRAIN OF THE PROCESS",
+    "desc": "Tesisler düşünmez — biz düşündürürüz. Savunma sınıfı tesisler ve ağır proses endüstrileri için ileri seviye otomasyon, SCADA yazılımları ve kontrol sistemleri.",
+    "btn_discover": "ÇÖZÜMLERİ İNCELE",
+    "btn_start": "MÜHENDİSLİK BAŞLAT"
   },
-  "marquee": {
-    "items": [
-      "KENEVİR MAKİNA ÜRETİCİSİ",
-      "ANAHTAR TESLİM ÇÖZÜMLER",
-      "ELYAF İŞLEME TEKNOLOJİLERİ",
-      "OTOMASYON & YAZILIM",
-      "AR-GE MÜHENDİSLİĞİ",
-      "GLOBAL LOJİSTİK",
-      "SÜRDÜRÜLEBİLİR ENERJİ"
-    ]
-  },
-  "corporate": {
-    "section_label": "HAKKIMIZDA",
-    "headline": "Biz sadece bu işe odaklanıyoruz. Ve bu işte en iyisiyiz.",
-    "p1": "RNG Dış Ticaret, keten ve kenevir elyafının ön işleme, elyaf hazırlama ve kotonizasyon süreçlerine %100 odaklanmış, bu alanda uzmanlaşmış bir mühendislik ve ticaret şirketidir.",
-    "p2": "Bu coğrafyada keten ve kenevir elyaf teknolojilerini “başka işlerin arasında” yapmıyoruz. Sadece bu işe odaklanıyoruz.",
-    "p3": "RNG Dış Ticaret, global ölçekte yatırım yapan firmalara; yüksek performanslı makine hatları, ileri mühendislik desteği ve uzun vadeli proses danışmanlığı sunmaktadır.",
-    "mission_title": "MİSYONUMUZ",
-    "mission_body": "Müşterilerimize yüksek verimli, düşük enerji tüketimli, bakım dostu, ATEX/Ex-Proof güvenlik standartlarına uygun, modüler ve genişlemeye açık elyaf işleme hatları sunmak ve bu yatırımı güvenli şekilde sonuçlandırmak.",
-    "cta_detailed_info": "DETAYLI BİLGİ ALIN",
-    "vision_title": "VİZYONUMUZ",
-    "vision_body": "Keten ve kenevir gibi stratejik lif kaynaklarında; endüstriyel elyaf üretimi için birinci basamak olan elyaf hazırlama teknolojilerinde dünyanın en güvenilir markalarından biri olmak.",
-    "vision_list": [
-      "Endüstriyel elyaf üretimi",
-      "Selüloz üretimi (alpha-selüloz)",
-      "Nitroselüloz ve savunma sanayi",
-      "Biyokompozit ve biyoplastik",
-      "Nonwoven & tekstil sanayi"
-    ],
-    "vision_details": [
-      {
-        "title": "Endüstriyel elyaf üretimi",
-        "description": "Keten ve kenevir gibi doğal lif kaynaklarından endüstriyel kalitede elyaf üretimi. RNG Export'un gelişmiş işleme teknolojileri ile ham balyalardan başlayarak, kotonize elyaf, uzun elyaf ve kısa elyaf gibi çeşitli formatta endüstriyel ürünler üretilmektedir. Bu elyaflar, tekstil, kompozit, nonwoven ve biyokompozit sektörlerinde kritik hammadde olarak kullanılmaktadır.",
-        "features": [
-          "Çok kademeli işleme teknolojisi",
-          "Yüksek saflık oranı",
-          "Homojen kalite kontrolü",
-          "Sürdürülebilir üretim",
-          "Endüstriyel standartlara uygunluk"
-        ],
-        "applications": [
-          "Nonwoven tekstil üretimi",
-          "İplik ve dokuma endüstrisi",
-          "Kompozit malzeme üretimi",
-          "Biyokompozit uygulamaları",
-          "Teknik tekstil sektörü"
-        ]
-      },
-      {
-        "title": "Selüloz üretimi (alpha-selüloz)",
-        "description": "Yüksek saflıkta alpha-selüloz üretimi için optimize edilmiş elyaf işleme süreçleri. Alpha-selüloz, kağıt, kimyasal endüstri ve özel uygulamalar için kritik bir hammaddedir. RNG Export'un teknolojisi, yüksek saflık oranları ve tutarlı kalite ile endüstriyel selüloz üretimine hazır elyaf sağlar.",
-        "features": [
-          "Yüksek saflık alpha-selüloz",
-          "Kimyasal işleme uygunluğu",
-          "Tutarlı kalite standartları",
-          "Endüstriyel ölçek üretim",
-          "Çevre dostu proses"
-        ],
-        "applications": [
-          "Kağıt ve karton üretimi",
-          "Kimyasal endüstri",
-          "Selüloz türevleri",
-          "Özel kimyasal uygulamalar",
-          "Biyo-rafineri süreçleri"
-        ]
-      },
-      {
-        "title": "Nitroselüloz ve savunma sanayi",
-        "description": "Savunma sanayi ve özel uygulamalar için nitroselüloz üretimine uygun yüksek kaliteli elyaf işleme. Nitroselüloz, propellant, patlayıcı ve özel kimyasal uygulamalarda kullanılan kritik bir hammaddedir. RNG Export'un titiz kalite kontrol süreçleri ile savunma sanayi standartlarına uygun elyaf üretimi gerçekleştirilmektedir.",
-        "features": [
-          "Savunma sanayi standartlarına uygunluk",
-          "Yüksek saflık ve kalite kontrolü",
-          "Güvenlik sertifikasyonları",
-          "Özel uygulama odaklı",
-          "Kritik sektör desteği"
-        ],
-        "applications": [
-          "Propellant üretimi",
-          "Patlayıcı endüstrisi",
-          "Savunma sanayi uygulamaları",
-          "Özel kimyasal üretim",
-          "Güvenlik kritik uygulamalar"
-        ]
-      },
-      {
-        "title": "Biyokompozit ve biyoplastik",
-        "description": "Sürdürülebilir biyokompozit ve biyoplastik üretimi için optimize edilmiş elyaf işleme teknolojileri. Doğal liflerden üretilen biyokompozitler, otomotiv, mobilya, ambalaj ve inşaat sektörlerinde sentetik malzemelere sürdürülebilir alternatifler sunar. RNG Export'un elyaf işleme teknolojisi, yüksek performanslı biyokompozit üretimi için ideal hammadde sağlar.",
-        "features": [
-          "Sürdürülebilir malzeme üretimi",
-          "Yüksek performans özellikleri",
-          "Çevre dostu proses",
-          "Otomotiv uygulamalarına uygun",
-          "Geri dönüştürülebilir"
-        ],
-        "applications": [
-          "Otomotiv kompozitleri",
-          "Mobilya endüstrisi",
-          "Ambalaj malzemeleri",
-          "İnşaat uygulamaları",
-          "Biyoplastik üretimi"
-        ]
-      },
-      {
-        "title": "Nonwoven & tekstil sanayi",
-        "description": "Nonwoven ve tekstil sanayi için özel olarak geliştirilmiş elyaf işleme çözümleri. Kotonize elyaf, kısa elyaf ve uzun elyaf formatlarında üretilen ürünler, hijyen, medikal, filtre, temizlik ve teknik tekstil uygulamalarında kullanılmaktadır. RNG Export'un teknolojisi, yüksek kalite ve homojen yapı ile tekstil üretim hatlarına hazır hammadde sağlar.",
-        "features": [
-          "Nonwoven uygulamalarına optimize",
-          "Yüksek emici özellikler",
-          "Homojen lif dağılımı",
-          "Tekstil üretim hatlarına uygun",
-          "Geniş uygulama yelpazesi"
-        ],
-        "applications": [
-          "Hijyen ürünleri (bebek bezi, ped)",
-          "Medikal tekstiller",
-          "Filtre malzemeleri",
-          "Temizlik ürünleri",
-          "Teknik tekstil uygulamaları"
-        ]
-      }
-    ],
-    "stats": [
-      { "val": "9", "label": "ANA MAKİNE GRUBU" },
-      { "val": "3", "label": "ENTEGRE HAT" },
-      { "val": "%100", "label": "ODAKLANMA" }
-    ]
-  },
-  "lines": {
-    "section_label": "ÜRETİM HATLARIMIZ",
-    "section_title": "Global pazarda sunduğumuz tam entegre 3 ana çözüm.",
-    "items": [
-      {
-        "title": "KENEVA – Keten & Kenevir Ön Elyaf İşleme Hattı",
-        "subtext": "Pre-Processing & Opening Line",
-        "desc": "Tarladan gelen ham balyanın ilk kez açıldığı, lifin ana kısım ve odunsu parçadan ayrıldığı, yabancı maddelerin temizlendiği ve stabil bir giriş akışı elde edildiği hattır.",
-        "outputs": [
-          "Balya bütünlüğünün bozulmadan açılması",
-          "Büyük parçaların küçültülmesi",
-          "Elyafın taranması",
-          "Kırtık, toz, saman, yabancı madde ayrımı",
-          "Lifin temel temizliği",
-          "Homojen bir besleme malzemesi oluşturma"
-        ],
-        "benefit": "Sonraki aşamaların verimliliğini %40-55 oranında artırır. Selüloz, biyokompozit ve kotonizasyon uygulamaları için olmazsa olmazdır."
-      },
-      {
-        "title": "KOTONEX - Keten & Kenevir Elyaf Kotonizasyon Hattı",
-        "subtext": "Cottonization Line",
-        "desc": "İşin kalbi burasıdır. Kotonizasyon hattı lif boyunu kısaltır, elyafı inceltir, temizler, hafifletir ve “pamuk benzeri” bir formata getirir.",
-        "applications": [
-          "Nonwoven",
-          "Tekstil karışım ipliği",
-          "Alfa-selüloz üretimi",
-          "Nitroselüloz üretimi",
-          "Savunma sanayi propellant üretimi",
-          "Biyokompozit takviye malzemesi"
-        ],
-        "outputs": [
-          "Lif boyu kontrolü",
-          "İnceltilmiş, açılmış lif",
-          "Metal ve tozdan arındırılmış malzeme",
-          "Sürekli ve stabil debi",
-          "Düşük nem & homojen yoğunluk"
-        ]
-      },
-      {
-        "title": "Uzun Elyaf İşleme Hattı",
-        "subtext": "Long Fibre Line",
-        "desc": "Bu hat özellikle teknik tekstiller, otomotiv kompozitleri ve inşaat güçlendirme malzemeleri için uzun lif üreten hattır.",
-        "features": [
-          "Lif boyu kırılmasını engelleyen özel açıcılar",
-          "Düşük hız kontrollü tarama tamburları",
-          "Hassas shaker-eleme",
-          "Metal ve kir ayrımı"
-        ],
-        "applications": [
-          "Teknik tekstiller",
-          "Otomotiv kompozitleri",
-          "İnşaat güçlendirme malzemeleri"
-        ],
-        "outputs": [
-          "Keten esaslı kompozit",
-          "Lif takviyeli plastik",
-          "Cam elyafa alternatif bio-fiber çözümler"
-        ]
-      }
-    ],
-    "list_titles": {
-      "features": "ÖZELLİKLER",
-      "applications": "KULLANIM SEKTÖRLERİ",
-      "outputs_long": "ÇIKTI ÜRÜNLER",
-      "outputs_short": "TEMEL ÇIKTILAR",
-      "advantage": "AVANTAJ:"
+  "sectors": {
+    "defense": {
+      "title": "Savunma Sanayi Otomasyonu",
+      "desc": "Nitro-selüloz, TNT, RDX ve enerjetik prosesler için SIL güvenlikli SCADA–PLC mimarileri."
     },
-    "zoom_hint": "Büyütmek için tıkla"
-  },
-  "process": {
-    "section_label": "RNG STANDART PROSES",
-    "section_title": "GOLD-STANDARD PROSES AKIŞI",
-    "section_desc": "Tüm hatlarımızda uygulanan, verimliliği kanıtlanmış standart işleyiş şeması.",
-    "steps": [
-      "Ham Balya Besleme",
-      "KENEVA Ön Açma",
-      "RODI Eleme (1. Kademe)",
-      "Shaker İnce Temizlik",
-      "Kırpık/Toz Çıkarma",
-      "Metal Kontrol",
-      "Kotonizasyon Ünitesi",
-      "Uzun Elyaf Ünitesi",
-      "Final Stabilizasyon",
-      "Balya Presleme"
-    ],
-    "step_details": [
-      {
-        "title": "Ham Balya Besleme",
-        "description": "İşleme hattına ham balyaların otomatik veya manuel olarak beslenmesi aşaması. Balyaların düzenli ve kontrollü şekilde sisteme girişi sağlanır.",
-        "features": ["Otomatik besleme sistemi", "Kontrollü yoğunluk", "Sürekli üretim akışı"]
-      },
-      {
-        "title": "KENEVA Ön Açma",
-        "description": "Balyaların açılması ve liflerin ilk parçalanması işlemi. Bu aşama, sonraki işlemlerin verimliliğini artırmak için kritik öneme sahiptir.",
-        "features": ["Yüksek verimlilik", "Lif koruma", "Otomatik kontrol"]
-      },
-      {
-        "title": "RODI Eleme (1. Kademe)",
-        "description": "Döner tamburlu elek sistemi ile ilk aşama eleme işlemi. Toz, kırpık ve kısa parçacıklar ayrılır.",
-        "features": ["360° döner tambur", "ATEX uyumlu", "Yüksek temizlik oranı"]
-      },
-      {
-        "title": "Shaker İnce Temizlik",
-        "description": "Titreşimli elek sistemi ile ince temizlik aşaması. Küçük partiküller ve tozlar tamamen ayrılır.",
-        "features": ["Hassas eleme", "Düşük enerji tüketimi", "Yüksek kalite"]
-      },
-      {
-        "title": "Kırpık/Toz Çıkarma",
-        "description": "Lif içindeki kırpık ve toz parçacıklarının aspirasyon sistemi ile çıkarılması. Ürün kalitesi bu aşamada belirlenir.",
-        "features": ["Güçlü aspirasyon", "Toz filtreleme", "Çevre dostu"]
-      },
-      {
-        "title": "Metal Kontrol",
-        "description": "Metal dedektör sistemi ile lif içindeki metal parçacıkların tespit edilmesi ve çıkarılması. Makine güvenliği için kritik aşama.",
-        "features": ["Yüksek hassasiyet", "Otomatik red", "Güvenlik odaklı"]
-      },
-      {
-        "title": "Kotonizasyon Ünitesi",
-        "description": "Liflerin pamuksu forma dönüştürüldüğü kritik aşama. Çok kademeli tarak sistemi ile lifler inceltilir ve standardize edilir.",
-        "features": ["Çok kademeli sistem", "Yüksek kalite", "Enerji verimli"]
-      },
-      {
-        "title": "Uzun Elyaf Ünitesi",
-        "description": "6-40 cm arası uzun liflerin korunarak işlendiği özel ünite. Teknik tekstil ve kompozit uygulamaları için optimize edilmiştir.",
-        "features": ["Lif koruma", "Hassas işleme", "Yüksek mukavemet"]
-      },
-      {
-        "title": "Final Stabilizasyon",
-        "description": "İşlenmiş liflerin son kalite kontrolü ve stabilizasyon aşaması. Ürün standardizasyonu sağlanır.",
-        "features": ["Kalite kontrolü", "Stabilizasyon", "Standartlaştırma"]
-      },
-      {
-        "title": "Balya Presleme",
-        "description": "İşlenmiş liflerin otomatik presleme sistemi ile balyalanması. Yüksek yoğunluklu, taşımaya uygun balyalar oluşturulur.",
-        "features": ["Otomatik presleme", "Yüksek yoğunluk", "Taşıma uygunluğu"]
-      }
-    ],
-    "outputs_title": "PROSES ÇIKTI ÜRÜNLERİ",
-    "outputs": [
-      {
-        "title": "KOTONİZE ELYAF",
-        "desc": "Pamuk benzeri formatta, endüstriyel kalitede işlenmiş elyaf."
-      },
-      {
-        "title": "TEMİZLENMİŞ UZUN ELYAF",
-        "desc": "Teknik tekstil ve kompozit uygulamaları için optimize edilmiş uzun lif."
-      },
-      {
-        "title": "KISA ELYAF",
-        "desc": "Nonwoven ve biyokompozit sektörleri için standartlaştırılmış kısa elyaf."
-      }
-    ],
-    "output_details": [
-      {
-        "title": "KOTONİZE ELYAF",
-        "description": "Keten ve kenevir liflerinin çok kademeli tarak sistemi ile pamuksu forma dönüştürüldüğü, endüstriyel kalitede işlenmiş premium elyaf. Bu ürün, liflerin inceltilmesi ve standardize edilmesi sürecinden geçerek, pamuk benzeri yapı ve dokunuş kazanır. Yüksek saflık oranı ve homojen lif dağılımı sayesinde nonwoven, iplik, biyokompozit ve selüloz üretimi gibi kritik endüstriyel uygulamalarda kullanıma hazırdır. RNG Export'un gelişmiş kotonizasyon teknolojisi ile üretilen bu elyaf, sürdürülebilir ve çevre dostu bir alternatif sunarak tekstil ve kompozit sektörlerinde öncü bir rol oynar.",
-        "features": [
-          "Pamuk benzeri yapı ve dokunuş özellikleri",
-          "%95+ saflık oranı ile yüksek kalite",
-          "Homojen lif dağılımı ve standartlaştırılmış boyut",
-          "Nonwoven ve iplik üretimi için optimize edilmiş",
-          "Biyokompozit ve selüloz uygulamalarına uygun",
-          "Düşük nem içeriği ve stabil yapı",
-          "Metal ve tozdan tamamen arındırılmış"
-        ],
-        "applications": [
-          "Nonwoven tekstil üretimi (hijyen, medikal, filtre)",
-          "İplik ve dokuma endüstrisi (karışım iplikleri)",
-          "Biyokompozit malzeme üretimi (otomatik parçalar)",
-          "Selüloz üretimi (alfa-selüloz, nitroselüloz)",
-          "Teknik tekstil uygulamaları (koruyucu kıyafetler)",
-          "Savunma sanayi propellant üretimi",
-          "Kağıt ve karton endüstrisi"
-        ]
-      },
-      {
-        "title": "TEMİZLENMİŞ UZUN ELYAF",
-        "description": "6-40 cm arası uzun liflerin bütünlüğü korunarak işlendiği, teknik tekstil ve kompozit uygulamaları için özel olarak optimize edilmiş premium ürün. RNG Export'un gelişmiş uzun elyaf işleme teknolojisi sayesinde, liflerin doğal mukavemeti ve dayanıklılığı korunurken, metal parçacıkları ve tozdan tamamen arındırılır. Bu ürün, cam elyaf ve sentetik fiberlere sürdürülebilir bir alternatif sunarak, otomotiv, havacılık, inşaat ve denizcilik sektörlerinde yüksek performanslı kompozit malzemelerin üretiminde kullanılır. Homojen kalite ve tutarlı lif boyu dağılımı ile endüstriyel standartlara uygun, güvenilir bir hammadde sağlar.",
-        "features": [
-          "6-40 cm lif boyu korunur (maksimum mukavemet)",
-          "Yüksek çekme mukavemeti değerleri",
-          "Metal ve tozdan tamamen arındırılmış",
-          "Homojen kalite ve tutarlı lif dağılımı",
-          "Kompozit uygulamaları için optimize edilmiş",
-          "Düşük nem içeriği ve stabil yapı",
-          "Çevre dostu ve sürdürülebilir"
-        ],
-        "applications": [
-          "Kompozit malzeme üretimi (otomatik parçalar, paneller)",
-          "Teknik tekstil uygulamaları (koruyucu kıyafetler, çadır)",
-          "İnşaat güçlendirme (beton takviye, geotekstil)",
-          "Otomotiv endüstrisi (interior, exterior parçalar)",
-          "Cam elyaf alternatifi (hafif ve dayanıklı)",
-          "Denizcilik ve havacılık kompozitleri",
-          "Spor ekipmanları (kayak, bisiklet frame)"
-        ]
-      },
-      {
-        "title": "KISA ELYAF",
-        "description": "Nonwoven ve biyokompozit sektörleri için özel olarak standartlaştırılmış, yüksek kalitede işlenmiş kısa elyaf. RNG Export'un titiz kalite kontrol süreçleri sayesinde, homojen boyut dağılımı ve tutarlı kalite ile endüstriyel uygulamalara hazır formatta üretilir. Bu ürün, dolgu malzemeleri, izolasyon ürünleri ve ambalaj endüstrisi gibi geniş bir kullanım alanına sahiptir. Yüksek emici özellikleri ve çevre dostu yapısı ile sürdürülebilir üretim süreçlerinde tercih edilen bir hammaddedir. Standartlaştırılmış boyut ve homojen dağılım sayesinde, üretim hatlarında sorunsuz işlenebilir ve tutarlı sonuçlar sağlar.",
-        "features": [
-          "Standartlaştırılmış boyut ve homojen dağılım",
-          "Yüksek kalite kontrolü ve tutarlılık",
-          "Nonwoven uygulamaları için optimize edilmiş",
-          "Biyokompozit üretimi için ideal özellikler",
-          "Yüksek emici kapasite",
-          "Düşük nem içeriği",
-          "Çevre dostu ve geri dönüştürülebilir"
-        ],
-        "applications": [
-          "Nonwoven tekstil üretimi (hijyen, medikal, temizlik)",
-          "Biyokompozit malzemeler (otomatik, mobilya)",
-          "Dolgu malzemeleri (yastık, yorgan, oyuncak)",
-          "İzolasyon ürünleri (ses, ısı, nem)",
-          "Ambalaj endüstrisi (koruyucu ambalaj)",
-          "Otomotiv iç mekan dolguları",
-          "Bahçe ve tarım uygulamaları (malç, toprak iyileştirme)"
-        ]
-      }
-    ]
-  },
-  "contact": {
-    "section_label": "BİZE ULAŞIN",
-    "title": "PROJENİZİ <br /> BİRLİKTE <br /> BAŞLATALIM",
-    "desc": "Yüksek performanslı makine hatları ve ileri mühendislik çözümleri için ilk adımı atın. Uzman ekibimiz fizibilite ve projelendirme için sizi bekliyor.",
-    "global_center_title": "GLOBAL MERKEZ",
-    "global_center_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
-    "direct_contact_title": "DOĞRUDAN İLETİŞİM",
-    "direct_contact_phone": "+90 242 502 17 72\n+90 546 680 47 72",
-    "direct_contact_mail": "INFO@RNGEXPORT.COM",
-    "form": {
-      "title": "Bize Yazın",
-      "name_label": "AD SOYAD",
-      "name_placeholder": "İsim Soyisim",
-      "company_label": "FİRMA",
-      "company_placeholder": "Firma Adı",
-      "email_label": "E-POSTA",
-      "email_placeholder": "ornek@sirket.com",
-      "project_label": "PROJE DETAYI",
-      "project_placeholder": "Projenizden kısaca bahsedin...",
-      "submit": "TEKLİFİ GÖNDER"
+    "chemistry": {
+      "title": "Kimya & Proses Endüstrisi",
+      "desc": "Reaktör, kolon, asit–alkol geri kazanım ve batch proses kontrol yazılımları."
+    },
+    "plastic": {
+      "title": "Plastik & Polimer Sistemleri",
+      "desc": "Ekstrüzyon, twin-roll ve granülizasyon hatları için tork–sıcaklık–hız senkronizasyonu."
+    },
+    "textile": {
+      "title": "Kenevir & Elyaf İşleme Hatları",
+      "desc": "Kenevir işleme makinaları, kotonizasyon, aspirasyon ve elyaf üretim hatlarında uçtan uca otomasyon ve makine çözümleri."
+    },
+    "food": {
+      "title": "Gıda & Paketleme Sistemleri",
+      "desc": "CIP/SIP sterilizasyon, dolum hattı kontrolü, üretim izlenebilirlik yazılımları."
+    },
+    "energy": {
+      "title": "Enerji & Yardımcı Tesisler",
+      "desc": "Buhar, basınç, su & chiller yönetimi için SCADA tabanlı izleme ve raporlama."
     }
   },
-  "factory": {
-    "section_label": "FABRİKAMIZ",
-    "title": "RNG EXPORT ÜRETİM MERKEZİ",
-    "description": "Antalya Organize Sanayi Bölgesi'ndeki entegre tesisimizde üretim hatları, demo merkezleri ve ziyaretçi turları tek bir kampüste buluşuyor.",
-    "cards": [
-      {
-        "title": "Üretim Holü",
-        "description": "12 metre tavan yüksekliğine sahip montaj hattı, tam kapasiteli test düzenekleri ve 24/7 operasyon planlaması.",
-        "meta": "24/7 OPERASYON"
-      },
-      {
-        "title": "Ar-Ge & Demo Merkezi",
-        "description": "Müşteri hammaddesiyle pilot üretim yapabildiğimiz test laboratuvarları, veri izleme odaları ve operatör eğitim stüdyoları.",
-        "meta": "MÜHENDİSLİK"
-      },
-      {
-        "title": "Ziyaretçi Koridoru",
-        "description": "Projeler için ayrılan cam koridorlu tur güzergâhı, sesli rehber sistemi ve interaktif bilgi panelleri.",
-        "meta": "ZİYARET"
-      }
+  "corporate": {
+    "title": "BİZ TESİSLERİN BEYİNLERİNİ KODLUYORUZ",
+    "desc": "Trakya Design, klasik firma hiyerarşisinden ziyade operasyon komuta merkezine benzeyen bir mühendislik organizasyon yapısına sahiptir.",
+    "history": "Trakya Design Proje Ltd. Şti.’nin temelleri 2012 yılında, ileri mühendislik vizyonu ve endüstriyel otomasyon teknolojilerini yerli–millî yapıya taşımak hedefiyle atıldı. Kırklareli Teknokent'ten İstanbul Skyport Residence merkezine uzanan yolculuğumuzda, saha kontrol yazılımlarından savunma sınıfı tesislere entegre SCADA–MES–Automation çözümleri üreten bir teknoloji merkezine dönüştük.",
+    "mission": "Savunma ve ağır proses endüstrilerinde; insan hatasını sıfıra indiren, hatasız çalışan, kendi kendini yöneten otomasyon sistemleri geliştirmek.",
+    "vision": "Önümüzdeki 10 yıl içinde yalnızca tesis kontrolü yapan bir şirket değil, ağır proses endüstrilerinde yapay zekâ ile karar verebilen komuta yazılımı geliştiren bir teknoloji strateji merkezine dönüşmek.",
+    "structure": [
+      "Başmühendislik Konseyi",
+      "SCADA Yazılım Ekibi",
+      "PLC & Otomasyon Operasyon Birimi",
+      "Proses Modelleme & AI Simülasyon Grubu",
+      "Ar-Ge Uygulama Hücresi"
     ]
   },
-  "machinesSection": {
-    "section_label": "MAKİNE PARKURU",
-    "section_title": "Profesyonel Makine Çözümleri",
-    "section_desc": "Keten ve kenevir işleme süreçleri için özel olarak geliştirilmiş 9 ana ünite.",
-    "details": "DETAYLAR",
-    "view": "İNCELE"
-  },
-  "machines": {
-    "items": [
-      {
-        "id": "M-01",
-        "name": "KENEVA – Ön Elyaf İşleme Ünitesi",
-        "category": "Elyaf Üretimi",
-        "specs": { "Kapasite": "Yüksek", "Güç": "Optimize", "Otomasyon": "PLC Kontrol" },
-        "description": "Ham balyadan girdi alan ilk büyük ünitedir. Balya bütünlüğünü bozmadan açar, büyük parçaları küçültür ve lifi ana kısımdan ayırarak stabil bir giriş akışı sağlar.",
-        "features": [
-          "Yüksek kapasiteli tamburlu açıcı teknolojisi",
-          "Tambur içi ters yönlü bıçak geometrisi",
-          "Toz oluşumunu minimuma indiren düşük hız kontrolü",
-          "ATEX uyumlu aspirasyon çıkışları",
-          "Besleme yoğunluğunu sabitleyen otomatik kontrol sistemi"
-        ],
-        "detailSpecs": {
-          "Fonksiyon": "Balya açma, lif parçalama, kaba tarama",
-          "Verimlilik": "Sonraki aşamaların verimliliğini %40-55 artırır",
-          "Güvenlik": "ATEX Uyumlu",
-          "Kontrol": "Otomatik Yoğunluk Kontrolü"
-        }
-      },
-      {
-        "id": "M-02",
-        "name": "KOTONEX - Elyaf Kotonizasyon Hattı",
-        "category": "Kotonizasyon",
-        "specs": { "Kapasite": "Endüstriyel", "Güç": "Düşük Tüketim", "Otomasyon": "Tam Otomatik" },
-        "description": "Lifin en son ve en kritik dönüşümünü yapar. Lifleri inceltir, boyunu kararlı hale getirir ve \"pamuksu\" forma sokar. Selüloz, NC, biyokompozit, iplik ve nonwoven üretiminin \"gold standard\" hammaddesini üretir.",
-        "features": [
-          "Çok kademeli tarak sistemi",
-          "Yüksek hızlı rotorlar",
-          "Lif açılışında %30 verim artışı",
-          "Düşük enerji tüketimi",
-          "Lif kırılmasını engelleyen tasarım"
-        ],
-        "detailSpecs": {
-          "Çıktı": "Pamuksu, inceltilmiş lif",
-          "Uygulama": "Nonwoven, iplik, biyokompozit",
-          "Verim": "Yüksek saflıkta elyaf",
-          "Enerji": "Optimize edilmiş düşük tüketim"
-        }
-      },
-      {
-        "id": "M-03",
-        "name": "Uzun Elyaf İşleme Hattı",
-        "category": "Uzun Lif",
-        "specs": { "Kapasite": "6-40 cm Lif", "Güç": "Hassas", "Otomasyon": "Servo" },
-        "description": "Keten/kenevirin 6–40 cm arası uzun liflerini koruyarak işler. Lif kırılmasını engelleyen özel açıcılar ve düşük hız kontrollü tarama tamburları ile çalışır.",
-        "features": [
-          "Lif kırılmasını engelleyen düşük torklu açma",
-          "Yumuşak tarama teknolojisi",
-          "Uzun lif seçimi ve ayırma",
-          "Yabancı madde eleme sistemi"
-        ],
-        "detailSpecs": {
-          "Lif Boyu": "6 - 40 cm",
-          "Kullanım": "Kompozit, teknik tekstil, inşaat güçlendirme",
-          "Teknoloji": "Düşük torklu hassas açma",
-          "Kalite": "Yüksek mukavemetli uzun lif"
-        }
-      },
-      {
-        "id": "M-04",
-        "name": "RODI – Döner Tamburlu Elek",
-        "category": "Eleme & Temizlik",
-        "specs": { "Kapasite": "360° Tambur", "Güç": "Yüksek", "Otomasyon": "ATEX" },
-        "description": "Keten ve kenevir proseslerinin her aşamasında kullanılan kritik eleme teknolojisi. Lif içinden toz, kırtık ve kısa parçacıkları ayırarak ürün kalitesini belirler.",
-        "features": [
-          "360° döner tambur tasarımı",
-          "Ayarlanabilir elek açıklığı",
-          "ATEX uyumlu toz çıkışı",
-          "Paslanmaz çelik tamburlu gövde",
-          "Homojen ürün yoğunluğu sağlama"
-        ],
-        "detailSpecs": {
-          "Tip": "Döner Tambur",
-          "Malzeme": "Paslanmaz Çelik",
-          "Güvenlik": "ATEX Uyumlu Aspirasyon",
-          "Fonksiyon": "Toz ve kırtık ayırma"
-        }
-      },
-      {
-        "id": "M-05",
-        "name": "Dikey Balya Presi",
-        "category": "Paketleme",
-        "specs": { "Kapasite": "150-350 kg", "Güç": "Hidrolik", "Otomasyon": "Otomatik" },
-        "description": "Kısa elyaf, kotonize elyaf ve uzun elyaf için kompakt paketleme çözümü. Otomatik sıkıştırma ile yüksek yoğunluklu balyalar oluşturur.",
-        "features": [
-          "150–350 kg balya kapasitesi",
-          "Güçlü hidrolik ünite",
-          "Tam korumalı çelik gövde",
-          "Otomatik sıkıştırma döngüsü",
-          "Yüksek dayanım ve güvenlik"
-        ],
-        "detailSpecs": {
-          "Kapasite": "150 - 350 kg/balya",
-          "Sistem": "Hidrolik Güç Ünitesi",
-          "Gövde": "Çelik Konstrüksiyon",
-          "Operasyon": "Yarı Otomatik / Otomatik"
-        }
-      },
-      {
-        "id": "M-06",
-        "name": "Yatay Balya Presi",
-        "category": "Paketleme",
-        "specs": { "Kapasite": "400-750 kg", "Güç": "Servo Kontrol", "Otomasyon": "PLC" },
-        "description": "Büyük kapasiteli işletmelerin tercih ettiği, sürekli beslemeye uygun yüksek hacimli pres sistemi.",
-        "features": [
-          "400–750 kg balya ağırlığı",
-          "Hidrolik servo kontrol sistemi",
-          "Yatay besleme hunisi",
-          "Ağır hizmet şasesi",
-          "Otomatik ip sarma veya çelik kelepçe opsiyonu"
-        ],
-        "detailSpecs": {
-          "Kapasite": "400 - 750 kg/balya",
-          "Kontrol": "Hidrolik Servo",
-          "Besleme": "Sürekli/Yatay",
-          "Opsiyon": "Otomatik Bağlama"
-        }
-      },
-      {
-        "id": "M-07",
-        "name": "Aspirasyon Ünitesi",
-        "category": "Toz Toplama",
-        "specs": { "Kapasite": "Tüm Hat", "Güç": "Merkezi", "Otomasyon": "Entegre" },
-        "description": "Tüm hattın beynidir; tozu, hafif parçayı ve lif uçuntusunu toplar. Tesisin hava kalitesini korur ve ATEX güvenliğini sağlar.",
-        "features": [
-          "Yüksek kapasiteli toz toplama",
-          "Lif uçuşmasını önleme",
-          "Kırtık ayrımı entegrasyonu",
-          "Yangın ve kıvılcım riskini azaltma",
-          "Hava kalitesi kontrolü"
-        ],
-        "detailSpecs": {
-          "Fonksiyon": "Toz ve partikül emiş",
-          "Güvenlik": "ATEX Standartları",
-          "Filtre": "Endüstriyel tip",
-          "Koruma": "Yangın risk yönetimi"
-        }
-      },
-      {
-        "id": "M-08",
-        "name": "Manyetik Dedektör",
-        "category": "Güvenlik",
-        "specs": { "Kapasite": "Sıfır Hata", "Güç": "Sensör", "Otomasyon": "Otomatik Stop" },
-        "description": "Hammaddeden gelebilecek metal parçaları ayırarak tüm hattı ve makineleri korur. RODI ve kotonizasyon ünitelerinin güvenliği için kritiktir.",
-        "features": [
-          "Metal kontaminasyonunu sıfıra indirme",
-          "Sensör tabanlı otomatik durdurma",
-          "Operatör güvenliğini artırma",
-          "Makine parkurunu koruma"
-        ],
-        "detailSpecs": {
-          "Tip": "Manyetik / Sensörlü",
-          "Tepki Süresi": "Milisaniye",
-          "Koruma": "Tüm hat ekipmanları",
-          "Otomasyon": "Otomatik Stop & Alarm"
-        }
-      },
-      {
-        "id": "M-09",
-        "name": "Shaker Ünitesi",
-        "category": "İnce Temizlik",
-        "specs": { "Kapasite": "Hassas", "Güç": "Vibrasyon", "Otomasyon": "Anti-blinding" },
-        "description": "Elyafın son formunu belirleyen, kalan kırtık ve talaşı ayıran ince temizlik ve ayırma makinesidir.",
-        "features": [
-          "Çok kademeli elek sistemi",
-          "Vibrasyon kontrollü gövde",
-          "Anti-blinding mekanizması (tıkanma önleyici)",
-          "Aspirasyon ile entegre çalışma",
-          "Elyaf debisini stabil hale getirme"
-        ],
-        "detailSpecs": {
-          "Sistem": "Vibrasyonlu Elek",
-          "Fonksiyon": "İnce toz ve kırtık ayrımı",
-          "Teknoloji": "Anti-blinding",
-          "Entegrasyon": "Aspirasyon uyumlu"
-        }
-      },
-      {
-        "id": "M-10",
-        "name": "Pelet Makinasi",
-        "category": "Peletleme",
-        "specs": { "Kapasite": "100 - 300 kg/h", "Güç": "Hidrolik", "Otomasyon": "Otomatik" },
-        "description": "Üretim artığı veya yan ürünlerin pelet formuna dönüştürülmesini sağlar.",
-        "features": [
-          "Yüksek sıkıştırma oranı",
-          "Dayanıklı disk ve rulo sistemi",
-          "Otomatik yağlama",
-          "Aşırı yük koruması"
-        ],
-        "detailSpecs": {
-          "Kapasite": "100 - 300 kg/h",
-          "Güç": "Hidrolik",
-          "Kontrol": "Otomatik",
-          "Çıktı": "Endüstriyel Pelet"
-        }
-      },
-      {
-        "id": "M-11",
-        "name": "Tohum Eleme Ünitesi",
-        "category": "Tohum Eleme",
-        "specs": { "Kapasite": "5-12 t/saat" },
-        "description": "Hasat sonrası tohumların ayrıştırılması ve temizlenmesi için kullanılır.",
-        "features": [
-          "Hassas eleme teknolojisi",
-          "Farklı boyuttaki tohumlar için ayarlanabilir",
-          "Toz emiş sistemi",
-          "Kolay temizlenebilir yapı"
-        ],
-        "detailSpecs": {
-          "Kapasite": "5-12 t/saat",
-          "Hassasiyet": "Yüksek",
-          "Elek": "Değiştirilebilir",
-          "Kullanım": "Tohum Temizliği"
-        }
-      }
-    ],
-    "detail_labels": {
-      "features": "Öne Çıkan Özellikler",
-      "specs": "Teknik Özellikler",
-      "cta": "Detaylı Bilgi İste",
-      "zoom_hint": "Büyütmek İçin Tıkla",
-      "back_home": "Ana Sayfaya Dön",
-      "get_offer": "Teklif Al",
-      "no_image": "GÖRSEL YOK"
+  "services": {
+    "automation": {
+      "title": "Endüstriyel Otomasyon Sistemleri",
+      "desc": "Savunma sınıfı prosesler için tam ölçekli kontrol mimarisi. Çok hatlı reaktör–kolon proseslerinde hazard rated automation logic."
     },
-    "features_title": "ÖZELLİKLER",
-    "applications_title": "KULLANIM SEKTÖRLERİ"
+    "scada": {
+      "title": "SCADA Yazılım Geliştirme",
+      "desc": "Siemens WinCC & Ignition tabanlı ağır proses SCADA mimarileri. Real-time Alarm Matrix ve Trend Engine ile tam kontrol."
+    },
+    "panels": {
+      "title": "Kontrol & Güç Panoları",
+      "desc": "IEC 61439 – UL – CE uyumlu, Ex-proof sertifikasyon yapısında operasyon zekâsının fiziksel bedeni."
+    },
+    "plc": {
+      "title": "PLC Programlama & Safe-PLC",
+      "desc": "Siemens S7-400 → S7-1500 → S7-1500F full safety expertise. Biz PLC yazmayız — tesisin reflekslerini oluştururuz."
+    },
+    "software": {
+      "title": "Endüstriyel Yazılım & Data Analytics",
+      "desc": "Big Data + AI destekli proses davranış analizi. Batch Quality Prediction ve AI assisted dosage tuning."
+    },
+    "cybersecurity": {
+      "title": "Siber Güvenlik & OT Network",
+      "desc": "Askeri protokolde endüstriyel ağ güvenliği. Zero-Trust firewall architecture ve Deep-Packet Inspection."
+    },
+    "digital_twin": {
+      "title": "Proses Simülasyonu & Digital Twin",
+      "desc": "Tesis hatlarının sanal klonunu üretme yeteneği. Gerçek hat çalışmadan önce biz işletmeye geleceği gösteririz."
+    }
   },
-  "facilities": {
-    "hero": {
-      "subtitle": "MÜHENDİSLİK & TİCARET",
-    "title": "Endüstriyel Gücün <br /> Merkezi",
-    "desc": "Keten ve kenevir üretim hatlarının tüm adımlarını sahada canlı olarak takip ediyoruz. Fabrika yatırımlarımızda makine parkuru, mühendislik merkezi ve tarla operasyonları tek platformda birleşiyor.",
-    "placeholder": "NO IMG",
-    "view_machines_btn": "İNCELE",
-    "engineering_badge": "RNG EXPORT<br/>MÜHENDİSLİK"
-  },
-    "stories": [
-      {
-        "title": "Kenevir Elyaf Soyma",
-        "tag": "Entegre Üretim Tesisi",
-        "description": "Metrelerce uzunluğa ulaşan keten ve kenevir saplarını çok kademeli kesme, ayırma ve temizleme süreçleriyle işleyerek lif boyunu koruyoruz. Bu hat, tekstil ve biyokompozit üreticileri için sürekli ve homojen besleme sağlıyor.",
-        "cta": "İşleme hattını keşfedin"
+  "contact": {
+    "title": "OPERASYON BAŞLAT",
+    "desc": "İletişim bizim için prosedür değil, operasyon başlangıcıdır. Her mesaj doğrudan mühendislik komuta merkezine düşer.",
+    "address_title": "MERKEZ LOKASYON",
+    "address": "Yakuplu Mahallesi, Hürriyet Bulvarı, Skyport Residence No:1 İç Kapı No: 70, Beylikdüzü / İstanbul — Türkiye",
+    "phone": "+90 (212) 000 00 00",
+    "email": "info@trakya-design.com",
+    "form": {
+      "title": "GÜVENLİ PROJE TALEP FORMU",
+      "name": "AD SOYAD",
+      "company": "FİRMA / KURUM",
+      "type": "TALEP TİPİ",
+      "types": {
+        "automation": "Endüstriyel Otomasyon",
+        "defense": "Savunma Kimyası & Enerjetik",
+        "scada": "SCADA / PLC Programlama",
+        "digital_twin": "Digital Twin & Simülasyon",
+        "mes": "MES & IoT Veri Yönetimi"
       },
-      {
-        "title": "Elyaf Teknolojileri Merkezi",
-        "tag": "Test & Eğitim Tesisi",
-        "description": "Demo üretim hattımızda müşterilerimizin ham maddeleriyle test çalışmaları yapıyor, farklı iklim ve nem senaryolarını simüle ediyoruz. Ar-Ge mühendislerimiz sahadaki tüm veri noktalarını bu tesiste topluyor.",
-        "cta": "Demo talep edin"
-      },
-      {
-        "title": "Tekstil Keneviri Hasadı",
-        "tag": "Tarla Operasyonları",
-        "description": "Uzun lifli keten ve kenevir hasadını patentli prosesimizle gerçekleştiriyoruz. Hasat edilen saplar, sahadaki mobil hatlarda taranıp preslenerek fabrikaya taşınıyor.",
-        "cta": "Hasat çözümlerini incele"
-      },
-      {
-        "title": "Üretim Süreçleri Mercek Altında",
-        "tag": "Mühendislik Merkezi",
-        "description": "Operasyon merkezimizde üretim mühendisleri, otomasyon ekibi ve kalite laboratuvarı tek bir çatı altında bulunuyor. Her proje için müşteri sahasından canlı görüntüler alıp gerçek zamanlı iyileştirme önerileri sunuyoruz.",
-        "cta": "Video turu izleyin"
-      }
-    ],
-    "contact": {
-      "label": "SAHADA GÖZLEM",
-      "title": "Tesisi Yerinde İnceleyin",
-      "desc": "Sahada veya demo merkezimizde üretim hatlarımızı görmek için randevu alın. Operasyon yöneticilerimiz tüm süreçleri canlı olarak aktarıyor.",
-      "email_cta": "INFO@RNGEXPORT.COM",
-      "global_center_label": "Global Merkez",
-      "global_center_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
-      "phone_label": "Telefon",
-      "phone_number": "+90 242 502 17 72\n+90 546 680 47 72",
-      "schedule_label": "Operasyon Takvimi",
-      "schedule_items": [
-        "Demo hat ziyaretleri",
-        "Sahada proses validasyonu",
-        "Operatör eğitimleri"
-      ]
+      "message": "PROJE DETAYLARI & KAPASİTE",
+      "submit": "MÜHENDİSLİĞİ BAŞLAT"
     }
   },
   "footer": {
-    "brand_text": "Kenevir makina üreticileri arasında öncü olan RNG Export, keten ve kenevir elyaf işleme teknolojilerinde global mühendislik ortağınızdır. Tarladan son ürüne kadar anahtar teslim fabrika çözümleri sunuyoruz.",
+    "brand_text": "Industrial Intelligence & Automation Engineering. Savunma, Kimya, Enerji ve Endüstriyel Tesisler İçin Yüksek Güvenlikli Otomasyon Çözümleri.",
     "quick_links": "HIZLI ERİŞİM",
-    "contact_center": "İLETİŞİM MERKEZİ",
+    "contact_center": "İLETİŞİM & KOMUTA",
     "hq_label": "GENEL MERKEZ",
-    "hq_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
-    "factory_label": "FABRİKA",
-    "factory_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
-    "email_label": "E-POSTA",
-    "phone_label": "TELEFON",
-    "bottom_text": "TÜM HAKLARI SAKLIDIR.",
+    "copyright": "TÜM HAKLARI SAKLIDIR.",
     "privacy": "GİZLİLİK POLİTİKASI",
-    "kvkk": "KVKK",
-    "cookies": "ÇEREZ POLİTİKASI"
+    "kvkk": "KVKK AYDINLATMA"
   }
 }
