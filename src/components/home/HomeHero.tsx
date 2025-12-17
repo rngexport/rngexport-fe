@@ -24,6 +24,9 @@ export default function HomeHero() {
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tighter mb-6 md:mb-10 text-white">
             <Trans i18nKey="hero.title" components={{ br: <br /> }} />
           </h1>
+          <h2 className="sr-only">
+            Endüstriyel Kenevir ve Keten İşleme Makinaları Üreticisi
+          </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-200 max-w-xl md:max-w-2xl leading-relaxed mb-10 md:mb-16 font-light">
             {t('hero.desc')}
           </p>

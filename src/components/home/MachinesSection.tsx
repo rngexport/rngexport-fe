@@ -136,6 +136,13 @@ export default function MachinesSection() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black">
               {t('machinesSection.section_title')}
             </h2>
+            <div className="sr-only">
+               <h3>Kenevir İşleme Makinaları</h3>
+               <h3>Keten İşleme Makinaları</h3>
+               <h3>Kenevir Soyma Makinası</h3>
+               <h3>Elyaf Üretim Makinası</h3>
+               <h3>Dekortikatör Makinası</h3>
+            </div>
             <p className="mt-4 text-base md:text-lg text-black max-w-lg">
               {t('machinesSection.section_desc')}
             </p>

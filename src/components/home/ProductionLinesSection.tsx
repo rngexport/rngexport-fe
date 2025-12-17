@@ -43,6 +43,12 @@ export default function ProductionLinesSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black max-w-3xl">
             {t('lines.section_title')}
           </h2>
+          <div className="sr-only">
+            <h3>Kenevir Üretim Hattı</h3>
+            <h3>Keten Üretim Hattı</h3>
+            <h3>Elyaf İşleme Makinaları</h3>
+            <h3>Kotonizasyon Hattı</h3>
+          </div>
         </div>
 
         <div className="flex flex-col gap-12">
