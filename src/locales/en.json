@@ -24,6 +24,11 @@
       "title": "RNG Export | Contact and Quote Request",
       "description": "Request a quote for flax and hemp fiber processing lines. Visit our Antalya industrial campus, book demo and on-site assessments.",
       "keywords": "rng export contact, hemp machinery quote, flax fiber plant visit"
+    },
+    "blog": {
+      "title": "RNG Export Blog | Hemp & Flax Fiber Engineering",
+      "description": "Technical articles on hemp and flax fiber processing machinery, cottonization lines, long fiber and turnkey plant design.",
+      "keywords": "hemp blog, flax blog, fiber processing machinery, cottonization, long fiber"
     }
   },
   "header": {
@@ -38,6 +43,7 @@
     "machines": "MACHINES",
     "process": "PROCESS",
     "facilities": "FACILITIES",
+    "blog": "BLOG",
     "contact": "CONTACT"
   },
   "hero": {
@@ -401,7 +407,7 @@
     "global_center_title": "GLOBAL HEADQUARTERS",
     "global_center_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
     "direct_contact_title": "DIRECT CONTACT",
-    "direct_contact_phone": "+90 242 502 17 72\n+90 546 680 47 72",
+    "direct_contact_phone": "+90 546 680 47 72\n+90 242 502 17 72",
     "direct_contact_mail": "INFO@RNGEXPORT.COM",
     "form": {
       "title": "Write to Us",
@@ -719,13 +725,50 @@
       "global_center_label": "Global Headquarters",
       "global_center_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
       "phone_label": "Phone",
-      "phone_number": "+90 242 502 17 72\n+90 546 680 47 72",
+      "phone_number": "+90 546 680 47 72\n+90 242 502 17 72",
       "schedule_label": "Operations Schedule",
       "schedule_items": [
         "Demo line visits",
         "On-site process validation",
         "Operator trainings"
       ]
+    }
+  },
+  "blog": {
+    "label": "BLOG",
+    "heading": "Engineering Insights on Hemp & Flax Fiber",
+    "subheading": "Field-proven tips on cottonization, long fiber stability, turnkey plants and quality optimization.",
+    "read_more": "READ MORE",
+    "back_to_blog": "All Posts",
+    "gallery": "Image Gallery",
+    "zoom": "Zoom",
+    "tags_label": "Tags",
+    "share_label": "Share",
+    "posts": {
+      "hemp-line-optimization": {
+        "title": "Optimizing Hemp Lines: The Golden Rules of Cottonization",
+        "excerpt": "Removing moisture, dust and metal before cottonization boosts throughput up to 30%. Which sensors and drum speeds matter most?",
+        "content": "Three critical parameters define cottonization yield: inlet moisture (8–12%), drum speed and aspiration flow. Sensor-based density control keeps the line stable and trims energy use.",
+        "long_content": "In industrial hemp processing facilities, the most critical way to increase efficiency is to standardize the quality of the material entering the cottonization line. Our field experience at RNG Export shows that capacity increases of up to 30% are achieved not just by increasing machine speed, but by optimizing the process.\n\nRule One: Inlet Moisture. The moisture content of the fiber entering the cottonization unit must be between 8% and 12%. Fiber that is too dry breaks and turns into dust; fiber that is too moist wraps around drums and causes blockages. We use sensors that continuously measure moisture at the line inlet and automatic humidification units to maintain this balance.\n\nRule Two: Drum Speed and Blade Geometry. Every hemp variety is different. Drum revolutions per minute (RPM) must be dynamically adjustable via PLC according to fiber strength. On RNG Export lines, operators can optimize machine settings in seconds by running recipe-based production during raw material changes.\n\nRule Three: Aspiration Flow. Removing micro-dust and short fibers released during cottonization is vital for both product quality and ATEX safety. Insufficient suction causes fibers to re-agglomerate (nep formation). RNG Export aspiration units save energy and offer maximum cleaning by adjusting flow rates as needed thanks to frequency inverter fans.",
+        "date": "2025-12-15",
+        "tags": ["hemp", "cottonization", "aspiration"]
+      },
+      "flax-turnkey-factory": {
+        "title": "Turnkey Flax Fiber Plant: A Practical Guide",
+        "excerpt": "Flax stalk breaking, shive control and long fiber protection: ATEX safety, aspiration layout, and post-baling logistics.",
+        "content": "Biggest loss in flax lines is fiber breakage and shive density fluctuation. Low-torque openers, fine shaker screening and automatic bale pressing deliver homogeneous density.",
+        "long_content": "Setting up a flax processing plant requires integrated process engineering, not just lining up machines. Every step from the arrival of bales from the field to the shipment of processed fiber must be planned.\n\n1. Decortication (Stalk Breaking and Pre-Opening): Separating the woody part (shive) of the flax stalk from the fiber begins with a mechanical breaking process. The critical part here is to break the woody part without shortening the fiber length. RNG Export's KENEVA series openers ensure maximum shive separation without damaging the fiber thanks to special blade angles.\n\n2. Fine Cleaning (Scutching & Shaking): Multi-deck shaker systems are used to clean remaining small woody particles. Thanks to our anti-blinding technology, screens remain continuously open and cleaning efficiency does not drop.\n\n3. ATEX and Safety: Flax dust is highly flammable. The facility's aspiration system and electrical panels must comply with ATEX standards. RNG Export offers spark detection and automatic suppression systems as standard.\n\n4. Logistics and Baling: Processed flax fiber is voluminous. High-density bale presses are used to reduce transport costs. Our fully automatic presses speed up your logistics operation by working with a capacity of up to 5 tons per hour.",
+        "date": "2025-12-10",
+        "tags": ["flax", "turnkey", "plant"]
+      },
+      "long-fiber-composites": {
+        "title": "Long Fiber for Composites: Automotive-Grade Flax & Hemp",
+        "excerpt": "Preserving 6–40 cm fibers is critical for lightweight alternatives to glass fiber. How stabilization and metal detection affect surface quality.",
+        "content": "With low-speed controlled drums and anti-blinding shakers, fiber integrity is preserved, tensile strength rises, and biocomposites gain better surface quality.",
+        "long_content": "The automotive industry is turning to natural fibers instead of glass fiber to reduce vehicle weight and carbon footprint. Flax and hemp are the strongest candidates with their high strength-to-weight ratio. However, the fiber to be used in composite production must meet certain standards.\n\nFiber Length: The main factor providing strength in composite materials is fiber length. RNG Export's long fiber lines process fibers between 6-40 cm while preserving them. By avoiding aggressive openers, the natural structure of the fiber is not disrupted.\n\nMetal and Foreign Matter: A metal particle in injection or pressing molds can lead to disaster. Therefore, our lines feature multi-stage magnetic detectors and metal separators. We guarantee 100% metal-free fiber.\n\nHomogeneity: In composite part production, the fiber must be distributed evenly within the mold. Our KOTONEX technology prevents clumping by individualizing fibers and facilitates resin impregnation.\n\nDoor panels, dashboard bodies, and interior trim parts produced with this technology possess both lightweight and impact-absorbing properties.",
+        "date": "2025-12-05",
+        "tags": ["long fiber", "composite", "automotive"]
+      }
     }
   },
   "footer": {

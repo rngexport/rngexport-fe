@@ -7,6 +7,14 @@ import ru from './locales/ru.json'
 import en from './locales/en.json'
 
 const getInitialLanguage = () => {
+  // Önce URL'deki lang query parameter'ını kontrol et
+  const urlParams = new URLSearchParams(window.location.search)
+  const langParam = urlParams.get('lang')
+  if (langParam && ['tr', 'en', 'ru'].includes(langParam)) {
+    return langParam
+  }
+  
+  // Sonra subdomain kontrolü
   const hostname = window.location.hostname
   if (hostname.endsWith('.ru')) {
     return 'ru'

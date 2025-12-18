@@ -8,6 +8,8 @@ import Facilities from './Facilities'
 import Lines from './Lines'
 import Contact from './Contact'
 import Machines from './Machines'
+import Blog from './Blog'
+import BlogPost from './BlogPost'
 import './index.css'
 import './i18n'
 
@@ -28,6 +30,8 @@ createRoot(rootElement).render(
           <Route path="/facilities" element={<Facilities />} />
           <Route path="/lines" element={<Lines />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

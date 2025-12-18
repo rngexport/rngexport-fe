@@ -24,6 +24,11 @@
       "title": "RNG Export | İletişim ve Teklif Talebi",
       "description": "Kenevir ve keten elyaf işleme hatları için teklif isteyin. Antalya AOSB’deki tesisimizi ziyaret edin, demo ve saha inceleme randevusu alın.",
       "keywords": "rng export iletişim, kenevir makinası teklif, keten elyaf tesisi ziyaret"
+    },
+    "blog": {
+      "title": "RNG Export Blog | Kenevir ve Keten Elyaf Teknolojileri",
+      "description": "Kenevir ve keten elyaf işleme makinaları, kotonizasyon hatları, uzun elyaf ve tesis kurulumu üzerine teknik içerikler.",
+      "keywords": "kenevir blog, keten blog, elyaf işleme makinaları, kotonizasyon, uzun elyaf"
     }
   },
   "header": {
@@ -38,6 +43,7 @@
     "machines": "MAKİNELER",
     "process": "PROSES",
     "facilities": "TESİSLER",
+    "blog": "BLOG",
     "contact": "İLETİŞİM"
   },
   "hero": {
@@ -402,7 +408,7 @@
     "global_center_title": "GLOBAL MERKEZ",
     "global_center_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
     "direct_contact_title": "DOĞRUDAN İLETİŞİM",
-    "direct_contact_phone": "+90 242 502 17 72\n+90 546 680 47 72",
+    "direct_contact_phone": "+90 546 680 47 72\n+90 242 502 17 72",
     "direct_contact_mail": "INFO@RNGEXPORT.COM",
     "form": {
       "title": "Bize Yazın",
@@ -720,13 +726,50 @@
       "global_center_label": "Global Merkez",
       "global_center_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
       "phone_label": "Telefon",
-      "phone_number": "+90 242 502 17 72\n+90 546 680 47 72",
+      "phone_number": "+90 546 680 47 72\n+90 242 502 17 72",
       "schedule_label": "Operasyon Takvimi",
       "schedule_items": [
         "Demo hat ziyaretleri",
         "Sahada proses validasyonu",
         "Operatör eğitimleri"
       ]
+    }
+  },
+  "blog": {
+    "label": "BLOG",
+    "heading": "Kenevir ve Keten Elyafında Mühendislik Notları",
+    "subheading": "Kotonizasyon, uzun elyaf, anahtar teslim tesis ve kalite optimizasyonuna dair saha deneyimlerini paylaşıyoruz.",
+    "read_more": "DEVAMI",
+    "back_to_blog": "Tüm Yazılar",
+    "gallery": "Görsel Galeri",
+    "zoom": "Büyüt",
+    "tags_label": "Etiketler",
+    "share_label": "Paylaş",
+    "posts": {
+      "hemp-line-optimization": {
+        "title": "Kenevir Hattında Verim Optimizasyonu: Kotonizasyonun Altın Kuralları",
+        "excerpt": "Ham balyadan çıkan lifin nem, toz ve metalden arındırılması; kotonizasyon öncesi kapasiteyi %30’a kadar artırıyor. Hangi sensörler ve hangi tambur hızları kritik?",
+        "content": "Kotonizasyon verimini belirleyen üç kritik parametre: giriş nemi (%8-12 arası), tambur hızı ve aspirasyon debisi. Sensör tabanlı yoğunluk kontrolü ile hat stabil kalıyor ve enerji tüketimi düşüyor.",
+        "long_content": "Endüstriyel kenevir işleme tesislerinde verimliliği artırmanın en kritik yolu, kotonizasyon hattına giren malzemenin kalitesini standardize etmektir. RNG Export olarak sahada edindiğimiz deneyimler, %30'a varan kapasite artışının sadece makine hızını artırarak değil, prosesi optimize ederek sağlandığını gösteriyor.\n\nBirinci kural: Giriş Nemi. Kotonizasyon ünitesine giren lifin nem oranı %8 ile %12 arasında olmalıdır. Çok kuru lif kırılır ve toza dönüşür; çok nemli lif ise tamburlara sarar ve tıkanmalara yol açar. Bu dengeyi sağlamak için hat girişinde sürekli nem ölçümü yapan sensörler ve otomatik nemlendirme üniteleri kullanıyoruz.\n\nİkinci kural: Tambur Hızı ve Bıçak Geometrisi. Her kenevir varyetesi farklıdır. Lifin mukavemetine göre tambur devirlerinin (RPM) PLC üzerinden dinamik olarak ayarlanabilmesi gerekir. RNG Export hatlarında, operatörler hammadde değişimlerinde reçete bazlı üretim yaparak saniyeler içinde makine ayarlarını optimize edebilirler.\n\nÜçüncü kural: Aspirasyon Debisi. Kotonizasyon sırasında açığa çıkan mikro tozların ve kısa liflerin ortamdan uzaklaştırılması, hem ürün kalitesi hem de ATEX güvenliği için hayati önem taşır. Yetersiz emiş, liflerin tekrar topaklanmasına (nep oluşumu) neden olur. RNG Export aspirasyon üniteleri, frekans invertörlü fanları sayesinde ihtiyaca göre debi ayarı yaparak enerji tasarrufu sağlar ve maksimum temizlik sunar.",
+        "date": "2025-12-15",
+        "tags": ["kenevir", "kotonizasyon", "aspirasyon"]
+      },
+      "flax-turnkey-factory": {
+        "title": "Keten İçin Anahtar Teslim Elyaf Fabrikası Kurulum Rehberi",
+        "excerpt": "Keten sapı kırma, kıtık ayrımı ve uzun elyaf koruması: ATEX güvenliği, aspirasyon hat tasarımı ve balyalama sonrası lojistik ipuçları.",
+        "content": "Keten hattında en büyük kayıp, lif kırılması ve kıtık yoğunluğundaki dalgalanma. Düşük torklu açıcılar, shaker inceleme ve otomatik balya presi ile homojen yoğunluk sağlanıyor.",
+        "long_content": "Keten (flax) işleme tesisi kurmak, sadece makineleri yan yana dizmek değil, entegre bir proses mühendisliği gerektirir. Tarladan gelen balyaların fabrikaya girişinden, işlenmiş elyafın sevkiyatına kadar her adımın planlanması gerekir.\n\n1. Sap Kırma ve Ön Açma (Decortication): Keten sapının odunsu kısmının (shive) liften ayrılması, mekanik bir kırma işlemiyle başlar. Burada kritik olan, lifin boyunu kısaltmadan odunsu kısmı kırmaktır. RNG Export'un KENEVA serisi açıcıları, özel bıçak açıları sayesinde lifi zedelemeden maksimum kıtık ayrımı sağlar.\n\n2. İnce Temizlik (Scutching & Shaking): Kalan küçük odunsu parçacıkların temizlenmesi için çok katlı shaker (sarsak) sistemleri kullanılır. Anti-blinding (tıkanma önleyici) teknolojimiz sayesinde elekler sürekli açık kalır ve temizlik verimi düşmez.\n\n3. ATEX ve Güvenlik: Keten tozu son derece yanıcıdır. Tesisin aspirasyon sistemi ve elektrik panoları ATEX standartlarına uygun olmalıdır. RNG Export, kıvılcım algılama ve otomatik sönümleme sistemlerini standart olarak sunar.\n\n4. Lojistik ve Balyalama: İşlenmiş keten elyafı hacimlidir. Nakliye maliyetlerini düşürmek için yüksek yoğunluklu balya presleri kullanılır. Tam otomatik preslerimiz, saatte 5 tona kadar kapasiteyle çalışarak lojistik operasyonunuzu hızlandırır.",
+        "date": "2025-12-10",
+        "tags": ["keten", "anahtar teslim", "tesis"]
+      },
+      "long-fiber-composites": {
+        "title": "Uzun Elyaf ile Kompozit Üretimi: Otomotiv İçin Flax & Hemp",
+        "excerpt": "6-40 cm uzun liflerin korunması, cam elyafa alternatif hafif kompozitler için kritik. Lif stabilizasyonu ve metal deteksiyonunun ürün kalitesine etkisi.",
+        "content": "Uzun elyaf hattında düşük hız kontrollü tamburlar ve anti-blinding shaker kullanıldığında lif bütünlüğü korunuyor. Böylece çekme dayanımı artıyor ve biyokompozitlerde yüzey kalitesi iyileşiyor.",
+        "long_content": "Otomotiv endüstrisi, araç ağırlığını azaltmak ve karbon ayak izini düşürmek için cam elyaf yerine doğal liflere yöneliyor. Keten ve kenevir, yüksek mukavemet/ağırlık oranıyla en güçlü adaylardır. Ancak kompozit üretiminde kullanılacak lifin belirli standartları karşılaması gerekir.\n\nLif Uzunluğu: Kompozit malzemelerde mukavemeti sağlayan ana unsur lif uzunluğudur. RNG Export'un uzun elyaf hatları, 6-40 cm arasındaki lifleri koruyarak işler. Agresif açıcılardan kaçınılarak, lifin doğal yapısı bozulmaz.\n\nMetal ve Yabancı Madde: Enjeksiyon veya presleme kalıplarında metal parçacığı felakete yol açabilir. Bu nedenle hatlarımızda çok kademeli manyetik detektörler ve metal ayırıcılar bulunur. %100 metalsiz elyaf garantisi veriyoruz.\n\nHomojenite: Kompozit parça üretiminde lifin kalıp içine eşit dağılması gerekir. KOTONEX teknolojimiz, lifleri tek tek açarak (individualization) topaklanmayı önler ve reçine emilimini (impregnation) kolaylaştırır.\n\nBu teknoloji ile üretilen kapı panelleri, torpido gövdeleri ve iç trim parçaları, hem hafif hem de darbe emici özelliklere sahip olur.",
+        "date": "2025-12-05",
+        "tags": ["uzun elyaf", "kompozit", "otomotiv"]
+      }
     }
   },
   "footer": {

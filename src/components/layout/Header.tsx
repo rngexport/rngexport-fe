@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import logo from '../../assets/logo-dark.png'
 
 export default function Header() {
   const location = useLocation()
+  const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const { t, i18n } = useTranslation()
   const [isLangOpen, setIsLangOpen] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,10 +22,42 @@ export default function Header() {
     }
   }, [isMenuOpen])
 
+  // URL'den dil parametresini oku ve i18n'i güncelle
+  useEffect(() => {
+    const langParam = searchParams.get('lang')
+    if (langParam && ['tr', 'en', 'ru'].includes(langParam)) {
+      if (i18n.language !== langParam) {
+        i18n.changeLanguage(langParam)
+      }
+    }
+  }, [searchParams, i18n])
+
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng)
     setIsLangOpen(false)
     setIsMenuOpen(false)
+    
+    // URL'ye lang query parameter ekle
+    const newSearchParams = new URLSearchParams(searchParams)
+    newSearchParams.set('lang', lng)
+    const newUrl = `${location.pathname}${location.hash}?${newSearchParams.toString()}`
+    navigate(newUrl, { replace: true })
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7242/ingest/99af1884-19f5-4477-bacd-8027fd6b163d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: 'debug-session',
+        runId: 'lang-switch-url',
+        hypothesisId: 'url_lang_param',
+        location: 'Header.tsx:changeLanguage',
+        message: 'Language changed with URL update',
+        data: { language: lng, pathname: location.pathname, hash: location.hash, newUrl },
+        timestamp: Date.now()
+      })
+    }).catch(() => {})
+    // #endregion
   }
 
   const navItems = [
@@ -33,6 +67,7 @@ export default function Header() {
     { label: t('nav.machines'), href: '/#machines' },
     { label: t('nav.process'), href: '/#process' },
     { label: t('nav.facilities'), href: '/facilities' },
+    { label: t('nav.blog'), href: '/blog' },
     { label: t('nav.contact'), href: '/#contact' },
   ]
 
@@ -55,11 +90,11 @@ export default function Header() {
               INFO@RNGEXPORT.COM
             </a>
             <div className="flex flex-col gap-1">
-              <a href="tel:+902425021772" className="hover:text-white transition-colors text-white">
-                +90 242 502 17 72
-              </a>
               <a href="tel:+905466804772" className="hover:text-white transition-colors text-white">
                 +90 546 680 47 72
+              </a>
+              <a href="tel:+902425021772" className="hover:text-white transition-colors text-white">
+                +90 242 502 17 72
               </a>
             </div>
           </div>
@@ -178,8 +213,8 @@ export default function Header() {
                 <div className="flex flex-col gap-4 text-sm">
                   <a href="mailto:INFO@RNGEXPORT.COM" className="font-bold text-black">INFO@RNGEXPORT.COM</a>
                   <div className="flex flex-col gap-1 text-neutral-600">
-                    <a href="tel:+902425021772">+90 242 502 17 72</a>
                     <a href="tel:+905466804772">+90 546 680 47 72</a>
+                    <a href="tel:+902425021772">+90 242 502 17 72</a>
                   </div>
                 </div>
 

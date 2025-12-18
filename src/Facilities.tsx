@@ -287,16 +287,16 @@ function FacilityContact({ onImageClick }: { onImageClick: (src: string) => void
                 </a>
                 <div className="flex flex-col gap-0">
                    <a 
-                    href="tel:+902425021772"
+                    href="tel:+905466804772"
                     className="inline-flex items-center justify-start gap-3 bg-white text-black hover:bg-neutral-200 px-8 py-3 text-sm font-bold uppercase tracking-widest transition-all border-b border-neutral-200 cursor-pointer"
                   >
-                    +90 242 502 17 72
+                    +90 546 680 47 72
                   </a>
                    <a 
-                    href="tel:+905466804772"
+                    href="tel:+902425021772"
                     className="inline-flex items-center justify-start gap-3 bg-white text-black hover:bg-neutral-200 px-8 py-3 text-sm font-bold uppercase tracking-widest transition-all cursor-pointer"
                   >
-                    +90 546 680 47 72
+                    +90 242 502 17 72
                   </a>
                 </div>
               </div>

@@ -150,11 +150,11 @@ export default function Footer() {
                     <span className="text-[#cf8300] text-[10px] uppercase tracking-widest font-bold block mb-2">
                       {t('footer.phone_label')}
                     </span>
-                    <a href="tel:+902425021772" className="text-white hover:text-[#cf8300] transition-colors block text-sm mb-1">
-                      +90 242 502 17 72
-                    </a>
-                    <a href="tel:+905466804772" className="text-white hover:text-[#cf8300] transition-colors block text-sm">
+                    <a href="tel:+905466804772" className="text-white hover:text-[#cf8300] transition-colors block text-sm mb-1">
                       +90 546 680 47 72
+                    </a>
+                    <a href="tel:+902425021772" className="text-white hover:text-[#cf8300] transition-colors block text-sm">
+                      +90 242 502 17 72
                     </a>
                   </div>
                   <div className="pt-2 border-t border-white/10">
