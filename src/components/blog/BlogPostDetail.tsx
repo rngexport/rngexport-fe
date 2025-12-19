@@ -83,6 +83,28 @@ export default function BlogPostDetail() {
       <Helmet>
         <title>{post.title} - RNG Export Blog</title>
         <meta name="description" content={post.excerpt} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.excerpt,
+            image: post.image,
+            datePublished: post.date,
+            author: {
+              '@type': 'Organization',
+              name: 'RNG Export'
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'RNG Export',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.rngexport.com/assets/logo-dark.png'
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       {/* Modern Header with Parallax-like feel (Fixed "fixed" issue) */}
