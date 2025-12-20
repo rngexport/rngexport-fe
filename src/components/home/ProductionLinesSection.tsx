@@ -44,10 +44,7 @@ export default function ProductionLinesSection() {
             {t('lines.section_title')}
           </h2>
           <div className="sr-only">
-            <h3>Kenevir Üretim Hattı</h3>
-            <h3>Keten Üretim Hattı</h3>
-            <h3>Elyaf İşleme Makinaları</h3>
-            <h3>Kotonizasyon Hattı</h3>
+            <h3>Kenevir Üretim Hattı, Kenevir İşleme Makinaları, Keten İşleme Makinaları, Keten Üretim Hattı, Elyaf İşleme Makinaları, Elyaf Üretim Hattı, Kotonizasyon Hattı, Kenevir Makina Üreticileri, Keten Makina Üreticileri, Endüstriyel Kenevir Makinaları, Keten Fabrikası Kurulumu, Kenevir Fabrikası Kurulumu</h3>
           </div>
         </div>
 

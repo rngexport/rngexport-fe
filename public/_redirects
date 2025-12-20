@@ -1,0 +1,9 @@
+# Redirect /index.html to root
+/index.html / 301
+/index.html/ / 301
+
+# Redirect www to non-www (or vice versa - adjust as needed)
+# https://www.rngexport.com/* https://rngexport.com/:splat 301
+
+# SPA fallback - all routes to index.html
+/* /index.html 200

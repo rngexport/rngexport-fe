@@ -137,9 +137,7 @@ export default function MachinesSection() {
               {t('machinesSection.section_title')}
             </h2>
             <div className="sr-only">
-               <h3>Kenevir İşleme Makinaları</h3>
-               <h3>Keten İşleme Makinaları</h3>
-               <h3>Kenevir Soyma Makinası</h3>
+               <h3>Kenevir İşleme Makinaları, Keten İşleme Makinaları, Kenevir Soyma Makinası, Keten Soyma Makinası, Kenevir Makina Üreticileri, Keten Makina Üreticileri, Elyaf Üretim Hattı, Kotonizasyon Makinası, Dekortikatör, Şifanoz, Elyaf Açma Makinası, Keten Kırma Makinası, Kenevir Hasat Makinaları, Keten Hasat Makinaları, Endüstriyel Kenevir Makinaları, Endüstriyel Keten Makinaları</h3>
                <h3>Elyaf Üretim Makinası</h3>
                <h3>Dekortikatör Makinası</h3>
             </div>

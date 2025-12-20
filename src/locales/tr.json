@@ -49,15 +49,21 @@
   "hero": {
     "subtitle": "MÜHENDİSLİK & TİCARET",
     "title": "KENEVİR MAKİNA & <br /> ELYAF TEKNOLOJİLERİ",
-    "desc": "Tarladan çıkan ham balyayı, endüstriyel kaliteye sahip temizlenmiş, standardize edilmiş elyaf formatına dönüştüren profesyonel makina üreticisi.",
+    "desc": "Kenevir Makina Üreticisi ve Keten İşleme Makinaları konusunda uzman RNG Export. Tarladan çıkan ham balyayı, endüstriyel kaliteye sahip temizlenmiş, standardize edilmiş elyaf formatına dönüştüren profesyonel makina üreticisi. Elyaf üretim hattı, kotonizasyon ve dekortikatör teknolojileri.",
     "btn_discover": "HATLARIMIZI KEŞFEDİN",
     "btn_start": "PROJENİZİ BAŞLATIN"
   },
   "marquee": {
     "items": [
       "KENEVİR MAKİNA ÜRETİCİSİ",
+      "KETEN İŞLEME MAKİNALARI",
+      "ELYAF ÜRETİM HATTI",
+      "KETEN MAKİNA ÜRETİCİLERİ",
+      "KENEVİR İŞLEME MAKİNALARI",
       "ANAHTAR TESLİM ÇÖZÜMLER",
       "ELYAF İŞLEME TEKNOLOJİLERİ",
+      "KOTONİZASYON MAKİNASI",
+      "DEKORTİKATÖR",
       "OTOMASYON & YAZILIM",
       "AR-GE MÜHENDİSLİĞİ",
       "GLOBAL LOJİSTİK",
@@ -67,7 +73,7 @@
   "corporate": {
     "section_label": "HAKKIMIZDA",
     "headline": "Biz sadece bu işe odaklanıyoruz. Ve bu işte en iyisiyiz.",
-    "p1": "RNG Dış Ticaret, keten ve kenevir elyafının ön işleme, elyaf hazırlama ve kotonizasyon süreçlerine %100 odaklanmış, bu alanda uzmanlaşmış bir mühendislik ve ticaret şirketidir.",
+    "p1": "RNG Dış Ticaret, Kenevir Makina Üreticisi ve Keten İşleme Makinaları konusunda uzmanlaşmış bir şirkettir. Keten ve kenevir elyafının ön işleme, elyaf hazırlama ve kotonizasyon süreçlerine %100 odaklanmış, bu alanda uzmanlaşmış bir mühendislik ve ticaret şirketidir.",
     "p2": "Bu coğrafyada keten ve kenevir elyaf teknolojilerini “başka işlerin arasında” yapmıyoruz. Sadece bu işe odaklanıyoruz.",
     "p3": "RNG Dış Ticaret, global ölçekte yatırım yapan firmalara; yüksek performanslı makine hatları, ileri mühendislik desteği ve uzun vadeli proses danışmanlığı sunmaktadır.",
     "mission_title": "MİSYONUMUZ",

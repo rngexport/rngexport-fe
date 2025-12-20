@@ -2,12 +2,9 @@ import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
-// Blog post hero görselleri - konuya uygun, kaliteli seçilmiş
 import hempOptimizationImg from '../../images/blog/1000149215.jpg'
 import flaxFactoryImg from '../../images/blog/1000149251.jpg'
 import longFiberImg from '../../images/blog/1000149271.jpg'
-
-// İçerik ve galeri için kaliteli görseller
 import gallery1 from '../../images/blog/1000149221.jpg'
 import gallery2 from '../../images/blog/1000149235.jpg'
 import gallery3 from '../../images/blog/1000149247.jpg'
@@ -45,7 +42,6 @@ export default function BlogPostDetail() {
       }
     }
     
-    // #region agent log
     fetch('http://127.0.0.1:7242/ingest/99af1884-19f5-4477-bacd-8027fd6b163d', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -73,7 +69,6 @@ export default function BlogPostDetail() {
     )
   }
 
-  // Format content paragraphs
   const paragraphs = post.content.split('\n').filter((p: string) => p.trim() !== '')
   const firstHalf = paragraphs.slice(0, Math.ceil(paragraphs.length / 2))
   const secondHalf = paragraphs.slice(Math.ceil(paragraphs.length / 2))
@@ -107,7 +102,6 @@ export default function BlogPostDetail() {
         </script>
       </Helmet>
 
-      {/* Modern Header with Parallax-like feel (Fixed "fixed" issue) */}
       <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
@@ -145,12 +139,9 @@ export default function BlogPostDetail() {
         </div>
       </div>
 
-      {/* Main Content Area */}
       <div className="relative bg-white pt-16 lg:pt-24 px-6 min-h-screen">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-            
-            {/* Main Content Column */}
             <div className="lg:col-span-8">
               <div className="prose prose-lg prose-neutral max-w-none">
                 <p className="text-xl md:text-2xl leading-relaxed font-serif text-neutral-600 mb-10 border-l-4 border-[#cf8300] pl-6 italic">
@@ -163,7 +154,6 @@ export default function BlogPostDetail() {
                   </p>
                 ))}
 
-                {/* Mid-article visual break - Clickable */}
                 <div 
                   className="my-12 relative h-96 rounded-sm overflow-hidden group cursor-pointer"
                   onClick={() => setLightboxImage(GALLERY_IMAGES[0])}
@@ -187,7 +177,6 @@ export default function BlogPostDetail() {
                 ))}
               </div>
 
-              {/* Gallery Grid */}
               <div className="mt-16 pt-16 border-t border-neutral-100">
                 <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-neutral-400 mb-8">{t('blog.gallery')}</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -209,9 +198,7 @@ export default function BlogPostDetail() {
               </div>
             </div>
 
-            {/* Sidebar Column */}
             <div className="lg:col-span-4 space-y-12 h-fit lg:sticky lg:top-24">
-              {/* Author / Company Box */}
               <div className="bg-neutral-50 p-8 rounded-sm border border-neutral-100">
                 <div className="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
                   RNG
@@ -225,7 +212,6 @@ export default function BlogPostDetail() {
                 </Link>
               </div>
 
-              {/* Tags Cloud */}
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-900 mb-6 flex items-center gap-2">
                   <span className="w-8 h-[1px] bg-neutral-900"></span>
@@ -240,7 +226,6 @@ export default function BlogPostDetail() {
                 </div>
               </div>
 
-              {/* Share (Visual) */}
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-900 mb-6 flex items-center gap-2">
                   <span className="w-8 h-[1px] bg-neutral-900"></span>
@@ -268,7 +253,6 @@ export default function BlogPostDetail() {
         </div>
       </div>
 
-      {/* Lightbox Overlay */}
       {lightboxImage && (
         <div 
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 animate-in fade-in duration-200"
