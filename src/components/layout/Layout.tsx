@@ -34,6 +34,11 @@ export default function Layout({ children }: LayoutProps) {
         <meta property="og:image" content="https://www.rngexport.com/assets/logo-dark.png" />
         <meta property="og:locale" content={i18n.language === 'ru' ? 'ru_RU' : i18n.language === 'en' ? 'en_US' : 'tr_TR'} />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* Hreflang for TR / EN / RU */}
+        <link rel="alternate" href="https://www.rngexport.com/?lang=tr" hrefLang="tr" />
+        <link rel="alternate" href="https://www.rngexport.com/?lang=en" hrefLang="en" />
+        <link rel="alternate" href="https://www.rngexport.com/?lang=ru" hrefLang="ru" />
+        <link rel="alternate" href="https://www.rngexport.com/" hrefLang="x-default" />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',

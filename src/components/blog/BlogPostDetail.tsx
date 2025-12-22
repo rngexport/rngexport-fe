@@ -6,6 +6,10 @@ import logo from '../../assets/logo-dark.png'
 import hempOptimizationImg from '../../images/blog/1000149215.jpg'
 import flaxFactoryImg from '../../images/blog/1000149251.jpg'
 import longFiberImg from '../../images/blog/1000149271.jpg'
+import dustControlImg from '../../images/blog/1000149247.jpg'
+import qualityControlImg from '../../images/blog/1000149263.jpg'
+import metalDetectImg from '../../images/blog/1000149221.jpg'
+import energyOptimizeImg from '../../images/blog/1000149235.jpg'
 import gallery1 from '../../images/blog/1000149221.jpg'
 import gallery2 from '../../images/blog/1000149235.jpg'
 import gallery3 from '../../images/blog/1000149247.jpg'
@@ -16,7 +20,11 @@ import gallery6 from '../../images/blog/1000149275.jpg'
 const BLOG_IMAGES: Record<string, string> = {
   'hemp-line-optimization': hempOptimizationImg,
   'flax-turnkey-factory': flaxFactoryImg,
-  'long-fiber-composites': longFiberImg
+  'long-fiber-composites': longFiberImg,
+  'hemp-dust-control': dustControlImg,
+  'flax-quality-control': qualityControlImg,
+  'hemp-metal-detection': metalDetectImg,
+  'flax-energy-optimization': energyOptimizeImg
 }
 
 const GALLERY_IMAGES = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
@@ -100,6 +108,17 @@ export default function BlogPostDetail() {
                 url: 'https://www.rngexport.com/assets/logo-dark.png'
               }
             }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'RNG Export', item: 'https://www.rngexport.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.rngexport.com/blog' },
+              { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.rngexport.com/blog/${post.slug}` }
+            ]
           })}
         </script>
       </Helmet>

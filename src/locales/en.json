@@ -734,6 +734,49 @@
       ]
     }
   },
+  "testimonials": {
+    "section_label": "USER REVIEWS",
+    "title": "Trust Built in Real Projects",
+    "subtitle": "Feedback from investors and engineers running our hemp and flax processing lines.",
+    "items": [
+      {
+        "name": "Murat K.",
+        "role": "Plant Manager – Hemp Fiber",
+        "quote": "We achieved 28% throughput increase on cottonization and significantly reduced dust emissions. Service and commissioning teams are fast.",
+        "rating": 4.9
+      },
+      {
+        "name": "Elena S.",
+        "role": "Operations Director – Flax",
+        "quote": "Long-fiber line kept fiber integrity while reducing shive content. Energy optimization and ATEX compliance are solid.",
+        "rating": 4.8
+      },
+      {
+        "name": "Ahmed R.",
+        "role": "Project Manager – Biocomposites",
+        "quote": "Decorticator + aspiration combo minimized metal and dust contamination. Continuous support and fast spare parts are a big plus.",
+        "rating": 5
+      },
+      {
+        "name": "Zeynep T.",
+        "role": "Production Lead – Fiber Line",
+        "quote": "Hemp stripping machine with aspiration reduced fiber loss and stabilized final quality.",
+        "rating": 4.7
+      },
+      {
+        "name": "Sergey L.",
+        "role": "Technical Director – Flax",
+        "quote": "Long-fiber line with automation and sensors minimized operator errors and cut energy consumption.",
+        "rating": 4.9
+      },
+      {
+        "name": "Ebru A.",
+        "role": "R&D Engineer – Biocomposites",
+        "quote": "Post-decortication metal and dust removal boosted surface quality in injection molding. Reporting and support are very fast.",
+        "rating": 5
+      }
+    ]
+  },
   "blog": {
     "label": "BLOG",
     "heading": "Engineering Insights on Hemp & Flax Fiber",
@@ -768,6 +811,38 @@
         "long_content": "The automotive industry is turning to natural fibers instead of glass fiber to reduce vehicle weight and carbon footprint. Flax and hemp are the strongest candidates with their high strength-to-weight ratio. However, the fiber to be used in composite production must meet certain standards.\n\nFiber Length: The main factor providing strength in composite materials is fiber length. RNG Export's long fiber lines process fibers between 6-40 cm while preserving them. By avoiding aggressive openers, the natural structure of the fiber is not disrupted.\n\nMetal and Foreign Matter: A metal particle in injection or pressing molds can lead to disaster. Therefore, our lines feature multi-stage magnetic detectors and metal separators. We guarantee 100% metal-free fiber.\n\nHomogeneity: In composite part production, the fiber must be distributed evenly within the mold. Our KOTONEX technology prevents clumping by individualizing fibers and facilitates resin impregnation.\n\nDoor panels, dashboard bodies, and interior trim parts produced with this technology possess both lightweight and impact-absorbing properties.",
         "date": "2025-12-05",
         "tags": ["long fiber", "composite", "automotive"]
+      },
+      "hemp-dust-control": {
+        "title": "Dust & ATEX Control in Hemp Lines: Aspiration Tips",
+        "excerpt": "Cut dust, sparks, and fiber loss with multi-stage aspiration and sensor-based airflow. Which filter, which fan?",
+        "content": "Fine dust and metal particles reduce both quality and safety. The right cyclone, bag filter, and VFD fan combo is critical.",
+        "long_content": "Dust management in hemp processing is as much about safety (ATEX) as it is about product quality. Key principles we use at RNG Export:\n\n1) Multi-Stage Aspiration: Separate aspiration after bale opening, decortication, and cottonization. Dust and short fibers are captured at the source, not returned to the line.\n\n2) Sensor-Based Flow Control: VFD-driven fans adjust airflow to line load. This lowers energy use and prevents filter overload.\n\n3) Cyclone + Bag Filter: Cyclone captures heavy particles; bag filter traps fine dust. ATEX safety valves and spark detection modules minimize fire risk.\n\n4) Metal Separation: Magnetic detectors and separators reduce metal risk in dust, protecting knives and ensuring product safety.",
+        "date": "2025-12-18",
+        "tags": ["hemp", "aspiration", "ATEX"]
+      },
+      "flax-quality-control": {
+        "title": "Flax Fiber Quality Control: Moisture, Shive, and Metal",
+        "excerpt": "Operator recipes, online moisture sensors, and metal separation keep flax lines consistent. Which metric at which step?",
+        "content": "Three metrics define flax quality: moisture, shive ratio, and metal contamination. Inline sensors and recipe-based runs are key.",
+        "long_content": "In flax fiber production, fluctuating quality raises rejection risk. RNG Export lines monitor key metrics:\n\n1) Moisture Management: Online sensors keep 8–12% band. Over-dry fiber creates dust; over-wet fiber wraps drums. Humidification/drying adjusts per recipe.\n\n2) Shive Control: After shaker + aspiration, shive ratio is measured inline. If out of band, line speed and airflow self-optimize.\n\n3) Metal & Foreign Matter: Multi-stage magnets and metal separators improve machine life and product safety—protecting card wires and blades.\n\n4) Recipe-Based Production: Operators pick predefined recipes per raw material source. Keeps quality stable and shortens changeover.",
+        "date": "2025-12-12",
+        "tags": ["flax", "quality", "metal"]
+      },
+      "hemp-metal-detection": {
+        "title": "Metal Separation in Hemp Lines: Blade Life & Safety",
+        "excerpt": "Use multi-stage magnets and separators after decortication to extend blade life and cut spark risk.",
+        "content": "Metal contamination drives knife wear and spark risk. Multi-stage magnetic separation with sensor alerts is critical.",
+        "long_content": "Metal particles in hemp/flax lines shorten knife life, reduce product quality, and raise ATEX risk. Our approach:\n\n1) Multi-Stage Magnets: At bale opener and decorticator outlets; second stage before card wires and drums.\n\n2) Metal Separator: Inline in aspiration; sensor-driven ejection removes metal from flow.\n\n3) Sensor & Alarm: When metal density crosses threshold, line speed is reduced and operators are alerted to check knives.\n\n4) Spark Risk: Metal + dust increases spark risk; ATEX valves and spark detection modules are integrated.",
+        "date": "2025-12-20",
+        "tags": ["hemp", "metal", "safety"]
+      },
+      "flax-energy-optimization": {
+        "title": "Energy Optimization in Flax Lines: Fans, Drying, Automation",
+        "excerpt": "Cut energy up to 18% with VFD fans, moisture-driven drying, and recipe-based speed control.",
+        "content": "Energy load concentrates in drying, aspiration, and drive motors. VFDs and sensors make the difference.",
+        "long_content": "Energy cost is a major share in flax/hemp operations. Key optimizations we deploy:\n\n1) Aspiration Fans: VFD fans adjust flow to line load; filter differential pressure drives automatic modes.\n\n2) Drying: Moisture sensors prevent over-drying below target band; quality is preserved while energy drops.\n\n3) Automation / Recipes: Pre-set profiles for speed, temperature, and airflow per material; faster changeover.\n\n4) Energy Monitoring: Line-level kWh tracking and reporting for peak demand management and maintenance planning.",
+        "date": "2025-12-22",
+        "tags": ["flax", "energy", "automation"]
       }
     }
   },

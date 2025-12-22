@@ -4,9 +4,7 @@ export default function ContactSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 bg-white text-black border-t border-neutral-200 overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-neutral-50 -skew-x-12 translate-x-1/3 z-0"></div>
-      
+    <section id="contact" className="relative py-20 md:py-28 bg-white text-black border-t border-neutral-200 overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
 

@@ -8,6 +8,10 @@ import blogHeroImg from '../../images/blog/1000149201.jpg'
 import hempOptimizationImg from '../../images/blog/1000149215.jpg'
 import flaxFactoryImg from '../../images/blog/1000149251.jpg'
 import longFiberImg from '../../images/blog/1000149271.jpg'
+import dustControlImg from '../../images/blog/1000149247.jpg'
+import qualityControlImg from '../../images/blog/1000149263.jpg'
+import metalDetectImg from '../../images/blog/1000149221.jpg'
+import energyOptimizeImg from '../../images/blog/1000149235.jpg'
 
 type BlogPost = {
   slug: string
@@ -34,6 +38,30 @@ const BLOG_POSTS: BlogPost[] = [
     image: longFiberImg,
     date: '2025-12-05',
     tags: ['uzun elyaf', 'kompozit', 'otomotiv']
+  },
+  {
+    slug: 'hemp-dust-control',
+    image: dustControlImg,
+    date: '2025-12-18',
+    tags: ['kenevir', 'aspirasyon', 'toz kontrolü']
+  },
+  {
+    slug: 'flax-quality-control',
+    image: qualityControlImg,
+    date: '2025-12-12',
+    tags: ['keten', 'kalite', 'proses']
+  },
+  {
+    slug: 'hemp-metal-detection',
+    image: metalDetectImg,
+    date: '2025-12-20',
+    tags: ['kenevir', 'metal', 'güvenlik']
+  },
+  {
+    slug: 'flax-energy-optimization',
+    image: energyOptimizeImg,
+    date: '2025-12-22',
+    tags: ['keten', 'enerji', 'otomasyon']
   }
 ]
 
@@ -77,6 +105,16 @@ export default function BlogPage() {
         <meta name="description" content={t('seo.blog.description', 'Kenevir ve keten elyafı için makine, proses ve tesis yazıları.')} />
         <meta name="keywords" content={t('seo.blog.keywords', 'kenevir blog, keten blog, elyaf işleme makinaları')} />
         <link rel="canonical" href="https://www.rngexport.com/blog" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'RNG Export', item: 'https://www.rngexport.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.rngexport.com/blog' }
+            ]
+          })}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',

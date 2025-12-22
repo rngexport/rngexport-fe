@@ -741,6 +741,49 @@
       ]
     }
   },
+  "testimonials": {
+    "section_label": "KULLANICI YORUMLARI",
+    "title": "Gerçek Projelerden Gelen Güven",
+    "subtitle": "Kenevir ve keten işleme hatlarımızı kullanan yatırımcılar ve mühendislerden gelen geri bildirimler.",
+    "items": [
+      {
+        "name": "Murat K.",
+        "role": "Tesis Müdürü – Kenevir Elyaf",
+        "quote": "Kotonizasyon hattında %28 kapasite artışı ve toz emisyonunda ciddi azalma sağladık. Servis ve devreye alma ekibi çok hızlı.",
+        "rating": 4.9
+      },
+      {
+        "name": "Elena S.",
+        "role": "Operasyon Direktörü – Keten",
+        "quote": "Uzun elyaf hattı, lif bütünlüğünü korurken kıtık miktarını düşürdü. Enerji optimizasyonu ve ATEX uyumu başarılı.",
+        "rating": 4.8
+      },
+      {
+        "name": "Ahmed R.",
+        "role": "Proje Yöneticisi – Biyokompozit",
+        "quote": "Dekortikatör + aspirasyon kombinasyonu sayesinde metal ve toz kontaminasyonunu minimize ettik. Sürekli destek ve hızlı yedek parça önemli avantaj.",
+        "rating": 5
+      },
+      {
+        "name": "Zeynep T.",
+        "role": "Üretim Şefi – Elyaf Hattı",
+        "quote": "Kenevir soyma makinası ve aspirasyon hatlarıyla lif kaybını azalttık, nihai kalitede stabilite sağlandı.",
+        "rating": 4.7
+      },
+      {
+        "name": "Sergey L.",
+        "role": "Teknik Direktör – Keten",
+        "quote": "Uzun elyaf hattı, otomasyon ve sensör entegrasyonu sayesinde operatör hatalarını minimuma indirdi, enerji tüketimi düştü.",
+        "rating": 4.9
+      },
+      {
+        "name": "Ebru A.",
+        "role": "Ar-Ge Mühendisi – Biyokompozit",
+        "quote": "Dekortikatör sonrası metal ve toz ayırma, enjeksiyon kalıplamada yüzey kalitesini ciddi artırdı. Raporlama ve destek çok hızlı.",
+        "rating": 5
+      }
+    ]
+  },
   "blog": {
     "label": "BLOG",
     "heading": "Kenevir ve Keten Elyafında Mühendislik Notları",
@@ -775,6 +818,38 @@
         "long_content": "Otomotiv endüstrisi, araç ağırlığını azaltmak ve karbon ayak izini düşürmek için cam elyaf yerine doğal liflere yöneliyor. Keten ve kenevir, yüksek mukavemet/ağırlık oranıyla en güçlü adaylardır. Ancak kompozit üretiminde kullanılacak lifin belirli standartları karşılaması gerekir.\n\nLif Uzunluğu: Kompozit malzemelerde mukavemeti sağlayan ana unsur lif uzunluğudur. RNG Export'un uzun elyaf hatları, 6-40 cm arasındaki lifleri koruyarak işler. Agresif açıcılardan kaçınılarak, lifin doğal yapısı bozulmaz.\n\nMetal ve Yabancı Madde: Enjeksiyon veya presleme kalıplarında metal parçacığı felakete yol açabilir. Bu nedenle hatlarımızda çok kademeli manyetik detektörler ve metal ayırıcılar bulunur. %100 metalsiz elyaf garantisi veriyoruz.\n\nHomojenite: Kompozit parça üretiminde lifin kalıp içine eşit dağılması gerekir. KOTONEX teknolojimiz, lifleri tek tek açarak (individualization) topaklanmayı önler ve reçine emilimini (impregnation) kolaylaştırır.\n\nBu teknoloji ile üretilen kapı panelleri, torpido gövdeleri ve iç trim parçaları, hem hafif hem de darbe emici özelliklere sahip olur.",
         "date": "2025-12-05",
         "tags": ["uzun elyaf", "kompozit", "otomotiv"]
+      },
+      "hemp-dust-control": {
+        "title": "Kenevir Hatlarında Toz ve ATEX Kontrolü: Aspirasyon İpuçları",
+        "excerpt": "Toz, kıvılcım ve lif kaybını azaltmak için çok kademeli aspirasyon ve sensörlü debi kontrolü. Hangi filtre, hangi fan?",
+        "content": "Kenevir hatlarında ince toz ve metal parçacıkları hem kaliteyi hem de güvenliği düşürür. Doğru siklon, torba filtre ve invertörlü fan kombinasyonu kritik.",
+        "long_content": "Kenevir işleme hatlarında toz yönetimi, ürün kalitesinden daha çok güvenlik ve ATEX uyumu açısından önemlidir. RNG Export hatlarında aspirasyon şu prensiplere dayanır:\n\n1) Çok Kademeli Aspirasyon: Balya açma, dekortikatör ve kotonizasyon sonrası her kademede ayrı aspirasyon. Böylece toz ve kısa lif kaynakta tutulur, ana hatta geri dönmez.\n\n2) Sensör Tabanlı Debi Kontrolü: Fanlar frekans invertörlü çalışır; hat yüküne göre debi ayarlanır. Bu sayede hem enerji tüketimi düşer hem de filtreler aşırı yüklenmez.\n\n3) Siklon + Torba Filtre: Siklon ağır partikülleri alır, torba filtre ince tozu yakalar. ATEX emniyet valfleri ve kıvılcım algılama modülleriyle yangın riski minimize edilir.\n\n4) Metal Ayırma: Manyetik detektörler ve metal separatörler tozda taşınan metal riskini düşürür; özellikle bıçak ömrü ve ürün güvenliği için kritiktir.",
+        "date": "2025-12-18",
+        "tags": ["kenevir", "aspirasyon", "ATEX"]
+      },
+      "flax-quality-control": {
+        "title": "Keten Elyafında Kalite Kontrol: Nem, Kıtık ve Metal Yönetimi",
+        "excerpt": "Operatör reçeteleri, online nem sensörü ve metal ayırıcılarla keten hattında standart kalite. Hangi adımda hangi ölçüm?",
+        "content": "Keten hattında kaliteyi belirleyen üç metrik: nem, kıtık oranı ve metal kontaminasyonu. Online sensörler ve reçete bazlı üretim kritik rol oynar.",
+        "long_content": "Keten (flax) elyaf üretiminde dalgalı kalite, müşteride reddedilme riskini artırır. RNG Export hatlarında kalite kontrol şu temel ölçümlerle yapılır:\n\n1) Nem Yönetimi: Online nem sensörleriyle %8-12 bandı korunur. Çok kuru elyaf toz üretir, çok nemli elyaf tamburlara sarar. Nemlendirme/kurutma üniteleri reçeteye göre ayarlanır.\n\n2) Kıtık (Shive) Kontrolü: Shaker + aspirasyon sonrası kıtık oranı inline ölçülür. Hedef bandın dışına çıktığında hat hızı ve aspirasyon debisi otomatik optimize edilir.\n\n3) Metal ve Yabancı Madde: Çok kademeli mıknatıs ve metal ayırıcılar hem makine ömrünü hem de ürün güvenliğini artırır. Özellikle kart teli ve bıçak korunur.\n\n4) Reçete Bazlı Üretim: Operatörler ham madde kaynağına göre önceden tanımlı reçeteleri seçer. Bu sayede kalite standardı korunurken değişim süresi (changeover) kısalır.",
+        "date": "2025-12-12",
+        "tags": ["keten", "kalite", "metal"]
+      },
+      "hemp-metal-detection": {
+        "title": "Kenevir Hatlarında Metal Ayırma: Bıçak Ömrü ve Ürün Güvenliği",
+        "excerpt": "Dekortikatör sonrası çok kademeli mıknatıs ve metal ayırıcı ile bıçak ömrünü uzatın, kıvılcım riskini azaltın.",
+        "content": "Metal kontaminasyonu, bıçak aşınması ve kıvılcım riski yaratır. Çok kademeli manyetik ayırma ve sensörlü uyarı sistemi kritik.",
+        "long_content": "Kenevir ve keten hatlarında metal parçacıkları; bıçak ömrünü kısaltır, ürün kalitesini düşürür ve ATEX riskini artırır. RNG Export hatlarında uyguladığımız adımlar:\n\n1) Çok Kademeli Mıknatıs: Balya açma ve dekortikatör çıkışında manyetik çubuklar; kart teli ve tambur öncesi ikinci kademe.\n\n2) Metal Separatör: Aspirasyon hattına entegre metal ayırıcılar; sensör uyarılı ejection sistemiyle metali akıştan ayırır.\n\n3) Sensör ve Alarm: Metal yoğunluğu eşik aştığında hat hızı düşürülür, operatör uyarılır; bıçaklar kontrol edilir.\n\n4) Kıvılcım Riski: Metal + toz birleşimi kıvılcım riskini artırır. Bu nedenle ATEX valfleri ve kıvılcım algılama modülleri entegre edilir.",
+        "date": "2025-12-20",
+        "tags": ["kenevir", "metal", "güvenlik"]
+      },
+      "flax-energy-optimization": {
+        "title": "Keten Hatlarında Enerji Optimizasyonu: Fan, Kurutma ve Otomasyon",
+        "excerpt": "Invertörlü fanlar, nem kontrollü kurutma ve reçete bazlı hız yönetimiyle enerji tüketimini %18’e kadar düşürün.",
+        "content": "Keten hattında enerji yükü; kurutma, aspirasyon ve tahrik motorlarında yoğunlaşır. İnvertör ve sensör entegrasyonu kritik rol oynar.",
+        "long_content": "Enerji maliyeti, keten ve kenevir hatlarının işletmesinde büyük paya sahiptir. RNG Export projelerinde uygulanan optimizasyonlar:\n\n1) Aspirasyon Fanları: Frekans invertörlü fanlar, hat yüküne göre debiyi ayarlar. Filtre diferans basıncına göre otomatik modlar çalışır.\n\n2) Kurutma: Nem sensörleri ile hedef bandın altında kurutma yapılmaz; aşırı kurutma engellenir, ürün kalitesi korunur.\n\n3) Otomasyon / Reçete: Hammadde ve ürün tipine göre ön ayarlı hız, sıcaklık ve debi profilleri; changeover süresini kısaltır.\n\n4) Enerji İzleme: Hat bazlı kWh ölçümü ve raporlama; pik talep yönetimi ve bakım planlaması için veri sağlar.",
+        "date": "2025-12-22",
+        "tags": ["keten", "enerji", "otomasyon"]
       }
     }
   },

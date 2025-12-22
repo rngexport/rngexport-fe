@@ -9,6 +9,8 @@ import MachinesSection from './components/home/MachinesSection'
 import ProcessSection from './components/home/ProcessSection'
 import ContactSection from './components/home/ContactSection'
 import FactorySection from './components/home/FactorySection'
+import TestimonialsSection from './components/home/TestimonialsSection'
+import BlogPromo from './components/home/BlogPromo'
 
 function App() {
   const { t } = useTranslation()
@@ -51,6 +53,38 @@ function App() {
             ]
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Kenevir makina üreticileri kimdir?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'RNG Export, kenevir ve keten elyaf işleme için kotonizasyon, dekortikatör, soyma ve elyaf açma makinaları üreten mühendislik firmasıdır.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Keten işleme makinalarıyla hangi ürünler elde edilir?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Keten ve kenevirden uzun elyaf, kısa elyaf, kotonize elyaf ve biyokompozit hammaddeleri üretilir.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Anahtar teslim elyaf tesisinde hangi hatlar bulunur?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Balya açma, dekortikatör, aspirasyon, kotonizasyon, uzun elyaf hattı, kurutma, presleme ve otomasyon entegrasyonu bulunur.'
+                }
+              }
+            ]
+          })}
+        </script>
         <link rel="canonical" href="https://www.rngexport.com/" />
       </Helmet>
       <HomeHero />
@@ -59,8 +93,10 @@ function App() {
       <ProductionLinesSection />
       <MachinesSection />
       <ProcessSection />
+      <TestimonialsSection />
       <ContactSection />
       <FactorySection />
+      <BlogPromo />
     </Layout>
   )
 }
