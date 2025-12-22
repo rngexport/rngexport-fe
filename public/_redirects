@@ -5,6 +5,8 @@
 
 # Redirect legacy /i/* paths to root
 /i/* / 301
+# Redirect legacy /3/* paths to root
+/3/* / 301
 
 # SPA fallback - all routes to index.html (must be last)
 /* /index.html 200
