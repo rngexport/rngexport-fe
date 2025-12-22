@@ -107,10 +107,10 @@ export default function ProductionLinesSection() {
                  <div className="w-full relative group/image bg-black rounded-sm">
                     <ControlledZoom 
                       isZoomed={zoomedIndex === idx}
-                      onZoomChange={(isZoomed: boolean) => {
+                      onZoomChange={(isZoomed) => {
                         setZoomedIndex(isZoomed ? idx : null)
                       }}
-                      ZoomContent={(zoomProps: ZoomContentRenderProps) => (
+                      ZoomContent={(zoomProps) => (
                         <LineZoomContent
                           {...zoomProps}
                           line={item}
