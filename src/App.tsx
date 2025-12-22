@@ -9,6 +9,7 @@ import MachinesSection from './components/home/MachinesSection'
 import ProcessSection from './components/home/ProcessSection'
 import ContactSection from './components/home/ContactSection'
 import FactorySection from './components/home/FactorySection'
+import LatestBlogPosts from './components/home/LatestBlogPosts'
 
 function App() {
   const { t } = useTranslation()
@@ -59,6 +60,7 @@ function App() {
       <ProductionLinesSection />
       <MachinesSection />
       <ProcessSection />
+      <LatestBlogPosts />
       <ContactSection />
       <FactorySection />
     </Layout>

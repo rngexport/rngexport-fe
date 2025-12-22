@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
+import logo from '../../assets/logo-dark.png'
 import hempOptimizationImg from '../../images/blog/1000149215.jpg'
 import flaxFactoryImg from '../../images/blog/1000149251.jpg'
 import longFiberImg from '../../images/blog/1000149271.jpg'
@@ -78,6 +79,7 @@ export default function BlogPostDetail() {
       <Helmet>
         <title>{post.title} - RNG Export Blog</title>
         <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://www.rngexport.com/blog/${post.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -200,8 +202,8 @@ export default function BlogPostDetail() {
 
             <div className="lg:col-span-4 space-y-12 h-fit lg:sticky lg:top-24">
               <div className="bg-neutral-50 p-8 rounded-sm border border-neutral-100">
-                <div className="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                  RNG
+                <div className="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                  <img src={logo} alt="RNG Export" className="w-12 h-12 object-contain" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">RNG Export</h3>
                 <p className="text-sm text-neutral-600 leading-relaxed mb-6">
@@ -219,7 +221,7 @@ export default function BlogPostDetail() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {post.tags?.map((tag: string) => (
-                    <span key={tag} className="text-xs text-neutral-500 border border-neutral-200 px-3 py-1.5 hover:border-black hover:text-black transition-colors cursor-pointer uppercase tracking-wider">
+                    <span key={tag} className="text-xs text-neutral-500 border border-neutral-200 px-3 py-1.5 uppercase tracking-wider">
                       #{tag}
                     </span>
                   ))}
@@ -232,10 +234,36 @@ export default function BlogPostDetail() {
                   {t('blog.share_label')}
                 </h3>
                 <div className="flex gap-4 text-neutral-400">
-                  <button className="hover:text-[#0077b5] transition-colors">LinkedIn</button>
-                  <button className="hover:text-[#1da1f2] transition-colors">Twitter</button>
-                  <button className="hover:text-[#4267b2] transition-colors">Facebook</button>
-                  <button className="hover:text-black transition-colors">Email</button>
+                  <a
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.rngexport.com/blog/${post.slug}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#0077b5] transition-colors cursor-pointer"
+                  >
+                    LinkedIn
+                  </a>
+                  <a
+                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://www.rngexport.com/blog/${post.slug}`)}&text=${encodeURIComponent(post.title)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#1da1f2] transition-colors cursor-pointer"
+                  >
+                    Twitter
+                  </a>
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://www.rngexport.com/blog/${post.slug}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#4267b2] transition-colors cursor-pointer"
+                  >
+                    Facebook
+                  </a>
+                  <a
+                    href={`mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(`${post.title}\n\n${post.excerpt}\n\n${`https://www.rngexport.com/blog/${post.slug}`}`)}`}
+                    className="hover:text-black transition-colors cursor-pointer"
+                  >
+                    Email
+                  </a>
                 </div>
               </div>
             </div>

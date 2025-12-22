@@ -76,6 +76,24 @@ export default function BlogPage() {
         <title>{t('seo.blog.title', 'RNG Export Blog')}</title>
         <meta name="description" content={t('seo.blog.description', 'Kenevir ve keten elyafı için makine, proses ve tesis yazıları.')} />
         <meta name="keywords" content={t('seo.blog.keywords', 'kenevir blog, keten blog, elyaf işleme makinaları')} />
+        <link rel="canonical" href="https://www.rngexport.com/blog" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Blog',
+            name: 'RNG Export Blog',
+            description: 'Kenevir ve Keten Elyaf İşleme Makinaları, Kotonizasyon, Uzun Elyaf ve Tesis Kurulumu Üzerine Teknik İçerikler',
+            url: 'https://www.rngexport.com/blog',
+            publisher: {
+              '@type': 'Organization',
+              name: 'RNG Export',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.rngexport.com/assets/logo-dark.png'
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       <section className="relative overflow-hidden bg-neutral-950 text-white">
