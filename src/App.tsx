@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import Layout from './components/layout/Layout'
@@ -13,7 +14,29 @@ import TestimonialsSection from './components/home/TestimonialsSection'
 import BlogPromo from './components/home/BlogPromo'
 
 function App() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  // #region agent log
+  useEffect(() => {
+    const keywords = t(
+      'seo.home.keywords',
+      'kenevir işleme, keten işleme, kenevir makina, kenevir makinaları, keten makina, keten makinaları, elyaf işleme, elyaf makinaları'
+    )
+    fetch('http://127.0.0.1:7242/ingest/99af1884-19f5-4477-bacd-8027fd6b163d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: 'debug-session',
+        runId: 'home-seo',
+        hypothesisId: 'home_keywords',
+        location: 'App.tsx:useEffect',
+        message: 'Home SEO keywords applied',
+        data: { language: i18n.language, keywordsLength: keywords.length },
+        timestamp: Date.now()
+      })
+    }).catch(() => {})
+  }, [i18n.language, t])
+  // #endregion
 
   return (
     <Layout>
@@ -25,7 +48,10 @@ function App() {
         />
         <meta 
           name="keywords" 
-          content={t('seo.home.keywords', 'kenevir makina üreticileri, keten işleme makinaları, elyaf üretim hattı, kenevir soyma makinası, keten fabrikası kurulumu, rng export, kenevir işleme, keten makinası')} 
+          content={t(
+            'seo.home.keywords',
+            'kenevir işleme, keten işleme, kenevir makina, kenevir makinaları, keten makina, keten makinaları, elyaf işleme, elyaf makinaları, kenevir makina üreticileri, keten işleme makinaları, elyaf üretim hattı, kenevir soyma makinası, keten fabrikası kurulumu, rng export'
+          )} 
         />
         <script type="application/ld+json">
           {JSON.stringify({
