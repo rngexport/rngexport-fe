@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import img1 from '../../images/1.jpeg'
 import img2 from '../../images/2.jpeg'
@@ -30,6 +30,25 @@ import img27 from '../../images/27.jpeg'
 import img28 from '../../images/28.jpeg'
 import img29 from '../../images/29.jpeg'
 import img30 from '../../images/30.jpeg'
+import rodi1 from '../../images/rodi-1.jpeg'
+import rodi2 from '../../images/rodi-2.jpeg'
+import rodi3 from '../../images/rodi-3.jpeg'
+import shaker1 from '../../images/shaker.jpeg'
+import shaker2 from '../../images/shaker-2.jpeg'
+import aspirasyon1 from '../../images/aspirasyon-1.jpeg'
+import aspirasyon2 from '../../images/aspirasyon-2.jpeg'
+import aspirasyon3 from '../../images/aspirasyon-3.jpeg'
+import metalImg from '../../images/metal.jpeg'
+import kotonizasyon1 from '../../images/kotonizasyon-1.jpeg'
+import kotonizasyon2 from '../../images/kotonizasyon-2.jpeg'
+import kotonizasyon3 from '../../images/kotonizasyon-3.jpeg'
+import uzunElyaf1 from '../../images/uzun-elyaf-1.jpeg'
+import uzunElyaf2 from '../../images/uzun-elyaf-2.jpeg'
+import uzunElyaf3 from '../../images/uzun-elyaf-3.jpeg'
+import kaliteKontrol1 from '../../images/kalite-kontrol-1.jpeg'
+import kaliteKontrol2 from '../../images/kalite-kontrol-2.jpeg'
+import press1 from '../../images/press-1.jpeg'
+import press2 from '../../images/press-2.jpeg'
 
 export default function ProcessSection() {
   const { t } = useTranslation()
@@ -57,9 +76,56 @@ export default function ProcessSection() {
   }>
 
   const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30]
+  
+  // Tüm görselleri bir array'de topla (navigasyon için)
+  const allImages = [
+    ...images,
+    rodi1, rodi2, rodi3,
+    shaker1, shaker2,
+    aspirasyon1, aspirasyon2, aspirasyon3,
+    metalImg,
+    kotonizasyon1, kotonizasyon2, kotonizasyon3,
+    uzunElyaf1, uzunElyaf2, uzunElyaf3,
+    kaliteKontrol1, kaliteKontrol2,
+    press1, press2
+  ]
+  
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null)
   const [selectedOutputIndex, setSelectedOutputIndex] = useState<number | null>(null)
+  
+  // Görsel seçildiğinde index'i bul
+  const handleImageSelect = (image: string) => {
+    const index = allImages.findIndex(img => img === image)
+    setSelectedImage(image)
+    setSelectedImageIndex(index >= 0 ? index : null)
+  }
+  
+  // Klavye navigasyonu
+  useEffect(() => {
+    if (selectedImageIndex === null) return
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        const prevIndex = selectedImageIndex > 0 ? selectedImageIndex - 1 : allImages.length - 1
+        setSelectedImageIndex(prevIndex)
+        setSelectedImage(allImages[prevIndex])
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        const nextIndex = selectedImageIndex < allImages.length - 1 ? selectedImageIndex + 1 : 0
+        setSelectedImageIndex(nextIndex)
+        setSelectedImage(allImages[nextIndex])
+      } else if (e.key === 'Escape') {
+        setSelectedImage(null)
+        setSelectedImageIndex(null)
+      }
+    }
+    
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [selectedImageIndex, allImages])
   const stepMachineMap: string[] = ['M-01', 'M-01', 'M-04', 'M-07', 'M-07', 'M-04', 'M-02', 'M-03', 'M-02', 'M-05']
   const outputStepMap: number[][] = [
     [0, 1, 2, 3, 6],
@@ -68,6 +134,42 @@ export default function ProcessSection() {
   ]
 
   const getStepImages = (index: number) => {
+    // Step 3 (index 2) için özel rodi görselleri
+    if (index === 2) {
+      return [rodi1, rodi2, rodi3]
+    }
+    // Step 4 (index 3) "Shaker İnce Temizlik" için özel görseller: 1. resim kalacak, 2. ve 3. shaker görselleri
+    if (index === 3) {
+      const startIndex = index % images.length
+      return [images[startIndex], shaker1, shaker2]
+    }
+    // Step 5 (index 4) "Kırpık/Toz Çıkarma" için özel aspirasyon görselleri
+    if (index === 4) {
+      return [aspirasyon1, aspirasyon2, aspirasyon3]
+    }
+    // Step 6 (index 5) "Metal Kontrol" için ilk resim metal.jpeg
+    if (index === 5) {
+      const startIndex = index % images.length
+      return [metalImg, images[(startIndex + 1) % images.length], images[(startIndex + 2) % images.length]]
+    }
+    // Step 7 (index 6) "Kotonizasyon Ünitesi" için özel kotonizasyon görselleri
+    if (index === 6) {
+      return [kotonizasyon1, kotonizasyon2, kotonizasyon3]
+    }
+    // Step 8 (index 7) "Uzun Elyaf Ünitesi" için özel uzun-elyaf görselleri
+    if (index === 7) {
+      return [uzunElyaf1, uzunElyaf2, uzunElyaf3]
+    }
+    // Step 9 (index 8) "Final Stabilizasyon" için: 1. ve 2. kalite-kontrol, 3. mevcut
+    if (index === 8) {
+      const startIndex = index % images.length
+      return [kaliteKontrol1, kaliteKontrol2, images[(startIndex + 2) % images.length]]
+    }
+    // Step 10 (index 9) "Balya Presleme" için: 1. mevcut, 2. ve 3. press
+    if (index === 9) {
+      const startIndex = index % images.length
+      return [images[startIndex], press1, press2]
+    }
     const startIndex = index % images.length
     return [images[startIndex], images[(startIndex + 1) % images.length], images[(startIndex + 2) % images.length]]
   }
@@ -135,11 +237,12 @@ export default function ProcessSection() {
         <div className="relative mb-24 min-h-[500px] md:min-h-[600px]">
           <div 
             className="absolute top-0 right-0 w-full md:w-2/3 h-2/3 overflow-hidden group cursor-pointer"
-            onClick={() => setSelectedImage(images[22])}
+            onClick={() => handleImageSelect(images[22])}
           >
             <img 
               src={images[22]} 
-              alt="" 
+              alt="Hemp Fiber Processing Line - Large View" 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent group-hover:bg-black/10 transition-colors"></div>
@@ -147,55 +250,60 @@ export default function ProcessSection() {
 
           <div 
             className="absolute top-0 left-0 w-1/2 md:w-1/3 h-1/3 overflow-hidden group z-10 shadow-2xl cursor-pointer"
-            onClick={() => setSelectedImage(images[29])}
+            onClick={() => handleImageSelect(images[29])}
           >
             <img 
               src={images[29]} 
-              alt="" 
+              alt="Flax Processing Machinery Detail" 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
             />
           </div>
 
           <div 
             className="absolute bottom-0 left-0 w-1/3 md:w-1/4 h-1/3 overflow-hidden group z-10 shadow-2xl border-4 border-white cursor-pointer"
-            onClick={() => setSelectedImage(images[19])}
+            onClick={() => handleImageSelect(images[19])}
           >
             <img 
               src={images[19]} 
-              alt="" 
+              alt="Industrial Hemp Fiber Production" 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
             />
           </div>
 
           <div 
             className="absolute bottom-0 right-0 w-1/2 md:w-2/5 h-1/3 overflow-hidden group z-10 shadow-2xl cursor-pointer"
-            onClick={() => setSelectedImage(images[16])}
+            onClick={() => handleImageSelect(images[16])}
           >
             <img 
               src={images[16]} 
-              alt="" 
+              alt="Natural Fiber Processing Technology" 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
             />
           </div>
 
           <div 
             className="absolute top-1/2 left-1/3 w-1/4 h-1/4 overflow-hidden group z-20 shadow-xl border-2 border-white transform -translate-y-1/2 cursor-pointer"
-            onClick={() => setSelectedImage(images[4])}
+            onClick={() => handleImageSelect(images[4])}
           >
             <img 
               src={images[4]} 
-              alt="" 
+              alt="Hemp Decortication Process" 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
             />
           </div>
 
           <div 
             className="absolute bottom-1/4 right-1/4 w-1/5 h-1/5 overflow-hidden group z-20 shadow-xl border-2 border-white cursor-pointer"
-            onClick={() => setSelectedImage(images[5])}
+            onClick={() => handleImageSelect(images[5])}
           >
             <img 
               src={images[5]} 
-              alt="" 
+              alt="Flax Fiber Cleaning System" 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
             />
           </div>
@@ -267,7 +375,7 @@ export default function ProcessSection() {
                   <div 
                     key={idx}
                     className="relative overflow-hidden group cursor-pointer rounded-sm"
-                    onClick={() => setSelectedImage(img)}
+                    onClick={() => handleImageSelect(img)}
                   >
                     <img 
                       src={img} 
@@ -295,6 +403,11 @@ export default function ProcessSection() {
               </div>
 
               {(() => {
+                // Step 3 (Shaker İnce Temizlik), Step 4 (Kırpık/Toz Çıkarma) ve Step 6 (Metal Kontrol) için normal makine bilgisini gösterme
+                // Step 3 için sadece Shaker Ünitesi, Step 4 için sadece Aspirasyon Ünitesi, Step 6 için sadece Manyetik Dedektör gösterilecek
+                if (selectedStepIndex === 3 || selectedStepIndex === 4 || selectedStepIndex === 5) {
+                  return null
+                }
                 const machineData = getMachineDataForStep(selectedStepIndex)
                 if (!machineData) {
                   return null
@@ -343,6 +456,177 @@ export default function ProcessSection() {
                         <ul className="grid md:grid-cols-2 gap-3">
                           {machineData.features.slice(0, 6).map((feature, idx) => (
                             <li key={`${machineData.id}-feature-${idx}`} className="flex items-start gap-3 text-sm text-neutral-700">
+                              <span className="w-1.5 h-1.5 bg-[#cf8300] mt-1 flex-shrink-0 rounded-none"></span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                )
+              })()}
+
+              {/* Step 3 (Shaker İnce Temizlik) için Shaker Ünitesi ek bilgisi */}
+              {selectedStepIndex === 3 && (() => {
+                const shakerMachine = machines.find((m) => m.id === 'M-09')
+                if (!shakerMachine) return null
+                return (
+                  <div className="border-t border-neutral-200 pt-10 space-y-6">
+                    <div>
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-3 block">
+                        {t('machinesSection.section_label')}
+                      </span>
+                      <h4 className="text-2xl md:text-3xl font-bold text-black mb-2">{shakerMachine.name}</h4>
+                      <p className="text-neutral-600 text-base leading-relaxed">
+                        {shakerMachine.description}
+                      </p>
+                    </div>
+
+                    {shakerMachine.detailSpecs && Object.entries(shakerMachine.detailSpecs).length > 0 && (
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {Object.entries(shakerMachine.detailSpecs).map(([label, value]) => (
+                          <div key={label} className="p-4 border border-neutral-200 rounded-sm bg-white/60">
+                            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-500">{label}</span>
+                            <p className="text-sm text-neutral-700 mt-1">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {shakerMachine.specs && Object.entries(shakerMachine.specs).length > 0 && (
+                      <div className="grid md:grid-cols-3 gap-4">
+                        {Object.entries(shakerMachine.specs).map(([label, value]) => (
+                          <div key={label} className="bg-neutral-50 border border-neutral-200 p-4 rounded-sm">
+                            <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">{label}</span>
+                            <p className="text-base font-semibold text-black mt-2">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {shakerMachine.features && shakerMachine.features.length > 0 && (
+                      <div>
+                        <h5 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-4">
+                          {t('machines.features_title')}
+                        </h5>
+                        <ul className="grid md:grid-cols-2 gap-3">
+                          {shakerMachine.features.map((feature, idx) => (
+                            <li key={`shaker-feature-${idx}`} className="flex items-start gap-3 text-sm text-neutral-700">
+                              <span className="w-1.5 h-1.5 bg-[#cf8300] mt-1 flex-shrink-0 rounded-none"></span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                )
+              })()}
+
+              {/* Step 4 (Kırpık/Toz Çıkarma) için Aspirasyon Ünitesi ek bilgisi */}
+              {selectedStepIndex === 4 && (() => {
+                const aspirationMachine = machines.find((m) => m.id === 'M-07')
+                if (!aspirationMachine) return null
+                return (
+                  <div className="border-t border-neutral-200 pt-10 space-y-6">
+                    <div>
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-3 block">
+                        {t('machinesSection.section_label')}
+                      </span>
+                      <h4 className="text-2xl md:text-3xl font-bold text-black mb-2">{aspirationMachine.name}</h4>
+                      <p className="text-neutral-600 text-base leading-relaxed">
+                        {aspirationMachine.description}
+                      </p>
+                    </div>
+
+                    {aspirationMachine.specs && Object.entries(aspirationMachine.specs).length > 0 && (
+                      <div className="grid md:grid-cols-3 gap-4">
+                        {Object.entries(aspirationMachine.specs).map(([label, value]) => (
+                          <div key={label} className="bg-neutral-50 border border-neutral-200 p-4 rounded-sm">
+                            <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">{label}</span>
+                            <p className="text-base font-semibold text-black mt-2">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {aspirationMachine.detailSpecs && Object.entries(aspirationMachine.detailSpecs).length > 0 && (
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {Object.entries(aspirationMachine.detailSpecs).map(([label, value]) => (
+                          <div key={label} className="p-4 border border-neutral-200 rounded-sm bg-white/60">
+                            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-500">{label}</span>
+                            <p className="text-sm text-neutral-700 mt-1">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {aspirationMachine.features && aspirationMachine.features.length > 0 && (
+                      <div>
+                        <h5 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-4">
+                          {t('machines.features_title')}
+                        </h5>
+                        <ul className="grid md:grid-cols-2 gap-3">
+                          {aspirationMachine.features.map((feature, idx) => (
+                            <li key={`aspiration-feature-${idx}`} className="flex items-start gap-3 text-sm text-neutral-700">
+                              <span className="w-1.5 h-1.5 bg-[#cf8300] mt-1 flex-shrink-0 rounded-none"></span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                )
+              })()}
+
+              {/* Step 6 (Metal Kontrol) için Manyetik Dedektör ek bilgisi */}
+              {selectedStepIndex === 5 && (() => {
+                const metalDetector = machines.find((m) => m.id === 'M-08')
+                if (!metalDetector) return null
+                return (
+                  <div className="border-t border-neutral-200 pt-10 space-y-6">
+                    <div>
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-3 block">
+                        {t('machinesSection.section_label')}
+                      </span>
+                      <h4 className="text-2xl md:text-3xl font-bold text-black mb-2">{metalDetector.name}</h4>
+                      <p className="text-neutral-600 text-base leading-relaxed">
+                        {metalDetector.description}
+                      </p>
+                    </div>
+
+                    {metalDetector.specs && Object.entries(metalDetector.specs).length > 0 && (
+                      <div className="grid md:grid-cols-3 gap-4">
+                        {Object.entries(metalDetector.specs).map(([label, value]) => (
+                          <div key={label} className="bg-neutral-50 border border-neutral-200 p-4 rounded-sm">
+                            <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">{label}</span>
+                            <p className="text-base font-semibold text-black mt-2">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {metalDetector.detailSpecs && Object.entries(metalDetector.detailSpecs).length > 0 && (
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {Object.entries(metalDetector.detailSpecs).map(([label, value]) => (
+                          <div key={label} className="p-4 border border-neutral-200 rounded-sm bg-white/60">
+                            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-500">{label}</span>
+                            <p className="text-sm text-neutral-700 mt-1">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {metalDetector.features && metalDetector.features.length > 0 && (
+                      <div>
+                        <h5 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-4">
+                          {t('machines.features_title')}
+                        </h5>
+                        <ul className="grid md:grid-cols-2 gap-3">
+                          {metalDetector.features.map((feature, idx) => (
+                            <li key={`metal-feature-${idx}`} className="flex items-start gap-3 text-sm text-neutral-700">
                               <span className="w-1.5 h-1.5 bg-[#cf8300] mt-1 flex-shrink-0 rounded-none"></span>
                               {feature}
                             </li>
@@ -422,7 +706,7 @@ export default function ProcessSection() {
                   <div 
                     key={idx}
                     className="relative overflow-hidden group cursor-pointer rounded-sm"
-                    onClick={() => setSelectedImage(img)}
+                    onClick={() => handleImageSelect(img)}
                   >
                     <img 
                       src={img} 
@@ -468,17 +752,56 @@ export default function ProcessSection() {
         </div>
       )}
 
-      {selectedImage && (
+      {selectedImage && selectedImageIndex !== null && (
         <div 
           className="fixed inset-0 bg-black/90 z-[60] flex items-center justify-center p-6 cursor-pointer"
-          onClick={() => setSelectedImage(null)}
+          onClick={() => {
+            setSelectedImage(null)
+            setSelectedImageIndex(null)
+          }}
         >
           <button
-            onClick={() => setSelectedImage(null)}
-            className="absolute top-6 right-6 text-white hover:text-[#cf8300] transition-colors text-2xl font-bold z-10"
+            onClick={(e) => {
+              e.stopPropagation()
+              setSelectedImage(null)
+              setSelectedImageIndex(null)
+            }}
+            className="absolute top-6 right-6 text-white hover:text-[#cf8300] transition-colors text-2xl font-bold z-10 w-10 h-10 flex items-center justify-center"
           >
             ✕
           </button>
+          
+          {/* Geri butonu */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              const prevIndex = selectedImageIndex > 0 ? selectedImageIndex - 1 : allImages.length - 1
+              setSelectedImageIndex(prevIndex)
+              setSelectedImage(allImages[prevIndex])
+            }}
+            className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-[#cf8300] transition-colors text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/50 hover:bg-black/70 rounded-full"
+          >
+            ←
+          </button>
+          
+          {/* İleri butonu */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              const nextIndex = selectedImageIndex < allImages.length - 1 ? selectedImageIndex + 1 : 0
+              setSelectedImageIndex(nextIndex)
+              setSelectedImage(allImages[nextIndex])
+            }}
+            className="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-[#cf8300] transition-colors text-4xl font-bold z-10 w-12 h-12 flex items-center justify-center bg-black/50 hover:bg-black/70 rounded-full"
+          >
+            →
+          </button>
+          
+          {/* Görsel sayacı */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-sm z-10 bg-black/50 px-4 py-2 rounded-full">
+            {selectedImageIndex + 1} / {allImages.length}
+          </div>
+          
           <img 
             src={selectedImage} 
             alt="Enlarged view" 

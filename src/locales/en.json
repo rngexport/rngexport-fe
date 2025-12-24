@@ -3,12 +3,12 @@
     "home": {
       "title": "Hemp Machinery Manufacturer & Fiber Processing - RNG Export",
       "description": "RNG Export offers industrial hemp processing machinery, flax fiber production lines, and engineering solutions. Meet Keneva and Kotonex.",
-      "keywords": "hemp machinery, hemp processing, fiber production line, flax machine, rng export"
+      "keywords": "hemp machinery, hemp processing, fiber production line, flax machine, rng export, flax scutching machine, flax hackling machine, flax fiber plant, flax processing facility, flax tow processing, long flax fiber, short flax fiber, flax stalk breaking, flax decorticator, industrial flax machinery, flax fiber extraction, flax spinning raw material"
     },
     "machines": {
-      "title": "Hemp Processing Machinery & Equipment - RNG Export",
-      "description": "Industrial hemp processing machines by RNG Export: Keneva, Kotonex, RODI, Shaker, Bale Presses. See technical details and specs.",
-      "keywords": "hemp machinery manufacturer, hemp processing equipment, flax machinery, fiber machinery, shaker, bale press"
+      "title": "Hemp & Flax Processing Machinery & Equipment - RNG Export",
+      "description": "Industrial hemp and flax processing machines by RNG Export: Keneva, Kotonex, RODI, Shaker, Bale Presses. See technical details and specs.",
+      "keywords": "hemp machinery manufacturer, hemp processing equipment, flax machinery, fiber machinery, shaker, bale press, flax scutching, flax hackling, flax breaking"
     },
     "lines": {
       "title": "Turnkey Flax & Hemp Production Lines - RNG Export",
@@ -577,19 +577,35 @@
         "name": "Aspiration Unit",
         "category": "Dust Collection",
         "specs": { "Capacity": "Whole Line", "Power": "Central", "Automation": "Integrated" },
-        "description": "The brain of the entire line; collects dust, light particles, and fiber fly. Maintains facility air quality and ensures ATEX safety.",
+        "description": "The brain of the entire line; collects dust, light particles, and fiber fly. Maintains facility air quality and ensures ATEX safety. Multi-stage aspiration system captures dust and particles at each processing point. Cyclone and bag filter combination effectively separates both heavy and fine particles. Frequency inverter-controlled fans automatically adjust flow rate according to line load, optimizing energy consumption and preventing filter overload.",
         "features": [
-          "High-capacity dust collection",
+          "High-capacity dust collection (5000-15000 m³/h)",
           "Prevention of fiber fly",
           "Shive separation integration",
           "Fire and spark risk reduction",
-          "Air quality control"
+          "Air quality control",
+          "Multi-stage aspiration (source capture)",
+          "Cyclone + bag filter combination",
+          "Frequency inverter-controlled fans (energy optimization)",
+          "Sensor-based flow rate control",
+          "ATEX compliant spark detection modules",
+          "Automatic filter cleaning system",
+          "Central control and monitoring"
         ],
         "detailSpecs": {
           "Function": "Dust and particle suction",
           "Safety": "ATEX Standards",
-          "Filter": "Industrial type",
-          "Protection": "Fire risk management"
+          "Filter": "Industrial type (Bag + Cyclone)",
+          "Protection": "Fire risk management",
+          "Capacity": "5000-15000 m³/h (depending on line size)",
+          "Fan Type": "Centrifugal (Frequency Inverter Controlled)",
+          "Filter Surface": "200-500 m² (adjustable)",
+          "Pressure Loss": "< 1500 Pa",
+          "Noise Level": "< 80 dB(A)",
+          "Spark Detection": "ATEX Modules",
+          "Automation": "PLC Controlled",
+          "Maintenance Interval": "Every 1000 hours",
+          "Warranty": "2 years"
         }
       },
       {
@@ -597,18 +613,35 @@
         "name": "Magnetic Detector",
         "category": "Safety",
         "specs": { "Capacity": "Zero Error", "Power": "Sensor", "Automation": "Auto Stop" },
-        "description": "Protects the entire line and machines by separating metal parts coming from raw material. Critical for the safety of RODI and cottonization units.",
+        "description": "Protects the entire line and machines by separating metal parts coming from raw material. Critical for the safety of RODI and cottonization units. Multi-stage magnetic and sensor-based detection system detects iron, stainless steel, and other metal particles within milliseconds. When metal is detected, the line automatically stops and the operator is alerted. This protects blades, drums, and other sensitive equipment, guarantees product quality, and minimizes ATEX safety risks.",
         "features": [
           "Reducing metal contamination to zero",
           "Sensor-based automatic stop",
           "Increasing operator safety",
-          "Protecting machinery park"
+          "Protecting machinery park",
+          "Multi-stage magnetic detection (iron, stainless steel)",
+          "Millisecond-level response time",
+          "PLC integration and alarm system",
+          "Continuous monitoring with metal density sensor",
+          "Automatic ejection mechanism",
+          "Maintenance and calibration reminders",
+          "ATEX compliant design",
+          "Data logging and reporting"
         ],
         "detailSpecs": {
-          "Type": "Magnetic / Sensor-based",
-          "Response Time": "Milliseconds",
+          "Type": "Magnetic / Sensor-based (Multi-Stage)",
+          "Response Time": "< 10 Milliseconds",
           "Protection": "All line equipment",
-          "Automation": "Auto Stop & Alarm"
+          "Automation": "Auto Stop & Alarm",
+          "Detection Sensitivity": "0.5mm - 50mm (adjustable)",
+          "Metal Types": "Iron, Stainless Steel, Copper, Aluminum",
+          "Magnetic Field Strength": "High-Power Neodymium Magnets",
+          "Sensor Type": "Inductive / Capacitive",
+          "Operating Temperature": "-10°C to +60°C",
+          "IP Protection": "IP65",
+          "Power Consumption": "< 50W",
+          "Maintenance Interval": "Every 500 hours",
+          "Warranty": "2 years"
         }
       },
       {
@@ -616,19 +649,32 @@
         "name": "Shaker Unit",
         "category": "Fine Cleaning",
         "specs": { "Capacity": "Precise", "Power": "Vibration", "Automation": "Anti-blinding" },
-        "description": "Fine cleaning and separation machine that determines the final form of the fiber, separating remaining shives and sawdust.",
+        "description": "Fine cleaning and separation machine that determines the final form of the fiber, separating remaining shives and sawdust. With multi-stage vibrating screen system, it ensures separation of even the smallest particles in the fiber. Thanks to anti-blinding technology, screens remain continuously open and cleaning efficiency does not drop. Integrated operation with aspiration system guarantees complete removal of dust and light particles.",
         "features": [
-          "Multi-stage screen system",
-          "Vibration-controlled body",
-          "Anti-blinding mechanism",
+          "Multi-stage screen system (3-5 stages)",
+          "Vibration-controlled body (adjustable frequency)",
+          "Anti-blinding mechanism (clog prevention)",
           "Integrated operation with aspiration",
-          "Stabilizing fiber flow rate"
+          "Stabilizing fiber flow rate",
+          "Automatic screen cleaning system",
+          "Energy-efficient vibration motors",
+          "Sensor-based particle density control",
+          "ATEX compliant design",
+          "Easy maintenance and cleaning access"
         ],
         "detailSpecs": {
-          "System": "Vibrating Screen",
+          "System": "Vibrating Screen (Multi-Deck)",
           "Function": "Fine dust and shive separation",
-          "Technology": "Anti-blinding",
-          "Integration": "Aspiration compatible"
+          "Technology": "Anti-blinding (Clog Prevention)",
+          "Integration": "Aspiration compatible",
+          "Screen Stages": "3-5 stages (adjustable)",
+          "Vibration Frequency": "Adjustable (0-50 Hz)",
+          "Capacity": "500-3000 kg/hour (depending on fiber type)",
+          "Screen Opening": "0.5mm - 5mm (adjustable)",
+          "Power Consumption": "2-5 kW (depending on number of stages)",
+          "Noise Level": "< 75 dB(A)",
+          "Maintenance Interval": "Every 500 hours",
+          "Warranty": "2 years"
         }
       },
       {
@@ -654,19 +700,35 @@
         "id": "M-11",
         "name": "Seed Screening Unit",
         "category": "Seed Screening",
-        "specs": { "Capacity": "5-12 t/h" },
-        "description": "Used for separating and cleaning seeds after harvest.",
+        "specs": { "Capacity": "5-12 t/h", "Power": "Electric", "Automation": "Semi-Automatic" },
+        "description": "Used for separating and cleaning seeds after harvest. Multi-stage screening system ensures precise separation of seeds of different sizes. Automatic removal of dust, foreign matter, and damaged seeds guarantees high-quality seed production. Adjustable screen openings allow optimization for flax, hemp, and other oilseeds. Integrated aspiration system captures dust and light particles at source, ensuring clean and quality seed production.",
         "features": [
           "Sensitive screening technology",
           "Adjustable for different seed sizes",
           "Dust extraction system",
-          "Easy-to-clean structure"
+          "Easy-to-clean structure",
+          "Multi-stage screening system (3-4 stages)",
+          "Adjustable screen openings",
+          "Automatic foreign matter removal",
+          "Damaged seed detection and separation",
+          "Aspiration system integration",
+          "High-capacity processing",
+          "Energy-efficient design",
+          "Easy maintenance and cleaning"
         ],
         "detailSpecs": {
-          "Capacity": "5-12 t/h",
-          "Precision": "High",
-          "Screen": "Replaceable",
-          "Usage": "Seed Cleaning"
+          "Capacity": "5-12 t/h (depending on seed type)",
+          "Precision": "High (0.5mm - 10mm screen opening)",
+          "Screen": "Replaceable (3-4 stages)",
+          "Usage": "Seed Cleaning",
+          "Screen Stages": "3-4 stages (adjustable)",
+          "Screen Opening": "0.5mm - 10mm (depending on seed type)",
+          "Power Consumption": "3-7 kW (depending on capacity)",
+          "Aspiration": "Integrated (optional)",
+          "Cleaning Efficiency": "95-98%",
+          "Noise Level": "< 75 dB(A)",
+          "Maintenance Interval": "Every 300 hours",
+          "Warranty": "2 years"
         }
       }
     ],
@@ -855,10 +917,44 @@
     "factory_label": "PLANT",
     "factory_address": "AOSB 1. kısım Atatürk Bulvarı No: 10/1, Döşemealtı / Antalya / Türkiye",
     "email_label": "E-MAIL",
+    "solutions": "SOLUTIONS",
+    "hemp_machines": "Hemp Machines",
+    "flax_machines": "Flax Processing",
+    "decorticator": "Decorticator",
+    "fiber_lines": "Fiber Lines",
+    "cottonization": "Cottonization",
+    "shaker": "Shaker & Cleaning",
+    "aspiration": "Dust & Aspiration",
     "phone_label": "PHONE",
     "bottom_text": "ALL RIGHTS RESERVED.",
     "privacy": "PRIVACY POLICY",
     "kvkk": "KVKK / DATA PROTECTION",
     "cookies": "COOKIE POLICY"
+  },
+  "faq": {
+    "q1": {
+      "question": "Who are hemp machine manufacturers?",
+      "answer": "RNG Export is an engineering company that manufactures cottonization, decorticator, peeling and fiber opening machines for hemp and flax fiber processing."
+    },
+    "q2": {
+      "question": "What products are obtained with flax processing machines?",
+      "answer": "Long fiber, short fiber, cottonized fiber and biocomposite raw materials are produced from flax and hemp."
+    },
+    "q3": {
+      "question": "What lines are found in a turnkey fiber plant?",
+      "answer": "It includes bale opening, decorticator, aspiration, cottonization, long fiber line, drying, pressing and automation integration."
+    },
+    "q4": {
+      "question": "What is the difference between flax and hemp processing machines?",
+      "answer": "Flax fibers are finer and more delicate, requiring lower speeds and gentler openers. Hemp is tougher and needs higher crushing power in the decorticator. RNG Export lines offer the flexibility to process both products on a single line thanks to inverter-controlled motors and interchangeable knife sets."
+    },
+    "q5": {
+      "question": "What is the cost of a turnkey fiber plant installation?",
+      "answer": "The cost varies depending on capacity (tons/hour), automation level, and selected machine configuration. We offer scalable solutions ranging from 1 ton/hour starter lines to 5 ton/hour fully automated integrated facilities. You can contact our engineers for detailed feasibility and price offers."
+    },
+    "q6": {
+      "question": "How is decorticator machine efficiency measured?",
+      "answer": "Decorticator efficiency is measured by the ratio of woody parts (shives) separated without fiber loss. A good decorticator should provide 80-90% cleaning without breaking the fiber. RNG Export decorticators offer minimum fiber loss and maximum cleaning with adjustable knife angles and an optimized feeding system."
+    }
   }
 }

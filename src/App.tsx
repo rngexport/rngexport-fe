@@ -57,32 +57,14 @@ function App() {
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'Kenevir makina üreticileri kimdir?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'RNG Export, kenevir ve keten elyaf işleme için kotonizasyon, dekortikatör, soyma ve elyaf açma makinaları üreten mühendislik firmasıdır.'
-                }
-              },
-              {
-                '@type': 'Question',
-                name: 'Keten işleme makinalarıyla hangi ürünler elde edilir?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Keten ve kenevirden uzun elyaf, kısa elyaf, kotonize elyaf ve biyokompozit hammaddeleri üretilir.'
-                }
-              },
-              {
-                '@type': 'Question',
-                name: 'Anahtar teslim elyaf tesisinde hangi hatlar bulunur?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Balya açma, dekortikatör, aspirasyon, kotonizasyon, uzun elyaf hattı, kurutma, presleme ve otomasyon entegrasyonu bulunur.'
-                }
+            mainEntity: ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'].map(key => ({
+              '@type': 'Question',
+              name: t(`faq.${key}.question`),
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: t(`faq.${key}.answer`)
               }
-            ]
+            }))
           })}
         </script>
         <link rel="canonical" href="https://www.rngexport.com/" />

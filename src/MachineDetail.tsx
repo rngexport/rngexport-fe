@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet-async'
 import 'react-medium-image-zoom/dist/styles.css'
 import logoDark from './assets/logo-dark.png'
 
@@ -120,9 +121,61 @@ export default function MachineDetail() {
 
   const images = getMachineImages(id || '')
   const hasImages = images && images.length > 0
+  const currentUrl = `https://www.rngexport.com/machines/${id}`
 
   return (
     <div className="min-h-screen bg-white text-neutral-900 font-sans">
+      <Helmet>
+        <title>{`${machine.name} | RNG Export`}</title>
+        <meta name="description" content={machine.description} />
+        <link rel="canonical" href={currentUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org/',
+            '@type': 'Product',
+            name: machine.name,
+            image: hasImages ? images.map(img => `https://www.rngexport.com${img}`) : [],
+            description: machine.description,
+            brand: {
+              '@type': 'Brand',
+              name: 'RNG Export'
+            },
+            manufacturer: {
+              '@type': 'Organization',
+              name: 'RNG Export'
+            },
+            category: machine.category,
+            url: currentUrl
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: t('nav.home', 'Home'),
+                item: 'https://www.rngexport.com/'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: t('nav.machines', 'Machines'),
+                item: 'https://www.rngexport.com/#machines'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: machine.name,
+                item: currentUrl
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <nav className="sticky top-0 z-50 bg-white border-b border-neutral-200">
         <div className="max-w-[1800px] mx-auto px-6 h-24 flex items-center justify-between">
           <Link to="/" className="flex flex-col gap-1 group">

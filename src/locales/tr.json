@@ -3,12 +3,12 @@
     "home": {
       "title": "RNG Export",
       "description": "Kenevir ve keten üretim makinaları üreticisi RNG Export. Endüstriyel elyaf işleme, keten işleme makinaları, elyaf üretim hattı, kotonizasyon ve anahtar teslim fabrika kurulumu.",
-      "keywords": "kenevir üretim makinaları, kenevir işleme makinaları, keten işleme makinaları, kenevir makina üreticileri, keten makina üreticileri, keten endüstriyel makina, kenevir endüstriyel makina, elyaf üretim makinaları, elyaf işleme makinaları, elyaf üretim hattı, elyaf hattı, keten üretim, kenevir üretim, keten soyma makinası, kenevir soyma makinası, dekortikatör, kotonizasyon, keten fabrikası kurulumu, kenevir fabrikası kurulumu, keten lifi ayırma, keten sapı işleme, doğal elyaf teknolojileri, balya presi, elyaf temizleme, uzun elyaf hattı, keten tarağı"
+      "keywords": "kenevir üretim makinaları, kenevir işleme makinaları, keten işleme makinaları, kenevir makina üreticileri, keten makina üreticileri, keten endüstriyel makina, kenevir endüstriyel makina, elyaf üretim makinaları, elyaf işleme makinaları, elyaf üretim hattı, elyaf hattı, keten üretim, kenevir üretim, keten soyma makinası, kenevir soyma makinası, dekortikatör, kotonizasyon, keten fabrikası kurulumu, kenevir fabrikası kurulumu, keten lifi ayırma, keten sapı işleme, doğal elyaf teknolojileri, balya presi, elyaf temizleme, uzun elyaf hattı, keten tarağı, keten dövme makinası, keten tarama makinası, keten ipliği hammaddesi, keten sapı kırma, keten elyaf fabrikası, keten işleme tesisi, keten scutching, keten hackling, uzun keten lifi, kısa keten lifi, keten tow işleme, keten kıtık ayırma, keten sapı soyma, endüstriyel keten makinaları"
     },
     "machines": {
-      "title": "Kenevir İşleme Makinaları & Ekipmanları - RNG Export",
-      "description": "RNG Export tarafından üretilen endüstriyel kenevir işleme makinaları: Keneva, Kotonex, RODI, Shaker ve Balya Presleri. Teknik özellikler ve detaylar.",
-      "keywords": "kenevir makinaları üreticileri, kenevir işleme makinaları, keten makinaları, elyaf makinası, shaker, balya presi"
+      "title": "Kenevir ve Keten İşleme Makinaları & Ekipmanları - RNG Export",
+      "description": "RNG Export tarafından üretilen endüstriyel kenevir ve keten işleme makinaları: Keneva, Kotonex, RODI, Shaker ve Balya Presleri. Teknik özellikler ve detaylar.",
+      "keywords": "kenevir makinaları üreticileri, kenevir işleme makinaları, keten makinaları, elyaf makinası, shaker, balya presi, keten dövme, keten tarama, keten sapı kırma"
     },
     "lines": {
       "title": "Anahtar Teslim Kenevir & Keten Üretim Hatları - RNG Export",
@@ -584,19 +584,35 @@
         "name": "Aspirasyon Ünitesi",
         "category": "Toz Toplama",
         "specs": { "Kapasite": "Tüm Hat", "Güç": "Merkezi", "Otomasyon": "Entegre" },
-        "description": "Tüm hattın beynidir; tozu, hafif parçayı ve lif uçuntusunu toplar. Tesisin hava kalitesini korur ve ATEX güvenliğini sağlar.",
+        "description": "Tüm hattın beynidir; tozu, hafif parçayı ve lif uçuntusunu toplar. Tesisin hava kalitesini korur ve ATEX güvenliğini sağlar. Çok kademeli aspirasyon sistemi ile her işlem noktasından toz ve partiküller kaynakta yakalanır. Siklon ve torba filtre kombinasyonu sayesinde hem ağır hem de ince partiküller etkili şekilde ayrılır. Frekans invertörlü fanlar ile hat yüküne göre otomatik debi ayarlaması yapılır, böylece enerji tüketimi optimize edilir ve filtreler aşırı yüklenmez.",
         "features": [
-          "Yüksek kapasiteli toz toplama",
+          "Yüksek kapasiteli toz toplama (5000-15000 m³/h)",
           "Lif uçuşmasını önleme",
           "Kırtık ayrımı entegrasyonu",
           "Yangın ve kıvılcım riskini azaltma",
-          "Hava kalitesi kontrolü"
+          "Hava kalitesi kontrolü",
+          "Çok kademeli aspirasyon (kaynakta yakalama)",
+          "Siklon + torba filtre kombinasyonu",
+          "Frekans invertörlü fanlar (enerji optimizasyonu)",
+          "Sensör tabanlı debi kontrolü",
+          "ATEX uyumlu kıvılcım algılama modülleri",
+          "Otomatik filtre temizleme sistemi",
+          "Merkezi kontrol ve izleme"
         ],
         "detailSpecs": {
           "Fonksiyon": "Toz ve partikül emiş",
           "Güvenlik": "ATEX Standartları",
-          "Filtre": "Endüstriyel tip",
-          "Koruma": "Yangın risk yönetimi"
+          "Filtre": "Endüstriyel tip (Torba + Siklon)",
+          "Koruma": "Yangın risk yönetimi",
+          "Kapasite": "5000-15000 m³/h (hat büyüklüğüne göre)",
+          "Fan Tipi": "Santrifüj (Frekans İnvertörlü)",
+          "Filtre Yüzeyi": "200-500 m² (ayarlanabilir)",
+          "Basınç Kaybı": "< 1500 Pa",
+          "Gürültü Seviyesi": "< 80 dB(A)",
+          "Kıvılcım Algılama": "ATEX Modülleri",
+          "Otomasyon": "PLC Kontrollü",
+          "Bakım Aralığı": "Her 1000 saat",
+          "Garanti": "2 yıl"
         }
       },
       {
@@ -604,18 +620,35 @@
         "name": "Manyetik Dedektör",
         "category": "Güvenlik",
         "specs": { "Kapasite": "Sıfır Hata", "Güç": "Sensör", "Otomasyon": "Otomatik Stop" },
-        "description": "Hammaddeden gelebilecek metal parçaları ayırarak tüm hattı ve makineleri korur. RODI ve kotonizasyon ünitelerinin güvenliği için kritiktir.",
+        "description": "Hammaddeden gelebilecek metal parçaları ayırarak tüm hattı ve makineleri korur. RODI ve kotonizasyon ünitelerinin güvenliği için kritiktir. Çok kademeli manyetik ve sensör tabanlı algılama sistemi ile demir, paslanmaz çelik ve diğer metal parçacıklarını milisaniyeler içinde tespit eder. Metal algılandığında hat otomatik olarak durur ve operatör uyarılır. Bu sayede bıçaklar, tamburlar ve diğer hassas ekipmanlar korunur, ürün kalitesi garanti altına alınır ve ATEX güvenlik riskleri minimize edilir.",
         "features": [
           "Metal kontaminasyonunu sıfıra indirme",
           "Sensör tabanlı otomatik durdurma",
           "Operatör güvenliğini artırma",
-          "Makine parkurunu koruma"
+          "Makine parkurunu koruma",
+          "Çok kademeli manyetik algılama (demir, paslanmaz çelik)",
+          "Milisaniye seviyesinde tepki süresi",
+          "PLC entegrasyonu ve alarm sistemi",
+          "Metal yoğunluk sensörü ile sürekli izleme",
+          "Otomatik ejection (atma) mekanizması",
+          "Bakım ve kalibrasyon hatırlatıcıları",
+          "ATEX uyumlu tasarım",
+          "Veri kaydı ve raporlama"
         ],
         "detailSpecs": {
-          "Tip": "Manyetik / Sensörlü",
-          "Tepki Süresi": "Milisaniye",
+          "Tip": "Manyetik / Sensörlü (Multi-Stage)",
+          "Tepki Süresi": "< 10 Milisaniye",
           "Koruma": "Tüm hat ekipmanları",
-          "Otomasyon": "Otomatik Stop & Alarm"
+          "Otomasyon": "Otomatik Stop & Alarm",
+          "Algılama Hassasiyeti": "0.5mm - 50mm (ayarlanabilir)",
+          "Metal Tipleri": "Demir, Paslanmaz Çelik, Bakır, Alüminyum",
+          "Manyetik Alan Gücü": "Yüksek Güçlü Neodimyum Mıknatıslar",
+          "Sensör Tipi": "Endüktif / Kapasitif",
+          "Çalışma Sıcaklığı": "-10°C ile +60°C",
+          "IP Koruma": "IP65",
+          "Güç Tüketimi": "< 50W",
+          "Bakım Aralığı": "Her 500 saat",
+          "Garanti": "2 yıl"
         }
       },
       {
@@ -623,19 +656,32 @@
         "name": "Shaker Ünitesi",
         "category": "İnce Temizlik",
         "specs": { "Kapasite": "Hassas", "Güç": "Vibrasyon", "Otomasyon": "Anti-blinding" },
-        "description": "Elyafın son formunu belirleyen, kalan kırtık ve talaşı ayıran ince temizlik ve ayırma makinesidir.",
+        "description": "Elyafın son formunu belirleyen, kalan kırtık ve talaşı ayıran ince temizlik ve ayırma makinesidir. Çok kademeli vibrasyonlu elek sistemi ile elyaf içindeki en küçük partiküllerin bile ayrılmasını sağlar. Anti-blinding teknolojisi sayesinde elekler sürekli açık kalır ve temizlik verimi düşmez. Aspirasyon sistemi ile entegre çalışarak toz ve hafif partiküllerin tamamen uzaklaştırılmasını garanti eder.",
         "features": [
-          "Çok kademeli elek sistemi",
-          "Vibrasyon kontrollü gövde",
+          "Çok kademeli elek sistemi (3-5 kademe)",
+          "Vibrasyon kontrollü gövde (frekans ayarlanabilir)",
           "Anti-blinding mekanizması (tıkanma önleyici)",
           "Aspirasyon ile entegre çalışma",
-          "Elyaf debisini stabil hale getirme"
+          "Elyaf debisini stabil hale getirme",
+          "Otomatik elek temizleme sistemi",
+          "Enerji verimli vibrasyon motorları",
+          "Sensör tabanlı partikül yoğunluk kontrolü",
+          "ATEX uyumlu tasarım",
+          "Kolay bakım ve temizlik erişimi"
         ],
         "detailSpecs": {
-          "Sistem": "Vibrasyonlu Elek",
+          "Sistem": "Vibrasyonlu Elek (Multi-Deck)",
           "Fonksiyon": "İnce toz ve kırtık ayrımı",
-          "Teknoloji": "Anti-blinding",
-          "Entegrasyon": "Aspirasyon uyumlu"
+          "Teknoloji": "Anti-blinding (Tıkanma Önleyici)",
+          "Entegrasyon": "Aspirasyon uyumlu",
+          "Elek Kademeleri": "3-5 kademe (ayarlanabilir)",
+          "Vibrasyon Frekansı": "Ayarlanabilir (0-50 Hz)",
+          "Kapasite": "500-3000 kg/saat (elyaf tipine göre)",
+          "Elek Açıklığı": "0.5mm - 5mm (ayarlanabilir)",
+          "Güç Tüketimi": "2-5 kW (kademe sayısına göre)",
+          "Gürültü Seviyesi": "< 75 dB(A)",
+          "Bakım Aralığı": "Her 500 saat",
+          "Garanti": "2 yıl"
         }
       },
       {
@@ -661,19 +707,35 @@
         "id": "M-11",
         "name": "Tohum Eleme Ünitesi",
         "category": "Tohum Eleme",
-        "specs": { "Kapasite": "5-12 t/saat" },
-        "description": "Hasat sonrası tohumların ayrıştırılması ve temizlenmesi için kullanılır.",
+        "specs": { "Kapasite": "5-12 t/saat", "Güç": "Elektrik", "Otomasyon": "Yarı Otomatik" },
+        "description": "Hasat sonrası tohumların ayrıştırılması ve temizlenmesi için kullanılır. Çok kademeli eleme sistemi ile farklı boyuttaki tohumların hassas şekilde ayrılmasını sağlar. Toz, yabancı madde ve hasarlı tohumların otomatik olarak ayıklanması ile yüksek kaliteli tohum elde edilir. Ayarlanabilir elek açıklıkları sayesinde keten, kenevir ve diğer yağlı tohumlar için optimize edilebilir. Aspirasyon sistemi entegrasyonu ile toz ve hafif partiküller kaynakta yakalanır, böylece temiz ve kaliteli tohum üretimi garanti edilir.",
         "features": [
           "Hassas eleme teknolojisi",
           "Farklı boyuttaki tohumlar için ayarlanabilir",
           "Toz emiş sistemi",
-          "Kolay temizlenebilir yapı"
+          "Kolay temizlenebilir yapı",
+          "Çok kademeli eleme sistemi (3-4 kademe)",
+          "Ayarlanabilir elek açıklıkları",
+          "Otomatik yabancı madde ayıklama",
+          "Hasarlı tohum tespiti ve ayırma",
+          "Aspirasyon sistemi entegrasyonu",
+          "Yüksek kapasiteli işleme",
+          "Enerji verimli tasarım",
+          "Kolay bakım ve temizlik"
         ],
         "detailSpecs": {
-          "Kapasite": "5-12 t/saat",
-          "Hassasiyet": "Yüksek",
-          "Elek": "Değiştirilebilir",
-          "Kullanım": "Tohum Temizliği"
+          "Kapasite": "5-12 t/saat (tohum tipine göre)",
+          "Hassasiyet": "Yüksek (0.5mm - 10mm elek açıklığı)",
+          "Elek": "Değiştirilebilir (3-4 kademe)",
+          "Kullanım": "Tohum Temizliği",
+          "Elek Kademeleri": "3-4 kademe (ayarlanabilir)",
+          "Elek Açıklığı": "0.5mm - 10mm (tohum tipine göre)",
+          "Güç Tüketimi": "3-7 kW (kapasiteye göre)",
+          "Aspirasyon": "Entegre (opsiyonel)",
+          "Temizlik Verimi": "%95-98",
+          "Gürültü Seviyesi": "< 75 dB(A)",
+          "Bakım Aralığı": "Her 300 saat",
+          "Garanti": "2 yıl"
         }
       }
     ],
@@ -867,5 +929,31 @@
     "privacy": "GİZLİLİK POLİTİKASI",
     "kvkk": "KVKK",
     "cookies": "ÇEREZ POLİTİKASI"
+  },
+  "faq": {
+    "q1": {
+      "question": "Kenevir makina üreticileri kimdir?",
+      "answer": "RNG Export, kenevir ve keten elyaf işleme için kotonizasyon, dekortikatör, soyma ve elyaf açma makinaları üreten mühendislik firmasıdır."
+    },
+    "q2": {
+      "question": "Keten işleme makinalarıyla hangi ürünler elde edilir?",
+      "answer": "Keten ve kenevirden uzun elyaf, kısa elyaf, kotonize elyaf ve biyokompozit hammaddeleri üretilir."
+    },
+    "q3": {
+      "question": "Anahtar teslim elyaf tesisinde hangi hatlar bulunur?",
+      "answer": "Balya açma, dekortikatör, aspirasyon, kotonizasyon, uzun elyaf hattı, kurutma, presleme ve otomasyon entegrasyonu bulunur."
+    },
+    "q4": {
+      "question": "Keten ve kenevir işleme makinaları arasındaki fark nedir?",
+      "answer": "Keten lifleri daha ince ve hassastır, bu yüzden daha düşük devirli ve nazik açıcılar gerekir. Kenevir ise daha serttir ve dekortikatörde daha yüksek kırma gücü ister. RNG Export hatları, invertör kontrollü motorlar ve değiştirilebilir bıçak setleri sayesinde her iki ürünü de tek hatta işleyebilecek esnekliğe sahiptir."
+    },
+    "q5": {
+      "question": "Anahtar teslim elyaf tesisi kurulum maliyeti nedir?",
+      "answer": "Maliyet; kapasite (ton/saat), otomasyon seviyesi ve seçilen makine konfigürasyonuna göre değişir. 1 ton/saat kapasiteli başlangıç hattından, 5 ton/saat tam otomatik entegre tesislere kadar ölçeklenebilir çözümler sunuyoruz. Detaylı fizibilite ve fiyat teklifi için mühendislerimizle iletişime geçebilirsiniz."
+    },
+    "q6": {
+      "question": "Dekortikatör makinasının verimliliği nasıl ölçülür?",
+      "answer": "Dekortikatör verimliliği, lif kaybı olmadan ayrıştırılan odunsu kısım (kıtık) oranıyla ölçülür. İyi bir dekortikatör, lifi kırmadan %80-90 oranında temizlik sağlamalıdır. RNG Export dekortikatörleri, ayarlanabilir bıçak açıları ve optimize edilmiş besleme sistemiyle minimum lif kaybı ve maksimum temizlik sunar."
+    }
   }
 }

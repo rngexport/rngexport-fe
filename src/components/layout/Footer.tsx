@@ -54,12 +54,12 @@ export default function Footer() {
       
       <div className="max-w-[1800px] mx-auto px-6 pt-16 pb-8 relative z-10">
         
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
           
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
             <Link to="/" className="flex flex-col gap-1 shrink-0 mb-6 group">
               <div className="flex items-center gap-1.5">
-                <img src={logoLight} alt="RNG Export" className="h-10 w-auto object-contain mb-0.5" />
+                <img src={logoLight} alt="RNG Export - Kenevir & Keten Makinaları" className="h-10 w-auto object-contain mb-0.5" />
                 <span className="text-2xl font-bold tracking-tighter text-white">EXPORT</span>
               </div>
               <span className="tracking-[0.3em] text-white uppercase ml-2 text-[10px]">
@@ -77,6 +77,7 @@ export default function Footer() {
                   key={social}
                   href="#"
                   className="w-12 h-12 bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-[#cf8300] hover:border-[#cf8300] hover:scale-110 transition-all duration-300 text-[10px] font-bold shadow-lg"
+                  aria-label={`${social} Social Link`}
                 >
                   {social}
                 </a>
@@ -84,7 +85,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6 flex items-center gap-3">
               <span className="w-10 h-px bg-gradient-to-r from-[#cf8300] to-transparent"></span>
               {t('footer.quick_links')}
@@ -111,6 +112,8 @@ export default function Footer() {
                         ? 'nav.process'
                         : item.label === 'TESİSLER'
                         ? 'nav.facilities'
+                        : item.label === 'BLOG'
+                        ? 'nav.blog'
                         : 'nav.contact'
                     )}
                   </span>
@@ -119,7 +122,36 @@ export default function Footer() {
             </nav>
           </div>
 
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6 flex items-center gap-3">
+              <span className="w-10 h-px bg-gradient-to-r from-[#cf8300] to-transparent"></span>
+              {t('footer.solutions', 'ÇÖZÜMLER')}
+            </h4>
+            <nav className="space-y-3">
+              {[
+                { label: t('footer.hemp_machines', 'Kenevir Makinaları'), href: '/machines' },
+                { label: t('footer.flax_machines', 'Keten İşleme'), href: '/machines' },
+                { label: t('footer.decorticator', 'Dekortikatör'), href: '/machines/M-01' },
+                { label: t('footer.fiber_lines', 'Elyaf Hatları'), href: '/lines' },
+                { label: t('footer.cottonization', 'Kotonizasyon'), href: '/lines' },
+                { label: t('footer.shaker', 'Shaker & Temizlik'), href: '/machines/M-09' },
+                { label: t('footer.aspiration', 'Toz & Aspirasyon'), href: '/machines/M-07' },
+              ].map((link, idx) => (
+                <Link
+                  key={idx}
+                  to={link.href}
+                  className="group flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-all duration-300"
+                >
+                  <div className="w-2 h-2 bg-neutral-700 group-hover:bg-[#cf8300] group-hover:scale-125 transition-all duration-300 rounded-none"></div>
+                  <span className="group-hover:translate-x-2 transition-transform duration-300">
+                    {link.label}
+                  </span>
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="lg:col-span-3">
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6 flex items-center gap-3">
               <span className="w-10 h-px bg-gradient-to-r from-[#cf8300] to-transparent"></span>
               {t('footer.contact_center')}

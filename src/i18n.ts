@@ -10,6 +10,26 @@ const getInitialLanguage = () => {
   // Önce URL'deki lang query parameter'ını kontrol et
   const urlParams = new URLSearchParams(window.location.search)
   const langParam = urlParams.get('lang')
+  
+  // #region agent log
+  fetch('http://127.0.0.1:7242/ingest/99af1884-19f5-4477-bacd-8027fd6b163d', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      location: 'src/i18n.ts:12',
+      message: 'i18n detection',
+      data: {
+        langParam,
+        hostname: window.location.hostname,
+        pathname: window.location.pathname
+      },
+      timestamp: Date.now(),
+      sessionId: 'debug-session',
+      hypothesisId: 'H2_i18n'
+    })
+  }).catch(() => {})
+  // #endregion
+
   if (langParam && ['tr', 'en', 'ru'].includes(langParam)) {
     return langParam
   }
