@@ -4,64 +4,124 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 // Hero section için kaliteli görsel
 import blogHeroImg from '../../images/blog/1000149201.jpg'
-// Blog post kapak görselleri - konuya uygun seçilmiş
-import hempOptimizationImg from '../../images/blog/1000149215.jpg'
-import flaxFactoryImg from '../../images/blog/1000149251.jpg'
-import longFiberImg from '../../images/blog/1000149271.jpg'
-import dustControlImg from '../../images/blog/1000149247.jpg'
-import qualityControlImg from '../../images/blog/1000149263.jpg'
-import metalDetectImg from '../../images/blog/1000149221.jpg'
-import energyOptimizeImg from '../../images/blog/1000149235.jpg'
+
+// Tüm blog görsellerini dinamik olarak yükle
+const blogImagesGlob = import.meta.glob('../../images/blog/*.{jpg,jpeg,png,webp}', { eager: true, query: '?url', import: 'default' })
+const ALL_BLOG_IMAGES = Object.values(blogImagesGlob) as string[]
+
+// Slug'a göre deterministik bir sayı üreten fonksiyon (BlogPostDetail ile aynı mantık)
+const getSeededRandom = (seedStr: string) => {
+  let hash = 0;
+  for (let i = 0; i < seedStr.length; i++) {
+    const char = seedStr.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return Math.abs(hash);
+}
+
+// Bir diziyi seeded random ile karıştıran fonksiyon
+const shuffleArray = (array: string[], seed: number) => {
+  const shuffled = [...array];
+  let m = shuffled.length;
+  let t, i;
+
+  // Fisher-Yates shuffle with seed
+  while (m) {
+    // LCG random number generator
+    seed = (seed * 9301 + 49297) % 233280;
+    const rnd = seed / 233280;
+
+    i = Math.floor(rnd * m--);
+    t = shuffled[m];
+    shuffled[m] = shuffled[i];
+    shuffled[i] = t;
+  }
+  return shuffled;
+}
 
 type BlogPost = {
   slug: string
-  image: string
+  image?: string // Opsiyonel yaptık, dinamik seçeceğiz
   date: string
   tags: string[]
 }
 
-const BLOG_POSTS: BlogPost[] = [
+const BLOG_POSTS_DATA: BlogPost[] = [
   {
     slug: 'hemp-line-optimization',
-    image: hempOptimizationImg,
     date: '2025-12-15',
     tags: ['kenevir', 'elyaf', 'kotonizasyon']
   },
   {
     slug: 'flax-turnkey-factory',
-    image: flaxFactoryImg,
     date: '2025-12-10',
     tags: ['keten', 'anahtar teslim', 'tesis']
   },
   {
     slug: 'long-fiber-composites',
-    image: longFiberImg,
     date: '2025-12-05',
     tags: ['uzun elyaf', 'kompozit', 'otomotiv']
   },
   {
     slug: 'hemp-dust-control',
-    image: dustControlImg,
     date: '2025-12-18',
     tags: ['kenevir', 'aspirasyon', 'toz kontrolü']
   },
   {
     slug: 'flax-quality-control',
-    image: qualityControlImg,
     date: '2025-12-12',
     tags: ['keten', 'kalite', 'proses']
   },
   {
     slug: 'hemp-metal-detection',
-    image: metalDetectImg,
     date: '2025-12-20',
     tags: ['kenevir', 'metal', 'güvenlik']
   },
   {
     slug: 'flax-energy-optimization',
-    image: energyOptimizeImg,
     date: '2025-12-22',
     tags: ['keten', 'enerji', 'otomasyon']
+  },
+  {
+    slug: 'hemp-processing-checklist',
+    date: '2025-12-25',
+    tags: ['kenevir işleme', 'kurulum', 'checklist']
+  },
+  {
+    slug: 'flax-fiber-production-line',
+    date: '2025-12-23',
+    tags: ['keten', 'elyaf üretim', 'optimizasyon']
+  },
+  {
+    slug: 'decorticator-selection-guide',
+    date: '2025-12-24',
+    tags: ['dekortikatör', 'makina seçimi', 'rehber']
+  },
+  {
+    slug: 'hemp-flax-machinery-comparison',
+    date: '2025-12-26',
+    tags: ['kenevir', 'keten', 'karşılaştırma']
+  },
+  {
+    slug: 'fiber-plant-cost-analysis',
+    date: '2025-12-27',
+    tags: ['elyaf tesisi', 'maliyet', 'analiz']
+  },
+  {
+    slug: 'flax-stalk-processing',
+    date: '2025-12-28',
+    tags: ['keten sapı', 'işleme', 'teknoloji']
+  },
+  {
+    slug: 'hemp-peeling-machine',
+    date: '2025-12-29',
+    tags: ['kenevir soyma', 'makina', 'teknik']
+  },
+  {
+    slug: 'industrial-flax-machinery',
+    date: '2025-12-30',
+    tags: ['endüstriyel keten', 'makinalar', 'uygulamalar']
   }
 ]
 
@@ -79,7 +139,7 @@ export default function BlogPage() {
         hypothesisId: 'blog_seo_visibility',
         location: 'BlogPage.tsx:useEffect',
         message: 'Blog page rendered',
-        data: { language: i18n.language, posts: BLOG_POSTS.length },
+        data: { language: i18n.language, posts: BLOG_POSTS_DATA.length },
         timestamp: Date.now()
       })
     }).catch(() => {})
@@ -88,13 +148,21 @@ export default function BlogPage() {
 
   const translatedPosts = useMemo(
     () =>
-      BLOG_POSTS.map((post) => ({
-        ...post,
-        title: t(`blog.posts.${post.slug}.title`),
-        excerpt: t(`blog.posts.${post.slug}.excerpt`),
-        content: t(`blog.posts.${post.slug}.content`),
-        tags: (t(`blog.posts.${post.slug}.tags`, { returnObjects: true }) as string[]) || post.tags
-      })),
+      BLOG_POSTS_DATA.map((post) => {
+        // Her post için deterministik bir görsel seç
+        const seed = getSeededRandom(post.slug)
+        const shuffledImages = shuffleArray(ALL_BLOG_IMAGES, seed)
+        const selectedImage = shuffledImages[0] // Her zaman ilk görseli al (deterministik)
+
+        return {
+          ...post,
+          image: selectedImage,
+          title: t(`blog.posts.${post.slug}.title`),
+          excerpt: t(`blog.posts.${post.slug}.excerpt`),
+          content: t(`blog.posts.${post.slug}.content`),
+          tags: (t(`blog.posts.${post.slug}.tags`, { returnObjects: true }) as string[]) || post.tags
+        }
+      }),
     [i18n.language, t]
   )
 
@@ -103,7 +171,12 @@ export default function BlogPage() {
       <Helmet>
         <title>{t('seo.blog.title', 'RNG Export Blog')}</title>
         <meta name="description" content={t('seo.blog.description', 'Kenevir ve keten elyafı için makine, proses ve tesis yazıları.')} />
-        <meta name="keywords" content={t('seo.blog.keywords', 'kenevir blog, keten blog, elyaf işleme makinaları')} />
+        <meta name="keywords" content={t('seo.blog.keywords', 'kenevir blog, keten blog, elyaf işleme makinaları, kenevir işleme, keten işleme, dekortikatör, kotonizasyon, elyaf üretim hattı, kenevir makina, keten makina')} />
+        <meta property="og:title" content={t('seo.blog.title', 'RNG Export Blog')} />
+        <meta property="og:description" content={t('seo.blog.description', 'Kenevir ve keten elyafı için makine, proses ve tesis yazıları.')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.rngexport.com/blog" />
+        <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://www.rngexport.com/blog" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -136,7 +209,7 @@ export default function BlogPage() {
 
       <section className="relative overflow-hidden bg-neutral-950 text-white">
         <div className="absolute inset-0">
-          <img src={blogHeroImg} alt="" className="w-full h-full object-cover opacity-40" />
+          <img src={blogHeroImg} alt="Kenevir ve Keten Elyaf İşleme Blog" loading="lazy" className="w-full h-full object-cover opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
         </div>
         <div className="relative max-w-[1600px] mx-auto px-6 py-20 lg:py-28">
@@ -163,7 +236,8 @@ export default function BlogPage() {
               <div className="relative h-56 overflow-hidden">
                 <img
                   src={post.image}
-                  alt={post.title}
+                  alt={`${post.title} - ${post.excerpt.substring(0, 100)}`}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4 bg-black/70 text-white text-[11px] font-mono px-3 py-1 rounded-sm">
@@ -194,4 +268,3 @@ export default function BlogPage() {
     </div>
   )
 }
-

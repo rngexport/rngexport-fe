@@ -1,39 +1,92 @@
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import logo from '../../assets/logo-dark.png'
-import hempOptimizationImg from '../../images/blog/1000149215.jpg'
-import flaxFactoryImg from '../../images/blog/1000149251.jpg'
-import longFiberImg from '../../images/blog/1000149271.jpg'
-import dustControlImg from '../../images/blog/1000149247.jpg'
-import qualityControlImg from '../../images/blog/1000149263.jpg'
-import metalDetectImg from '../../images/blog/1000149221.jpg'
-import energyOptimizeImg from '../../images/blog/1000149235.jpg'
-import gallery1 from '../../images/blog/1000149221.jpg'
-import gallery2 from '../../images/blog/1000149235.jpg'
-import gallery3 from '../../images/blog/1000149247.jpg'
-import gallery4 from '../../images/blog/1000149259.jpg'
-import gallery5 from '../../images/blog/1000149263.jpg'
-import gallery6 from '../../images/blog/1000149275.jpg'
 
-const BLOG_IMAGES: Record<string, string> = {
-  'hemp-line-optimization': hempOptimizationImg,
-  'flax-turnkey-factory': flaxFactoryImg,
-  'long-fiber-composites': longFiberImg,
-  'hemp-dust-control': dustControlImg,
-  'flax-quality-control': qualityControlImg,
-  'hemp-metal-detection': metalDetectImg,
-  'flax-energy-optimization': energyOptimizeImg
+// Tüm blog görsellerini dinamik olarak yükle
+const blogImagesGlob = import.meta.glob('../../images/blog/*.{jpg,jpeg,png,webp}', { eager: true, query: '?url', import: 'default' })
+const ALL_BLOG_IMAGES = Object.values(blogImagesGlob) as string[]
+
+// Sabit kapak görselleri (öncelikli olanlar)
+// Bu map'i koruyoruz ama eğer burada tanımlı değilse veya çeşitlilik isteniyorsa havuzdan da seçebiliriz.
+// Şimdilik spesifik konulara uygun görselleri manuel maplemeye devam edelim, ama galeri için havuzu kullanalım.
+// Ayrıca kullanıcı "her makale aynı" dediği için, eğer map'te varsa onu kullan, yoksa (yeni eklenenler için) havuzdan seç.
+// Ancak mevcut map'teki görsellerin de hepsi aynı değil, sadece az sayıda.
+
+// Slug'a göre deterministik bir sayı üreten fonksiyon
+const getSeededRandom = (seedStr: string) => {
+  let hash = 0;
+  for (let i = 0; i < seedStr.length; i++) {
+    const char = seedStr.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return Math.abs(hash);
 }
 
-const GALLERY_IMAGES = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
+// Bir diziyi seeded random ile karıştıran fonksiyon
+const shuffleArray = (array: string[], seed: number) => {
+  const shuffled = [...array];
+  let m = shuffled.length;
+  let t, i;
+
+  // Fisher-Yates shuffle with seed
+  while (m) {
+    // LCG random number generator
+    seed = (seed * 9301 + 49297) % 233280;
+    const rnd = seed / 233280;
+
+    i = Math.floor(rnd * m--);
+    t = shuffled[m];
+    shuffled[m] = shuffled[i];
+    shuffled[i] = t;
+  }
+  return shuffled;
+}
 
 export default function BlogPostDetail() {
   const { slug } = useParams()
   const { t, i18n } = useTranslation()
   const [post, setPost] = useState<any>(null)
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
+  const [lightboxImageIndex, setLightboxImageIndex] = useState<number | null>(null)
+
+  // Slug değiştiğinde galeri görsellerini belirle
+  const galleryImages = useMemo(() => {
+    if (!slug) return []
+    
+    const seed = getSeededRandom(slug)
+    // Tüm görselleri karıştır
+    const shuffled = shuffleArray(ALL_BLOG_IMAGES, seed)
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7242/ingest/99af1884-19f5-4477-bacd-8027fd6b163d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: 'debug-session',
+        runId: 'blog-images',
+        hypothesisId: 'dynamic_images',
+        location: 'BlogPostDetail.tsx:useMemo',
+        message: 'Gallery images selected',
+        data: { slug, seed, totalImages: ALL_BLOG_IMAGES.length, selectedCount: 12, sample: shuffled.slice(1, 4) },
+        timestamp: Date.now()
+      })
+    }).catch(() => {})
+    // #endregion
+
+    // İlk görseli atla (genelde kapak fotosu olarak kullanılır) ve sonraki 12 tanesini al
+    return shuffled.slice(1, 13)
+  }, [slug])
+
+  // Kapak görseli belirle
+  const coverImage = useMemo(() => {
+    if (!slug) return ALL_BLOG_IMAGES[0]
+    const seed = getSeededRandom(slug)
+    const shuffled = shuffleArray(ALL_BLOG_IMAGES, seed)
+    return shuffled[0]
+  }, [slug])
 
   useEffect(() => {
     if (slug) {
@@ -45,27 +98,39 @@ export default function BlogPostDetail() {
           content: t(`blog.posts.${slug}.long_content`),
           excerpt: t(`blog.posts.${slug}.excerpt`),
           date: t(`blog.posts.${slug}.date`),
-          image: BLOG_IMAGES[slug] || hempOptimizationImg,
+          image: coverImage, // Dinamik seçilen kapak görseli
           tags: t(`blog.posts.${slug}.tags`, { returnObjects: true }) as string[]
         })
       }
     }
-    
-    fetch('http://127.0.0.1:7242/ingest/99af1884-19f5-4477-bacd-8027fd6b163d', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: 'debug-session',
-        runId: 'blog-detail-enhanced-fix',
-        hypothesisId: 'hero_image_fix',
-        location: 'BlogPostDetail.tsx:useEffect',
-        message: 'Fixed blog detail page',
-        data: { slug, language: i18n.language },
-        timestamp: Date.now()
-      })
-    }).catch(() => {})
-    // #endregion
-  }, [slug, t, i18n.language])
+  }, [slug, t, i18n.language, coverImage])
+
+  // Klavye navigasyonu için event listener
+  useEffect(() => {
+    if (lightboxImageIndex === null) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft' && lightboxImageIndex > 0) {
+        e.preventDefault()
+        const prevIndex = lightboxImageIndex - 1
+        setLightboxImageIndex(prevIndex)
+        setLightboxImage(galleryImages[prevIndex])
+      } else if (e.key === 'ArrowRight' && lightboxImageIndex < galleryImages.length - 1) {
+        e.preventDefault()
+        const nextIndex = lightboxImageIndex + 1
+        setLightboxImageIndex(nextIndex)
+        setLightboxImage(galleryImages[nextIndex])
+      } else if (e.key === 'Escape') {
+        setLightboxImage(null)
+        setLightboxImageIndex(null)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [lightboxImageIndex, galleryImages])
 
   if (!post) {
     return (
@@ -87,6 +152,16 @@ export default function BlogPostDetail() {
       <Helmet>
         <title>{post.title} - RNG Export Blog</title>
         <meta name="description" content={post.excerpt} />
+        <meta name="keywords" content={post.tags.join(', ') + ', kenevir işleme, keten işleme, elyaf üretim, dekortikatör, kotonizasyon'} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={post.image} />
+        <meta property="og:url" content={`https://www.rngexport.com/blog/${post.slug}`} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={post.image} />
         <link rel="canonical" href={`https://www.rngexport.com/blog/${post.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -96,9 +171,11 @@ export default function BlogPostDetail() {
             description: post.excerpt,
             image: post.image,
             datePublished: post.date,
+            dateModified: post.date,
             author: {
               '@type': 'Organization',
-              name: 'RNG Export'
+              name: 'RNG Export',
+              url: 'https://www.rngexport.com'
             },
             publisher: {
               '@type': 'Organization',
@@ -107,7 +184,14 @@ export default function BlogPostDetail() {
                 '@type': 'ImageObject',
                 url: 'https://www.rngexport.com/assets/logo-dark.png'
               }
-            }
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': `https://www.rngexport.com/blog/${post.slug}`
+            },
+            keywords: post.tags.join(', '),
+            articleSection: 'Kenevir ve Keten İşleme',
+            inLanguage: i18n.language
           })}
         </script>
         <script type="application/ld+json">
@@ -177,11 +261,15 @@ export default function BlogPostDetail() {
 
                 <div 
                   className="my-12 relative h-96 rounded-sm overflow-hidden group cursor-pointer"
-                  onClick={() => setLightboxImage(GALLERY_IMAGES[0])}
+                  onClick={() => {
+                    setLightboxImage(galleryImages[0])
+                    setLightboxImageIndex(0)
+                  }}
                 >
                   <img 
-                    src={GALLERY_IMAGES[0]} 
-                    alt="Process detail" 
+                    src={galleryImages[0]} 
+                    alt={`${post.title} - ${t('blog.gallery')}`}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 flex items-center justify-center">
@@ -201,15 +289,19 @@ export default function BlogPostDetail() {
               <div className="mt-16 pt-16 border-t border-neutral-100">
                 <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-neutral-400 mb-8">{t('blog.gallery')}</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {GALLERY_IMAGES.map((img, idx) => (
+                  {galleryImages.map((img, idx) => (
                     <div 
                       key={idx} 
                       className="aspect-[4/3] bg-neutral-100 overflow-hidden rounded-sm cursor-zoom-in group relative"
-                      onClick={() => setLightboxImage(img)}
+                      onClick={() => {
+                        setLightboxImage(img)
+                        setLightboxImageIndex(idx)
+                      }}
                     >
                       <img 
                         src={img} 
-                        alt={`Gallery ${idx + 1}`} 
+                        alt={`${post.title} - ${t('blog.gallery')} ${idx + 1}`}
+                        loading="lazy" 
                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
@@ -300,20 +392,67 @@ export default function BlogPostDetail() {
         </div>
       </div>
 
-      {lightboxImage && (
+      {lightboxImage && lightboxImageIndex !== null && (
         <div 
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 animate-in fade-in duration-200"
-          onClick={() => setLightboxImage(null)}
+          onClick={() => {
+            setLightboxImage(null)
+            setLightboxImageIndex(null)
+          }}
         >
           <button 
-            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
-            onClick={() => setLightboxImage(null)}
+            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors z-10"
+            onClick={(e) => {
+              e.stopPropagation()
+              setLightboxImage(null)
+              setLightboxImageIndex(null)
+            }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
+          
+          {/* Previous button */}
+          {lightboxImageIndex > 0 && (
+            <button
+              className="absolute left-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 bg-black/30 hover:bg-black/50 rounded-full p-3"
+              onClick={(e) => {
+                e.stopPropagation()
+                const prevIndex = lightboxImageIndex - 1
+                setLightboxImageIndex(prevIndex)
+                setLightboxImage(galleryImages[prevIndex])
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+          )}
+          
+          {/* Next button */}
+          {lightboxImageIndex < galleryImages.length - 1 && (
+            <button
+              className="absolute right-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 bg-black/30 hover:bg-black/50 rounded-full p-3"
+              onClick={(e) => {
+                e.stopPropagation()
+                const nextIndex = lightboxImageIndex + 1
+                setLightboxImageIndex(nextIndex)
+                setLightboxImage(galleryImages[nextIndex])
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          )}
+          
+          {/* Image counter */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm z-10 bg-black/30 px-4 py-2 rounded-full">
+            {lightboxImageIndex + 1} / {galleryImages.length}
+          </div>
+          
           <img 
             src={lightboxImage} 
             alt="Full screen" 
