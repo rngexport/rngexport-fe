@@ -26,9 +26,29 @@ export default function Layout({ children }: LayoutProps) {
     }
   }, [hash, pathname])
 
+  // #region agent log
+  useEffect(() => {
+    document.documentElement.lang = i18n.language
+    fetch('http://127.0.0.1:7242/ingest/99af1884-19f5-4477-bacd-8027fd6b163d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: 'debug-session',
+        runId: 'lang-update',
+        hypothesisId: 'html_lang_attribute',
+        location: 'Layout.tsx:useEffect',
+        message: 'Language updated',
+        data: { language: i18n.language, htmlLang: document.documentElement.lang },
+        timestamp: Date.now()
+      })
+    }).catch(() => {})
+  }, [i18n.language])
+  // #endregion
+
   return (
     <div className="min-h-screen bg-white text-neutral-900 font-sans selection:bg-neutral-900 selection:text-white overflow-x-hidden">
       <Helmet>
+        <html lang={i18n.language} />
         <meta property="og:site_name" content="RNG Export" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.rngexport.com/assets/logo-dark.png" />

@@ -22,16 +22,24 @@ function App() {
       'seo.home.keywords',
       'kenevir işleme, keten işleme, kenevir makina, kenevir makinaları, keten makina, keten makinaları, elyaf işleme, elyaf makinaları'
     )
+    const title = t('seo.home.title', 'RNG Export')
+    const description = t('seo.home.description', 'RNG Export')
+
     fetch('http://127.0.0.1:7242/ingest/99af1884-19f5-4477-bacd-8027fd6b163d', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         sessionId: 'debug-session',
-        runId: 'home-seo',
-        hypothesisId: 'home_keywords',
+        runId: 'home-seo-debug',
+        hypothesisId: 'meta_tags_update',
         location: 'App.tsx:useEffect',
-        message: 'Home SEO keywords applied',
-        data: { language: i18n.language, keywordsLength: keywords.length },
+        message: 'Meta tags state',
+        data: { 
+          language: i18n.language, 
+          title,
+          description,
+          keywords
+        },
         timestamp: Date.now()
       })
     }).catch(() => {})

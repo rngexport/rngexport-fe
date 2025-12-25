@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import MachineDetail from './MachineDetail'
@@ -38,6 +38,26 @@ if (!rootElement) {
   throw new Error('Failed to find the root element')
 }
 
+function RedirectHandler() {
+  const location = useLocation()
+  const path = location.pathname
+  
+  // /ru, /en, /tr ile başlayan path'leri yakala
+  const match = path.match(/^\/(ru|en|tr)(\/|$)(.*)/)
+  
+  if (match) {
+    const lang = match[1]
+    const rest = match[3] || ''
+    // Mevcut query params varsa koru, yoksa sadece lang ekle
+    const searchParams = new URLSearchParams(location.search)
+    searchParams.set('lang', lang)
+    
+    return <Navigate to={`/${rest}?${searchParams.toString()}`} replace />
+  }
+  
+  return <Navigate to="/" replace />
+}
+
 createRoot(rootElement).render(
   <StrictMode>
     <HelmetProvider>
@@ -51,7 +71,7 @@ createRoot(rootElement).render(
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<RedirectHandler />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>
